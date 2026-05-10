@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const PASS_THRESHOLD = 72;
 
@@ -136,6 +136,8 @@ export default function Summary({
   questions,
   paperNum,
   onBackToHome,
+  onPaperComplete,
+  timeTaken,
 }) {
   const [filter, setFilter] = useState("all");
 
@@ -148,6 +150,22 @@ export default function Summary({
   const wrong = userAnswers.length - correct - skipped;
   const scorePct = Math.round((correct / userAnswers.length) * 100);
   const passed = scorePct >= PASS_THRESHOLD;
+
+  // Format time taken
+  const timeMins = timeTaken != null ? Math.floor(timeTaken / 60) : null;
+  const timeSecs = timeTaken != null ? timeTaken % 60 : null;
+  const timeStr =
+    timeMins != null
+      ? timeMins > 0
+        ? `${timeMins}m ${String(timeSecs).padStart(2, "0")}s`
+        : `${timeSecs}s`
+      : null;
+
+  // Report score to parent so unlock logic can run
+  useEffect(() => {
+    if (onPaperComplete) onPaperComplete(paperNum, scorePct);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Donut chart math
   const total = userAnswers.length;
@@ -174,6 +192,11 @@ export default function Summary({
         <p id="summary-hero-sub">
           Score: {scorePct}% · Passing threshold: {PASS_THRESHOLD}%
         </p>
+        {timeStr && (
+          <p id="summary-time-taken">
+            ⏱ Completed in <strong>{timeStr}</strong> out of 130 min
+          </p>
+        )}
 
         {/* Donut + legend */}
         <div id="summary-donut-row">
