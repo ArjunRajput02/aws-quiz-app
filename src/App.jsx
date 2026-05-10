@@ -1,38 +1,25 @@
 import { useEffect, useState, useCallback } from 'react';
-
 import Header from './components/Header.jsx';
 import PaperSelect from './components/PaperSelect.jsx';
 import Quiz from './components/Quiz.jsx';
-
+import NotesPage from './components/NotesPage.jsx';
 import { ALL_PAPERS } from './papers.js';
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
-
-const UNLOCK_THRESHOLD = 80; // percent needed to unlock next paper
+const UNLOCK_THRESHOLD = 80;
 const STORAGE_KEY = 'dva_paper_scores';
 
 function loadScores() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-
     if (!raw) return {};
-
-    // Decode base64 → JSON
     return JSON.parse(atob(raw));
-  } catch {
-    return {};
-  }
+  } catch { return {}; }
 }
-
 
 function saveScores(scores) {
-  // JSON → base64
-  const encoded = btoa(JSON.stringify(scores));
-
-  localStorage.setItem(STORAGE_KEY, encoded);
+  localStorage.setItem(STORAGE_KEY, btoa(JSON.stringify(scores)));
 }
 
-/** Paper N is unlocked if N===1 OR paper N-1 has score >= UNLOCK_THRESHOLD */
 function computeUnlocked(scores) {
   const unlocked = { 1: true };
   for (let n = 2; n <= 6; n++) {
@@ -41,40 +28,83 @@ function computeUnlocked(scores) {
   return unlocked;
 }
 
-// ─── App ────────────────────────────────────────────────────────────────────
+function LandingPage({ onSelectMode }) {
+  return (
+    <div id="landing-page">
+      <div id="landing-hero">
+        <div id="ps-badge">DVA-C02 Exam Prep</div>
+        <h1 id="landing-title">AWS Certified Developer – Associate</h1>
+        <p id="landing-subtitle">
+          Master the AWS Developer Associate exam with comprehensive study notes and realistic practice tests.
+          Choose your mode to get started.
+        </p>
+        <div id="landing-stats">
+          <div className="ps-stat"><span className="ps-stat-num">18</span><span className="ps-stat-label">Topics</span></div>
+          <div className="ps-stat-divider" />
+          <div className="ps-stat"><span className="ps-stat-num">390</span><span className="ps-stat-label">Questions</span></div>
+          <div className="ps-stat-divider" />
+          <div className="ps-stat"><span className="ps-stat-num">6</span><span className="ps-stat-label">Papers</span></div>
+          <div className="ps-stat-divider" />
+          <div className="ps-stat"><span className="ps-stat-num">72%</span><span className="ps-stat-label">Pass Mark</span></div>
+        </div>
+      </div>
+
+      <div id="mode-cards">
+        <button className="mode-card mode-card--notes" onClick={() => onSelectMode('notes')}>
+          <div className="mode-card-icon">📚</div>
+          <div className="mode-card-content">
+            <h2 className="mode-card-title">Study Notes</h2>
+            <p className="mode-card-desc">
+              Browse comprehensive notes for all DVA-C02 topics — IAM, EC2, S3, Lambda, DynamoDB, API Gateway,
+              CI/CD, CloudFormation, KMS, Cognito, and more. Sourced from arkalim's Notion notes.
+            </p>
+            <div className="mode-card-meta">
+              <span className="mode-meta-pill">📖 18 Topics</span>
+              <span className="mode-meta-pill">🔍 Searchable</span>
+              <span className="mode-meta-pill">📌 Key Concepts</span>
+            </div>
+          </div>
+          <span className="mode-card-cta">Open Notes →</span>
+        </button>
+
+        <button className="mode-card mode-card--quiz" onClick={() => onSelectMode('quiz')}>
+          <div className="mode-card-icon">📝</div>
+          <div className="mode-card-content">
+            <h2 className="mode-card-title">Practice Test</h2>
+            <p className="mode-card-desc">
+              Take realistic DVA-C02 practice exams with 65 questions each. Timed format, instant feedback,
+              detailed explanations, and progress tracking across 6 papers.
+            </p>
+            <div className="mode-card-meta">
+              <span className="mode-meta-pill">📋 6 Papers</span>
+              <span className="mode-meta-pill">⏱ 130 min each</span>
+              <span className="mode-meta-pill">🏆 Score Tracking</span>
+            </div>
+          </div>
+          <span className="mode-card-cta">Start Practice →</span>
+        </button>
+      </div>
+
+      <p id="ps-footer">Notes from arkalim's DVA-C02 Notion · Questions from Digital Cloud Training</p>
+    </div>
+  );
+}
 
 function App() {
-  const [selectedPaper, setSelectedPaper]   = useState(null);
-  const [scores, setScores]                 = useState(loadScores);
-  const [abandoned, setAbandoned]           = useState(false);
+  const [mode, setMode] = useState('landing'); // 'landing' | 'notes' | 'quiz'
+  const [selectedPaper, setSelectedPaper] = useState(null);
+  const [scores, setScores] = useState(loadScores);
+  const [abandoned, setAbandoned] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
 
-  // THEME STATE
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
-  });
-
-  // APPLY THEME
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
+    if (darkMode) { document.body.classList.add('dark'); localStorage.setItem('theme', 'dark'); }
+    else { document.body.classList.remove('dark'); localStorage.setItem('theme', 'light'); }
   }, [darkMode]);
 
-  // Tab-switch / visibility proctoring
   useEffect(() => {
     if (!selectedPaper) return;
-
-    const handleVisibility = () => {
-      if (document.hidden) {
-        setAbandoned(true);
-        setSelectedPaper(null);
-      }
-    };
-
+    const handleVisibility = () => { if (document.hidden) { setAbandoned(true); setSelectedPaper(null); } };
     document.addEventListener('visibilitychange', handleVisibility);
     return () => document.removeEventListener('visibilitychange', handleVisibility);
   }, [selectedPaper]);
@@ -87,10 +117,8 @@ function App() {
     setSelectedPaper(paperNum);
   };
 
-  const handleBackToHome = useCallback(() => {
-    setSelectedPaper(null);
-    setAbandoned(false);
-  }, []);
+  const handleBackToHome = useCallback(() => { setSelectedPaper(null); setAbandoned(false); setMode('landing'); }, []);
+  const handleBackToPapers = useCallback(() => { setSelectedPaper(null); setAbandoned(false); }, []);
 
   const handlePaperComplete = useCallback((paperNum, scorePct) => {
     setScores((prev) => {
@@ -104,44 +132,30 @@ function App() {
     <>
       <Header
         selectedPaper={selectedPaper}
+        mode={mode}
         onBackToHome={handleBackToHome}
+        onBackToPapers={selectedPaper ? handleBackToPapers : null}
         darkMode={darkMode}
         onToggleTheme={() => setDarkMode((prev) => !prev)}
       />
-
       <main>
         {abandoned && (
           <div id="abandon-banner">
             <div id="abandon-card">
               <span id="abandon-icon">🚫</span>
               <h2>Exam Abandoned</h2>
-              <p>
-                You switched tabs or left the exam window. For integrity reasons
-                your attempt has been <strong>automatically cancelled</strong>.
-              </p>
-              <button className="btn-abandon-back" onClick={() => setAbandoned(false)}>
-                Return to Papers →
-              </button>
+              <p>You switched tabs or left the exam window. Your attempt has been <strong>automatically cancelled</strong>.</p>
+              <button className="btn-abandon-back" onClick={() => { setAbandoned(false); }}>Return to Papers →</button>
             </div>
           </div>
         )}
-
-        {!abandoned && selectedPaper === null && (
-          <PaperSelect
-            onSelectPaper={handleSelectPaper}
-            unlockedMap={unlockedMap}
-            scores={scores}
-            unlockThreshold={UNLOCK_THRESHOLD}
-          />
+        {!abandoned && mode === 'landing' && <LandingPage onSelectMode={setMode} />}
+        {!abandoned && mode === 'notes' && <NotesPage />}
+        {!abandoned && mode === 'quiz' && selectedPaper === null && (
+          <PaperSelect onSelectPaper={handleSelectPaper} unlockedMap={unlockedMap} scores={scores} unlockThreshold={UNLOCK_THRESHOLD} />
         )}
-
-        {!abandoned && selectedPaper !== null && (
-          <Quiz
-            questions={ALL_PAPERS[selectedPaper]}
-            paperNum={selectedPaper}
-            onBackToHome={handleBackToHome}
-            onPaperComplete={handlePaperComplete}
-          />
+        {!abandoned && mode === 'quiz' && selectedPaper !== null && (
+          <Quiz questions={ALL_PAPERS[selectedPaper]} paperNum={selectedPaper} onBackToHome={handleBackToPapers} onPaperComplete={handlePaperComplete} />
         )}
       </main>
     </>
