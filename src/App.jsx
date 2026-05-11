@@ -94,7 +94,6 @@ function App() {
   const [mode, setMode] = useState('landing'); // 'landing' | 'notes' | 'quiz'
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [scores, setScores] = useState(loadScores);
-  const [abandoned, setAbandoned] = useState(false);
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
 
   useEffect(() => {
@@ -102,23 +101,27 @@ function App() {
     else { document.body.classList.remove('dark'); localStorage.setItem('theme', 'light'); }
   }, [darkMode]);
 
-  useEffect(() => {
-    if (!selectedPaper) return;
-    const handleVisibility = () => { if (document.hidden) { setAbandoned(true); setSelectedPaper(null); } };
-    document.addEventListener('visibilitychange', handleVisibility);
-    return () => document.removeEventListener('visibilitychange', handleVisibility);
-  }, [selectedPaper]);
+  // ── NOTE: ALL tab-switch detection and abandon logic has been removed from
+  // here. It now lives entirely inside Quiz.jsx, which handles 3 warnings
+  // then abandons on the 4th switch — and correctly ignores tab switches
+  // on the Summary screen. Having a listener here caused immediate abandon
+  // on the very first switch, overriding Quiz.jsx's warning system. ──────
 
   const unlockedMap = computeUnlocked(scores);
 
   const handleSelectPaper = (paperNum) => {
     if (!unlockedMap[paperNum]) return;
-    setAbandoned(false);
     setSelectedPaper(paperNum);
   };
 
-  const handleBackToHome = useCallback(() => { setSelectedPaper(null); setAbandoned(false); setMode('landing'); }, []);
-  const handleBackToPapers = useCallback(() => { setSelectedPaper(null); setAbandoned(false); }, []);
+  const handleBackToHome = useCallback(() => {
+    setSelectedPaper(null);
+    setMode('landing');
+  }, []);
+
+  const handleBackToPapers = useCallback(() => {
+    setSelectedPaper(null);
+  }, []);
 
   const handlePaperComplete = useCallback((paperNum, scorePct) => {
     setScores((prev) => {
@@ -139,23 +142,23 @@ function App() {
         onToggleTheme={() => setDarkMode((prev) => !prev)}
       />
       <main>
-        {abandoned && (
-          <div id="abandon-banner">
-            <div id="abandon-card">
-              <span id="abandon-icon">🚫</span>
-              <h2>Exam Abandoned</h2>
-              <p>You switched tabs or left the exam window. Your attempt has been <strong>automatically cancelled</strong>.</p>
-              <button className="btn-abandon-back" onClick={() => { setAbandoned(false); }}>Return to Papers →</button>
-            </div>
-          </div>
+        {mode === 'landing' && <LandingPage onSelectMode={setMode} />}
+        {mode === 'notes' && <NotesPage />}
+        {mode === 'quiz' && selectedPaper === null && (
+          <PaperSelect
+            onSelectPaper={handleSelectPaper}
+            unlockedMap={unlockedMap}
+            scores={scores}
+            unlockThreshold={UNLOCK_THRESHOLD}
+          />
         )}
-        {!abandoned && mode === 'landing' && <LandingPage onSelectMode={setMode} />}
-        {!abandoned && mode === 'notes' && <NotesPage />}
-        {!abandoned && mode === 'quiz' && selectedPaper === null && (
-          <PaperSelect onSelectPaper={handleSelectPaper} unlockedMap={unlockedMap} scores={scores} unlockThreshold={UNLOCK_THRESHOLD} />
-        )}
-        {!abandoned && mode === 'quiz' && selectedPaper !== null && (
-          <Quiz questions={ALL_PAPERS[selectedPaper]} paperNum={selectedPaper} onBackToHome={handleBackToPapers} onPaperComplete={handlePaperComplete} />
+        {mode === 'quiz' && selectedPaper !== null && (
+          <Quiz
+            questions={ALL_PAPERS[selectedPaper]}
+            paperNum={selectedPaper}
+            onBackToHome={handleBackToPapers}
+            onPaperComplete={handlePaperComplete}
+          />
         )}
       </main>
     </>

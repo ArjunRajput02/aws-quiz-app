@@ -3,11 +3,202 @@ import Question from "./Question.jsx";
 import Summary from "./Summary.jsx";
 
 const EXAM_DURATION = 130 * 60; // 130 minutes in seconds
+const MAX_WARNINGS = 3;         // 3 warnings shown, 4th switch = abandon
 
 function formatTime(seconds) {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
+// ── Warning modal ──────────────────────────────────────────────────────────
+function TabWarningModal({ warningNumber, onDismiss }) {
+  const remaining = MAX_WARNINGS - warningNumber;
+
+  const ordinal = warningNumber === 1 ? "1st" : warningNumber === 2 ? "2nd" : "3rd";
+  const bgColor = warningNumber === 1 ? "#fffbeb" : warningNumber === 2 ? "#fff7ed" : "#fef2f2";
+  const borderColor = warningNumber === 1 ? "#f59e0b" : warningNumber === 2 ? "#f97316" : "#ef4444";
+  const titleColor = warningNumber === 1 ? "#92400e" : warningNumber === 2 ? "#7c2d12" : "#991b1b";
+  const btnColor = warningNumber === 1 ? "#f59e0b" : warningNumber === 2 ? "#f97316" : "#ef4444";
+  const icon = warningNumber === 1 ? "⚠️" : warningNumber === 2 ? "🚨" : "🛑";
+
+  return (
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        background: "rgba(0,0,0,0.6)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "1rem",
+      }}
+    >
+      <div
+        style={{
+          background: bgColor,
+          border: `2px solid ${borderColor}`,
+          borderRadius: "14px",
+          padding: "2rem 2rem 1.75rem",
+          maxWidth: "460px",
+          width: "100%",
+          boxShadow: "0 12px 40px rgba(0,0,0,0.2)",
+          textAlign: "center",
+        }}
+      >
+        {/* Icon */}
+        <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}>{icon}</div>
+
+        {/* Badge */}
+        <div
+          style={{
+            display: "inline-block",
+            background: btnColor,
+            color: "#fff",
+            borderRadius: "99px",
+            padding: "3px 14px",
+            fontSize: "0.78rem",
+            fontWeight: 700,
+            letterSpacing: "0.05em",
+            marginBottom: "0.85rem",
+            textTransform: "uppercase",
+          }}
+        >
+          {ordinal} Warning · {warningNumber} / {MAX_WARNINGS}
+        </div>
+
+        {/* Title */}
+        <h2
+          style={{
+            margin: "0 0 0.6rem",
+            fontSize: "1.15rem",
+            fontWeight: 700,
+            color: titleColor,
+          }}
+        >
+          Tab switching is not allowed
+        </h2>
+
+        {/* Body */}
+        <p
+          style={{
+            margin: "0 0 0.5rem",
+            fontSize: "0.93rem",
+            color: titleColor,
+            lineHeight: 1.65,
+          }}
+        >
+          This behaviour is <strong>strictly prohibited</strong> in the real AWS
+          Certification Exam. Please stay on this tab for the duration of your
+          test.
+        </p>
+
+        {remaining > 0 ? (
+          <p
+            style={{
+              margin: "0 0 1.5rem",
+              fontSize: "0.88rem",
+              color: titleColor,
+              opacity: 0.85,
+            }}
+          >
+            You have <strong>{remaining} warning{remaining > 1 ? "s" : ""}</strong> remaining.
+            Your exam will be <strong>automatically abandoned</strong> on your{" "}
+            {remaining === 2 ? "3rd" : "next"} tab switch.
+          </p>
+        ) : (
+          <p
+            style={{
+              margin: "0 0 1.5rem",
+              fontSize: "0.88rem",
+              color: titleColor,
+              opacity: 0.85,
+            }}
+          >
+            <strong>This is your final warning.</strong> The next tab switch will
+            immediately and permanently abandon your exam with no further
+            confirmation.
+          </p>
+        )}
+
+        {/* Dismiss */}
+        <button
+          onClick={onDismiss}
+          style={{
+            background: btnColor,
+            color: "#fff",
+            border: "none",
+            borderRadius: "8px",
+            padding: "0.7rem 2rem",
+            fontSize: "0.95rem",
+            fontWeight: 600,
+            cursor: "pointer",
+            width: "100%",
+          }}
+        >
+          I understand — Resume Exam
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ── Abandoned screen ───────────────────────────────────────────────────────
+function AbandonedScreen({ onBackToHome }) {
+  return (
+    <div
+      style={{
+        minHeight: "60vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "2rem",
+        textAlign: "center",
+      }}
+    >
+      <div style={{ fontSize: "3.5rem", marginBottom: "1rem" }}>🚫</div>
+      <h2
+        style={{
+          fontSize: "1.4rem",
+          fontWeight: 700,
+          color: "#991b1b",
+          margin: "0 0 0.5rem",
+        }}
+      >
+        Exam Abandoned
+      </h2>
+      <p
+        style={{
+          fontSize: "0.95rem",
+          color: "#6b7280",
+          maxWidth: "400px",
+          lineHeight: 1.7,
+          margin: "0 0 1.75rem",
+        }}
+      >
+        You switched tabs <strong>4 times</strong> after receiving 3 warnings.
+        In the real AWS Certification Exam, this would result in immediate
+        disqualification. Please retake the paper to receive a score.
+      </p>
+      <button
+        onClick={onBackToHome}
+        style={{
+          background: "#ef4444",
+          color: "#fff",
+          border: "none",
+          borderRadius: "8px",
+          padding: "0.7rem 2rem",
+          fontSize: "0.95rem",
+          fontWeight: 600,
+          cursor: "pointer",
+        }}
+      >
+        ← Back to All Papers
+      </button>
+    </div>
+  );
 }
 
 export default function Quiz({
@@ -24,19 +215,32 @@ export default function Quiz({
     new Array(questions.length).fill(false),
   );
   const [submitted, setSubmitted] = useState(false);
+  const [abandoned, setAbandoned] = useState(false);
+
+  // ── Tab-switch state ───────────────────────────────────────────────────
+  const [switchCount, setSwitchCount] = useState(0);
+  const [warningShown, setWarningShown] = useState(null); // 1 | 2 | 3 | null
+
+  // Refs so the single registered visibilitychange handler always reads
+  // the latest values without needing to be torn down and re-registered.
+  const switchCountRef = useRef(0);
+  const submittedRef = useRef(false);
+  const abandonedRef = useRef(false);
+
+  useEffect(() => { submittedRef.current = submitted; }, [submitted]);
+  useEffect(() => { abandonedRef.current = abandoned; }, [abandoned]);
 
   // ── Timer ──────────────────────────────────────────────────────────────
   const [timeLeft, setTimeLeft] = useState(EXAM_DURATION);
-  const [timeTaken, setTimeTaken] = useState(0); // seconds elapsed when submitted
+  const [timeTaken, setTimeTaken] = useState(0);
   const startTimeRef = useRef(Date.now());
 
   useEffect(() => {
-    if (submitted) return;
+    if (submitted || abandoned) return;
     const id = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(id);
-          // Auto-submit when time runs out
           setTimeTaken(EXAM_DURATION);
           setSubmitted(true);
           return 0;
@@ -45,13 +249,42 @@ export default function Quiz({
       });
     }, 1000);
     return () => clearInterval(id);
-  }, [submitted]);
+  }, [submitted, abandoned]);
+
+  // ── Tab-switch detector — registered ONCE on mount ─────────────────────
+  // Fires when user LEAVES the tab (visibilityState === "hidden").
+  // The modal appears when they RETURN (tab is visible again) because
+  // React state updates from the hidden event flush on re-focus.
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState !== "hidden") return;
+      if (submittedRef.current || abandonedRef.current) return;
+
+      switchCountRef.current += 1;
+      const count = switchCountRef.current;
+      setSwitchCount(count);
+
+      if (count <= MAX_WARNINGS) {
+        // Switches 1, 2, 3 → show the matching numbered warning
+        setWarningShown(count);
+      } else {
+        // Switch 4 → abandon
+        abandonedRef.current = true;
+        setAbandoned(true);
+        setWarningShown(null);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () =>
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []); // empty deps — refs keep values fresh
 
   // ── Urgency colour ─────────────────────────────────────────────────────
-  const timerUrgent = timeLeft <= 10 * 60; // last 10 min → red
-  const timerWarning = timeLeft <= 30 * 60; // last 30 min → amber
+  const timerUrgent = timeLeft <= 10 * 60;
+  const timerWarning = timeLeft <= 30 * 60;
 
-  // ── Handlers ───────────────────────────────────────────────────────────
+  // ── Answer / flag handlers ─────────────────────────────────────────────
   const handleSelectAnswer = useCallback(
     (selectedAnswer) => {
       const q = questions[currentQ];
@@ -101,6 +334,14 @@ export default function Quiz({
 
   const answeredCount = userAnswers.filter((a) => a !== null).length;
 
+  // ── Render guards ──────────────────────────────────────────────────────
+
+  if (abandoned) {
+    return <AbandonedScreen onBackToHome={onBackToHome} />;
+  }
+
+  // Summary — the listener above exits early when submittedRef is true,
+  // so no tab-switch monitoring happens during review.
   if (submitted) {
     return (
       <Summary
@@ -116,6 +357,14 @@ export default function Quiz({
 
   return (
     <div id="quiz">
+      {/* Warning modal — sits above all quiz content */}
+      {warningShown !== null && (
+        <TabWarningModal
+          warningNumber={warningShown}
+          onDismiss={() => setWarningShown(null)}
+        />
+      )}
+
       <div id="quiz-header">
         <span id="quiz-title">DVA-C02 · Paper {paperNum}</span>
         <div id="quiz-meta">
@@ -124,11 +373,33 @@ export default function Quiz({
           </span>
           <span>{flagged.filter(Boolean).length} flagged</span>
 
-          {/* ── Countdown timer ── */}
+          {/* Warning counter badge — hidden until first switch */}
+          {switchCount > 0 && (
+            <span
+              style={{
+                fontWeight: 600,
+                fontSize: "0.85rem",
+                color:
+                  switchCount >= 3
+                    ? "#dc2626"
+                    : switchCount === 2
+                    ? "#ea580c"
+                    : "#d97706",
+              }}
+            >
+              ⚠ {switchCount}/{MAX_WARNINGS} warnings
+            </span>
+          )}
+
+          {/* Countdown timer */}
           <span
             id="quiz-timer"
             className={
-              timerUrgent ? "timer-urgent" : timerWarning ? "timer-warning" : ""
+              timerUrgent
+                ? "timer-urgent"
+                : timerWarning
+                ? "timer-warning"
+                : ""
             }
           >
             ⏱ {formatTime(timeLeft)}
