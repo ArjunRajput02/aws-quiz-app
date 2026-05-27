@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Answers from "./Answers.jsx";
 
 export default function Question({
@@ -9,6 +10,9 @@ export default function Question({
   onSelectAnswer,
   onFlag,
 }) {
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("theme") === "dark",
+  );
   return (
     <div id="question">
       <div className="question-nav-row">
@@ -27,10 +31,10 @@ export default function Question({
       </div>
 
       {/* <h2 style={{ whiteSpace: "pre-line" }}>{question.text}</h2> */}
-      <h2>
-      {question.text.split("\n").map((line, i) => (
-        <p key={i}>{line}</p>
-      ))}
+      <h2 style={darkMode ? { color: "white" } : {}}>
+        {question.text.split("\n").map((line, i) => (
+          <p key={i} style={darkMode ? { color: "white" } : {}}>{line}</p>
+        ))}
       </h2>
 
       <Answers
