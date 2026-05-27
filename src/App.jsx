@@ -5,7 +5,7 @@ import Quiz from "./components/Quiz.jsx";
 import NotesPage from "./components/NotesPage.jsx";
 import { ALL_PAPERS, totalPaper } from "./papers.js";
 
-const UNLOCK_THRESHOLD = 0;
+const UNLOCK_THRESHOLD = 80;
 const STORAGE_KEY = "dva_paper_scores";
 
 function loadScores() {
