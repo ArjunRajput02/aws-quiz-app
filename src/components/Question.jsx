@@ -18,12 +18,20 @@ export default function Question({
             <span className="multi-badge"> · Select TWO</span>
           )}
         </span>
-        <button className={`flag-btn${isFlagged ? " flagged" : ""}`} onClick={onFlag}>
+        <button
+          className={`flag-btn${isFlagged ? " flagged" : ""}`}
+          onClick={onFlag}
+        >
           {isFlagged ? "⚑ Flagged" : "⚐ Flag"}
         </button>
       </div>
 
-      <h2>{question.text}</h2>
+      {/* <h2 style={{ whiteSpace: "pre-line" }}>{question.text}</h2> */}
+      <h2>
+      {question.text.split("\n").map((line, i) => (
+        <p key={i}>{line}</p>
+      ))}
+      </h2>
 
       <Answers
         answers={question.answers}

@@ -1,19 +1,21 @@
-import { useEffect, useState, useCallback } from 'react';
-import Header from './components/Header.jsx';
-import PaperSelect from './components/PaperSelect.jsx';
-import Quiz from './components/Quiz.jsx';
-import NotesPage from './components/NotesPage.jsx';
-import { ALL_PAPERS } from './papers.js';
+import { useEffect, useState, useCallback } from "react";
+import Header from "./components/Header.jsx";
+import PaperSelect from "./components/PaperSelect.jsx";
+import Quiz from "./components/Quiz.jsx";
+import NotesPage from "./components/NotesPage.jsx";
+import { ALL_PAPERS, totalPaper } from "./papers.js";
 
-const UNLOCK_THRESHOLD = 80;
-const STORAGE_KEY = 'dva_paper_scores';
+const UNLOCK_THRESHOLD = 0;
+const STORAGE_KEY = "dva_paper_scores";
 
 function loadScores() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return {};
     return JSON.parse(atob(raw));
-  } catch { return {}; }
+  } catch {
+    return {};
+  }
 }
 
 function saveScores(scores) {
@@ -22,7 +24,7 @@ function saveScores(scores) {
 
 function computeUnlocked(scores) {
   const unlocked = { 1: true };
-  for (let n = 2; n <= 6; n++) {
+  for (let n = 2; n <= totalPaper.length; n++) {
     unlocked[n] = (scores[n - 1] ?? 0) >= UNLOCK_THRESHOLD;
   }
   return unlocked;
@@ -35,28 +37,44 @@ function LandingPage({ onSelectMode }) {
         <div id="ps-badge">DVA-C02 Exam Prep</div>
         <h1 id="landing-title">AWS Certified Developer – Associate</h1>
         <p id="landing-subtitle">
-          Master the AWS Developer Associate exam with comprehensive study notes and realistic practice tests.
-          Choose your mode to get started.
+          Master the AWS Developer Associate exam with comprehensive study notes
+          and realistic practice tests. Choose your mode to get started.
         </p>
         <div id="landing-stats">
-          <div className="ps-stat"><span className="ps-stat-num">18</span><span className="ps-stat-label">Topics</span></div>
+          <div className="ps-stat">
+            <span className="ps-stat-num">18</span>
+            <span className="ps-stat-label">Topics</span>
+          </div>
           <div className="ps-stat-divider" />
-          <div className="ps-stat"><span className="ps-stat-num">390</span><span className="ps-stat-label">Questions</span></div>
+          <div className="ps-stat">
+            <span className="ps-stat-num">390</span>
+            <span className="ps-stat-label">Questions</span>
+          </div>
           <div className="ps-stat-divider" />
-          <div className="ps-stat"><span className="ps-stat-num">6</span><span className="ps-stat-label">Papers</span></div>
+          <div className="ps-stat">
+            <span className="ps-stat-num">6</span>
+            <span className="ps-stat-label">Papers</span>
+          </div>
           <div className="ps-stat-divider" />
-          <div className="ps-stat"><span className="ps-stat-num">72%</span><span className="ps-stat-label">Pass Mark</span></div>
+          <div className="ps-stat">
+            <span className="ps-stat-num">72%</span>
+            <span className="ps-stat-label">Pass Mark</span>
+          </div>
         </div>
       </div>
 
       <div id="mode-cards">
-        <button className="mode-card mode-card--notes" onClick={() => onSelectMode('notes')}>
+        <button
+          className="mode-card mode-card--notes"
+          onClick={() => onSelectMode("notes")}
+        >
           <div className="mode-card-icon">📚</div>
           <div className="mode-card-content">
             <h2 className="mode-card-title">Study Notes</h2>
             <p className="mode-card-desc">
-              Browse comprehensive notes for all DVA-C02 topics — IAM, EC2, S3, Lambda, DynamoDB, API Gateway,
-              CI/CD, CloudFormation, KMS, Cognito, and more. Sourced from arkalim's Notion notes.
+              Browse comprehensive notes for all DVA-C02 topics — IAM, EC2, S3,
+              Lambda, DynamoDB, API Gateway, CI/CD, CloudFormation, KMS,
+              Cognito, and more. Sourced from arkalim's Notion notes.
             </p>
             <div className="mode-card-meta">
               <span className="mode-meta-pill">📖 18 Topics</span>
@@ -67,13 +85,17 @@ function LandingPage({ onSelectMode }) {
           <span className="mode-card-cta">Open Notes →</span>
         </button>
 
-        <button className="mode-card mode-card--quiz" onClick={() => onSelectMode('quiz')}>
+        <button
+          className="mode-card mode-card--quiz"
+          onClick={() => onSelectMode("quiz")}
+        >
           <div className="mode-card-icon">📝</div>
           <div className="mode-card-content">
             <h2 className="mode-card-title">Practice Test</h2>
             <p className="mode-card-desc">
-              Take realistic DVA-C02 practice exams with 65 questions each. Timed format, instant feedback,
-              detailed explanations, and progress tracking across 6 papers.
+              Take realistic DVA-C02 practice exams with 65 questions each.
+              Timed format, instant feedback, detailed explanations, and
+              progress tracking across 6 papers.
             </p>
             <div className="mode-card-meta">
               <span className="mode-meta-pill">📋 6 Papers</span>
@@ -85,20 +107,30 @@ function LandingPage({ onSelectMode }) {
         </button>
       </div>
 
-      <p id="ps-footer">Notes from arkalim's DVA-C02 Notion · Questions from Digital Cloud Training</p>
+      <p id="ps-footer">
+        Notes from arkalim's DVA-C02 Notion · Questions from Digital Cloud
+        Training
+      </p>
     </div>
   );
 }
 
 function App() {
-  const [mode, setMode] = useState('landing'); // 'landing' | 'notes' | 'quiz'
+  const [mode, setMode] = useState("landing"); // 'landing' | 'notes' | 'quiz'
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [scores, setScores] = useState(loadScores);
-  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("theme") === "dark",
+  );
 
   useEffect(() => {
-    if (darkMode) { document.body.classList.add('dark'); localStorage.setItem('theme', 'dark'); }
-    else { document.body.classList.remove('dark'); localStorage.setItem('theme', 'light'); }
+    if (darkMode) {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
   }, [darkMode]);
 
   // ── NOTE: ALL tab-switch detection and abandon logic has been removed from
@@ -116,7 +148,7 @@ function App() {
 
   const handleBackToHome = useCallback(() => {
     setSelectedPaper(null);
-    setMode('landing');
+    setMode("landing");
   }, []);
 
   const handleBackToPapers = useCallback(() => {
@@ -125,7 +157,10 @@ function App() {
 
   const handlePaperComplete = useCallback((paperNum, scorePct) => {
     setScores((prev) => {
-      const updated = { ...prev, [paperNum]: Math.max(prev[paperNum] ?? 0, scorePct) };
+      const updated = {
+        ...prev,
+        [paperNum]: Math.max(prev[paperNum] ?? 0, scorePct),
+      };
       saveScores(updated);
       return updated;
     });
@@ -142,9 +177,9 @@ function App() {
         onToggleTheme={() => setDarkMode((prev) => !prev)}
       />
       <main>
-        {mode === 'landing' && <LandingPage onSelectMode={setMode} />}
-        {mode === 'notes' && <NotesPage />}
-        {mode === 'quiz' && selectedPaper === null && (
+        {mode === "landing" && <LandingPage onSelectMode={setMode} />}
+        {mode === "notes" && <NotesPage />}
+        {mode === "quiz" && selectedPaper === null && (
           <PaperSelect
             onSelectPaper={handleSelectPaper}
             unlockedMap={unlockedMap}
@@ -152,7 +187,7 @@ function App() {
             unlockThreshold={UNLOCK_THRESHOLD}
           />
         )}
-        {mode === 'quiz' && selectedPaper !== null && (
+        {mode === "quiz" && selectedPaper !== null && (
           <Quiz
             questions={ALL_PAPERS[selectedPaper]}
             paperNum={selectedPaper}
