@@ -5,7 +5,7 @@ import Quiz from "./components/Quiz.jsx";
 import NotesPage from "./components/NotesPage.jsx";
 import { ALL_PAPERS, totalPaper } from "./papers.js";
 
-const UNLOCK_THRESHOLD = 80; 
+const UNLOCK_THRESHOLD = 80;
 const STORAGE_KEY = "dva_paper_scores";
 
 function loadScores() {
@@ -24,7 +24,7 @@ function saveScores(scores) {
 
 function computeUnlocked(scores) {
   const unlocked = { 1: true };
-  for (let n = 2; n <= totalPaper.length; n++) {
+  for (let n = 2; n <= totalPaper; n++) {
     unlocked[n] = (scores[n - 1] ?? 0) >= UNLOCK_THRESHOLD;
   }
   return unlocked;

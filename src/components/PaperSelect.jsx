@@ -100,8 +100,7 @@ export default function PaperSelect({
           const meta = PAPER_META[num];
           const diff = DIFF_COLOR[meta.difficulty];
           const qCount = ALL_PAPERS[num]?.length || 65;
-          // const isLocked = !unlockedMap[num];
-          const isLocked = false;
+          const isLocked = !unlockedMap[num];
           const bestScore = scores[num] ?? null;
           const prevScore = scores[num - 1] ?? null;
 
