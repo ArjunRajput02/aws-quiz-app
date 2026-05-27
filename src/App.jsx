@@ -24,7 +24,7 @@ function saveScores(scores) {
 
 function computeUnlocked(scores) {
   const unlocked = { 1: true };
-  for (let n = 2; n <= totalPaper; n++) {
+  for (let n = 2; n <= totalPaper.length; n++) {
     unlocked[n] = (scores[n - 1] ?? 0) >= UNLOCK_THRESHOLD;
   }
   return unlocked;
