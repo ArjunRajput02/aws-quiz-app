@@ -10930,6 +10930,6 @@ export const PAPER_NAMES = {
   4: "Practice Paper 4",
   5: "Practice Paper 5",
   6: "Practice Paper 6",
-  7: "Practice Paper 7",
-  8: "Practice Paper 8",
+  7: "Udemy Paper 1",
+  8: "Udemy Paper 2",
 };

@@ -1,4 +1,4 @@
-import { ALL_PAPERS, totalPaper } from "../papers.js";
+import { ALL_PAPERS, PAPER_NAMES, totalPaper } from "../papers.js";
 
 const PAPER_META = {
   1: {
@@ -146,7 +146,7 @@ export default function PaperSelect({
                     {isLocked ? "🔒" : meta.icon}
                   </div>
                   <div className="ps-card-info">
-                    <span className="ps-card-name">Practice Paper {num}</span>
+                    <span className="ps-card-name">{PAPER_NAMES[num]}</span>
                     <span
                       className="ps-card-diff"
                       style={
