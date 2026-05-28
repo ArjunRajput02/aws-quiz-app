@@ -53,6 +53,26 @@ const PAPER_META = {
     topics: ["ECR", "DynamoDB", "API Gateway", "CI/CD", "Monitoring", "AWS"],
     difficulty: "Medium",
   },
+  9: {
+    icon: "😍",
+    topics: ["ECR", "DynamoDB", "API Gateway", "CI/CD", "Monitoring", "AWS"],
+    difficulty: "Medium",
+  },
+  10: {
+    icon: "😍",
+    topics: ["ECR", "DynamoDB", "API Gateway", "CI/CD", "Monitoring", "AWS"],
+    difficulty: "Medium",
+  },
+  11: {
+    icon: "😍",
+    topics: ["ECR", "DynamoDB", "API Gateway", "CI/CD", "Monitoring", "AWS"],
+    difficulty: "Medium",
+  },
+  12: {
+    icon: "😍",
+    topics: ["ECR", "DynamoDB", "API Gateway", "CI/CD", "Monitoring", "AWS"],
+    difficulty: "Medium",
+  },
 };
 
 const DIFF_COLOR = {
