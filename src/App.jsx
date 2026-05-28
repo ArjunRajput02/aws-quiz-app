@@ -1,9 +1,10 @@
-import { useEffect, useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Header from "./components/Header.jsx";
 import PaperSelect from "./components/PaperSelect.jsx";
 import Quiz from "./components/Quiz.jsx";
 import NotesPage from "./components/NotesPage.jsx";
 import { ALL_PAPERS, totalPaper } from "./papers.js";
+import { useTheme } from "./components/ThemeContext.jsx";
 
 const UNLOCK_THRESHOLD = 0;
 const STORAGE_KEY = "dva_paper_scores";
@@ -119,20 +120,9 @@ function App() {
   const [mode, setMode] = useState("landing"); // 'landing' | 'notes' | 'quiz'
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [scores, setScores] = useState(loadScores);
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark",
-  );
+  const { theme, toggleTheme } = useTheme();
 
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [darkMode]);
-
+  const darkMode = theme === "dark";
   // ── NOTE: ALL tab-switch detection and abandon logic has been removed from
   // here. It now lives entirely inside Quiz.jsx, which handles 3 warnings
   // then abandons on the 4th switch — and correctly ignores tab switches
@@ -174,7 +164,7 @@ function App() {
         onBackToHome={handleBackToHome}
         onBackToPapers={selectedPaper ? handleBackToPapers : null}
         darkMode={darkMode}
-        onToggleTheme={() => setDarkMode((prev) => !prev)}
+        onToggleTheme={() => toggleTheme()}
       />
       <main>
         {mode === "landing" && <LandingPage onSelectMode={setMode} />}

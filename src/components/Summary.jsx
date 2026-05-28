@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTheme } from "./ThemeContext.jsx";
 
 const PASS_THRESHOLD = 72;
 
@@ -37,7 +38,10 @@ function ReviewItem({ answer, question, index }) {
   const userAnswerArr = Array.isArray(answer) ? answer : answer ? [answer] : [];
 
   return (
-    <li className={`review-item review-item--${status}`} style={{padding:"0px 24px"}}>
+    <li
+      className={`review-item review-item--${status}`}
+      style={{ padding: "0px 24px" }}
+    >
       {/* ── Header row ── */}
       <div className="review-item-header">
         <div className="review-item-meta">
@@ -140,9 +144,8 @@ export default function Summary({
   timeTaken,
 }) {
   const [filter, setFilter] = useState("all");
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark",
-  );
+  const { theme } = useTheme();
+  const darkMode = theme === "dark";
   const correct = userAnswers.filter(
     (answer, index) =>
       answer !== null && isAnswerCorrect(answer, questions[index]),
@@ -251,7 +254,12 @@ export default function Summary({
               )}
             </svg>
             <div className="summary-donut-center">
-              <span className="summary-donut-pct" style={darkMode?{color:"white"}:{}}>{scorePct}%</span>
+              <span
+                className="summary-donut-pct"
+                style={darkMode ? { color: "white" } : {}}
+              >
+                {scorePct}%
+              </span>
               <span className="summary-donut-lbl">score</span>
             </div>
           </div>
@@ -298,7 +306,7 @@ export default function Summary({
       </div>
 
       {/* ── Filter bar ── */}
-      <div className="review-filter-bar" style={{padding:"14px 0px"}}>
+      <div className="review-filter-bar" style={{ padding: "14px 0px" }}>
         <h3 className="review-heading">Review</h3>
         <div className="filter-tabs">
           {["all", "correct", "wrong", "skipped"].map((f) => (

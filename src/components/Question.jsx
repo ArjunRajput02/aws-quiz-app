@@ -1,5 +1,5 @@
-import { useState } from "react";
 import Answers from "./Answers.jsx";
+import { useTheme } from "./ThemeContext.jsx";
 
 export default function Question({
   index,
@@ -10,9 +10,8 @@ export default function Question({
   onSelectAnswer,
   onFlag,
 }) {
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark",
-  );
+  const { theme } = useTheme();
+  const darkMode = theme === "dark";
   return (
     <div id="question">
       <div className="question-nav-row">
@@ -33,7 +32,9 @@ export default function Question({
       {/* <h2 style={{ whiteSpace: "pre-line" }}>{question.text}</h2> */}
       <h2 style={darkMode ? { color: "white" } : {}}>
         {question.text.split("\n").map((line, i) => (
-          <p key={i} style={darkMode ? { color: "white" } : {}}>{line}</p>
+          <p key={i} style={darkMode ? { color: "white" } : {}}>
+            {line}
+          </p>
         ))}
       </h2>
 

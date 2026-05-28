@@ -79,12 +79,17 @@ export default function PaperSelect({
         </p>
         <div id="ps-stats">
           <div className="ps-stat">
-            <span className="ps-stat-num">6</span>
+            <span className="ps-stat-num">{totalPaper.length}</span>
             <span className="ps-stat-label">Papers</span>
           </div>
           <div className="ps-stat-divider" />
           <div className="ps-stat">
-            <span className="ps-stat-num">390</span>
+            <span className="ps-stat-num">
+              {totalPaper.reduce(
+                (sum, n) => sum + (ALL_PAPERS[n]?.length || 0),
+                0,
+              )}
+            </span>
             <span className="ps-stat-label">Questions</span>
           </div>
           <div className="ps-stat-divider" />
