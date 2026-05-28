@@ -99,7 +99,7 @@ function LandingPage({ onSelectMode }) {
               progress tracking across 6 papers.
             </p>
             <div className="mode-card-meta">
-              <span className="mode-meta-pill">📋 6 Papers</span>
+              <span className="mode-meta-pill">📋 {totalPaper.length} Papers</span>
               <span className="mode-meta-pill">⏱ 130 min each</span>
               <span className="mode-meta-pill">🏆 Score Tracking</span>
             </div>
