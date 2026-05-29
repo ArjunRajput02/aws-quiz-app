@@ -6,7 +6,12 @@ import NotesPage from "./components/NotesPage.jsx";
 import { ALL_PAPERS, totalPaper } from "./papers.js";
 import { useTheme } from "./components/ThemeContext.jsx";
 
-const UNLOCK_THRESHOLD = 80;
+const UNLOCK_THRESHOLD =
+  localStorage.getItem("UNLOCK_THRESHOLD") ??
+  (() => {
+    localStorage.setItem("UNLOCK_THRESHOLD", "80");
+    return "80";
+  })();
 const STORAGE_KEY = "dva_paper_scores";
 
 function loadScores() {
@@ -99,7 +104,9 @@ function LandingPage({ onSelectMode }) {
               progress tracking across 6 papers.
             </p>
             <div className="mode-card-meta">
-              <span className="mode-meta-pill">📋 {totalPaper.length} Papers</span>
+              <span className="mode-meta-pill">
+                📋 {totalPaper.length} Papers
+              </span>
               <span className="mode-meta-pill">⏱ 130 min each</span>
               <span className="mode-meta-pill">🏆 Score Tracking</span>
             </div>
