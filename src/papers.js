@@ -1171,12 +1171,8 @@ export const paper1 = [
   },
   {
     id: "s1q58",
-    text: "A Developer has been tasked by a client to create an application. The client has provided the following requirements for the application:",
+    text: "A Developer has been tasked by a client to create an application. The client has provided the following requirements for the application: \n1.Performance efficiency of seconds with up to a minute of latency \n \n2.Data storage requirements will be up to thousands of terabytes \n3.Per-message sizes may vary between 100 KB and 100 MB \n4.Data can be stored as key/value stores supporting eventual consistency What is the MOST cost-effective AWS service to meet these requirements?",
     answers: [
-      "Performance efficiency of seconds with up to a minute of latency",
-      "Data storage requirements will be up to thousands of terabytes",
-      "Per-message sizes may vary between 100 KB and 100 MB",
-      "Data can be stored as key/value stores supporting eventual consistency What is the MOST cost-effective AWS service to meet these requirements?",
       "Amazon DynamoDB",
       "Amazon S3",
       "Amazon RDS (with a MySQL engine)",
