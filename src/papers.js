@@ -11337,7 +11337,7 @@ export const paper8 = [
       "Perform DynamoDB read and write operations with ConsistentRead parameter set to true",
       "Complete both operations on Amazon RedShift in a single transaction block",
     ],
-    correctAnswerIndices: [0, 1],
+    correctAnswerIndices: [1, 2],
     isMultiSelect: true,
     explanation:
       "The requirement is atomicity (all-or-nothing updates across two users). This is supported by transactional systems such as DynamoDB transactions and relational databases like Amazon RDS. Both provide ACID guarantees, ensuring either both updates succeed or both are rolled back.",
