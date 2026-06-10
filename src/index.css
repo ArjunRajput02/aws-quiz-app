@@ -2011,3 +2011,305 @@ body.dark .mode-card--quiz .mode-meta-pill {
 body.dark .topic-card:hover {
   background: rgba(255, 255, 255, 0.04);
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   PDF Export Button
+══════════════════════════════════════════════════════════════════ */
+.btn-export-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s;
+}
+.btn-export-pdf:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+.btn-export-pdf:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+.pdf-btn-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pdf-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Domain Performance Section
+══════════════════════════════════════════════════════════════════ */
+#domain-summary {
+  margin: 0px 0 8px;
+}
+.domain-summary-heading {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 14px;
+}
+.domain-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+.domain-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.domain-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+}
+.domain-card--pass {
+  border-left: 4px solid #22c55e;
+}
+.domain-card--fail {
+  border-left: 4px solid #ef4444;
+}
+.domain-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.domain-card-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  margin-right: 10px;
+  line-height: 1.3;
+}
+.domain-card-pct {
+  font-size: 20px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.pct-pass {
+  color: #16a34a;
+}
+.pct-fail {
+  color: #dc2626;
+}
+.domain-progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.domain-progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fill-pass {
+  background: #22c55e;
+}
+.fill-fail {
+  background: #ef4444;
+}
+.domain-card-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.domain-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.ds-num {
+  font-size: 15px;
+  font-weight: 700;
+}
+.ds-total {
+  color: var(--primary);
+}
+.ds-correct {
+  color: #16a34a;
+}
+.ds-wrong {
+  color: #dc2626;
+}
+.ds-skipped {
+  color: #94a3b8;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   HTML question content styling
+══════════════════════════════════════════════════════════════════ */
+.question-html-content {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.question-html-content p {
+  margin: 0 0 8px;
+}
+.question-html-content pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 10px 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.question-html-content code {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Fira Mono", "Menlo", "Courier New", monospace;
+  font-size: 13px;
+}
+.question-html-content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+.question-html-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 13.5px;
+}
+.question-html-content th,
+.question-html-content td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  text-align: left;
+}
+.question-html-content th {
+  background: var(--surface);
+  font-weight: 700;
+}
+.question-html-content ul,
+.question-html-content ol {
+  margin: 6px 0;
+  padding-left: 22px;
+}
+.question-html-content li {
+  margin-bottom: 4px;
+}
+.question-html-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+body.dark .question-html-content code {
+  background: rgba(99, 179, 237, 0.1);
+  color: #63b3ed;
+}
+
+/* review html rendering */
+.review-q-html {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 6px 0 10px;
+}
+.review-q-html pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 6px 0;
+}
+.review-q-html code {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.review-q-html pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+.review-q-html table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12.5px;
+  margin: 6px 0;
+}
+.review-q-html th,
+.review-q-html td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+}
+.review-q-html th {
+  background: var(--surface);
+  font-weight: 700;
+}
+
+/* Domain badge in question navigator */
+.domain-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--surface);
+  padding: 2px 8px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  margin-left: 4px;
+}
+
+/* Domain badge in review items */
+.review-domain--topic {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  border-radius: 99px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+body.dark .review-domain--topic {
+  background: rgba(99, 179, 237, 0.12);
+  color: #63b3ed;
+}

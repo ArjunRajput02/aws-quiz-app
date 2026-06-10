@@ -1,6 +1,7 @@
 export const paper1 = [
   {
     id: "s1q1",
+    domain: "Deployment",
     text: "A Developer has used a third-party tool to build, bundle, and package a software package on-premises. The software package is stored in a local file system and must be deployed to Amazon EC2 instances. How can the application be deployed onto the EC2 instances?",
     answers: [
       "Upload the bundle to an Amazon S3 bucket and specify the S3 location when doing a deployment using AWS CodeDeploy.",
@@ -22,6 +23,7 @@ export const paper1 = [
   },
   {
     id: "s1q2",
+    domain: "Development with AWS Services",
     text: "A Developer is creating a serverless application that uses an Amazon DynamoDB table. The application must make idempotent, all-or-nothing operations for multiple groups of write actions. Which solution will meet these requirements?",
     answers: [
       "Update the items in the table using the BatchWriteltem operation and configure idempotency at the table level.",
@@ -43,6 +45,7 @@ export const paper1 = [
   },
   {
     id: "s1q3",
+    domain: "Development with AWS Services",
     text: "A company runs a legacy application that uses an XML-based SOAP interface. The company needs to expose the functionality of the service to external customers and plans to use Amazon API Gateway. How can a Developer configure the integration?",
     answers: [
       "Create a SOAP API using Amazon API Gateway. Transform the incoming JSON into a valid XML message for the SOAP interface using AWS Lambda.",
@@ -64,6 +67,7 @@ export const paper1 = [
   },
   {
     id: "s1q4",
+    domain: "Troubleshooting and Optimization",
     text: "An application serves customers in several different geographical regions. Information about the location users connect from is written to logs stored in Amazon CloudWatch Logs. The company needs to publish an Amazon CloudWatch custom metric that tracks connections for each location. Which approach will meet these requirements?",
     answers: [
       "Create a CloudWatch Logs Insights query to extract the location information from the logs and to create a custom metric with location as a dimension.",
@@ -85,6 +89,7 @@ export const paper1 = [
   },
   {
     id: "s1q5",
+    domain: "Deployment",
     text: "A Developer is creating a new web application that will be deployed using AWS Elastic Beanstalk from the AWS Management Console. The Developer is about to create a source bundle which will be uploaded using the console. Which of the following are valid requirements for creating the source bundle? (Select TWO.)",
     answers: [
       "Must include the cron.yaml file.",
@@ -108,6 +113,7 @@ export const paper1 = [
   },
   {
     id: "s1q6",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is writing code to run in a cron job on an Amazon EC2 instance that sends status information about the application to Amazon CloudWatch. Which method should the Developer use?",
     answers: [
       "Use the AWS CLI put-metric-alarm command.",
@@ -129,6 +135,7 @@ export const paper1 = [
   },
   {
     id: "s1q7",
+    domain: "Security",
     text: "A Developer is creating a web application that will be used by employees working from home. The company uses a SAML directory on-premises for storing user information. The Developer must integrate with the SAML directory and authorize each employee to access only their own data when using the application. Which approach should the Developer take?",
     answers: [
       "Create the application within an Amazon VPC and use a VPC endpoint with a trust policy to grant access to the employees.",
@@ -150,6 +157,7 @@ export const paper1 = [
   },
   {
     id: "s1q8",
+    domain: "Troubleshooting and Optimization",
     text: "A critical application runs on an Amazon EC2 instance. A Developer has configured a custom Amazon CloudWatch metric that monitors application availability with a data granularity of 1 second. The Developer must be notified within 30 seconds if the application experiences any issues. What should the Developer do to meet this requirement?",
     answers: [
       "Specify an Amazon SNS topic for alarms when issuing the put-metric-data AWS CLI command.",
@@ -171,6 +179,7 @@ export const paper1 = [
   },
   {
     id: "s1q9",
+    domain: "Troubleshooting and Optimization",
     text: "An application uses an Amazon DynamoDB table that is 50 GB in size and provisioned with 10,000 read capacity units (RCUs) per second. The table must be scanned during non-peak hours when normal traffic consumes around 5,000 RCUs. The Developer must scan the whole table in the shortest possible time whilst ensuring the normal workload is not affected. How would the Developer optimize this scan cost-effectively?",
     answers: [
       "Use sequential scans and apply a FilterExpression.",
@@ -192,6 +201,7 @@ export const paper1 = [
   },
   {
     id: "s1q10",
+    domain: "Security",
     text: "A company is deploying a static website hosted from an Amazon S3 bucket. The website must support encryption in-transit for website visitors. Which combination of actions must the Developer take to meet this requirement? (Select TWO.)",
     answers: [
       "Create an AWS WAF WebACL with a secure listener.",
@@ -215,6 +225,7 @@ export const paper1 = [
   },
   {
     id: "s1q11",
+    domain: "Development with AWS Services",
     text: "A developer is planning to use a Lambda function to process incoming requests from an Application Load Balancer (ALB). How can this be achieved?",
     answers: [
       "Create a target group and register the Lambda function using the AWS CLI",
@@ -236,6 +247,7 @@ export const paper1 = [
   },
   {
     id: "s1q12",
+    domain: "Troubleshooting and Optimization",
     text: "A developer is troubleshooting problems with a Lambda function that is invoked by Amazon SNS and repeatedly fails. How can the developer save discarded events for further processing?",
     answers: [
       "Enable CloudWatch Logs for the Lambda function",
@@ -257,6 +269,7 @@ export const paper1 = [
   },
   {
     id: "s1q13",
+    domain: "Security",
     text: "A company will be uploading several terabytes of data to Amazon S3. What is the SIMPLEST solution to ensure that the data is encrypted before it is sent to S3 and whilst in transit?",
     answers: [
       "Use client-side encryption with a KMS managed CMK and SSL",
@@ -278,6 +291,7 @@ export const paper1 = [
   },
   {
     id: "s1q14",
+    domain: "Development with AWS Services",
     text: "A company is setting up a Lambda function that will process events from a DynamoDB stream. The Lambda function has been created and a stream has been enabled. What else needs to be done for this solution to work?",
     answers: [
       "An alarm should be created in CloudWatch that sends a notification to Lambda when a new entry is added to the DynamoDB stream",
@@ -299,6 +313,7 @@ export const paper1 = [
   },
   {
     id: "s1q15",
+    domain: "Deployment",
     text: "A developer is preparing to deploy a Docker container to Amazon ECS using CodeDeploy. The developer has defined the deployment actions in a file. What should the developer name the file?",
     answers: ["buildspec.yml", "appspec.yml", "cron.yml", "appspec.json"],
     correctAnswerIndex: 1,
@@ -315,6 +330,7 @@ export const paper1 = [
   },
   {
     id: "s1q16",
+    domain: "Development with AWS Services",
     text: "A decoupled application is using an Amazon SQS queue. The processing layer that is retrieving messages from the queue is not able to keep up with the number of messages being placed in the queue. What is the FIRST step the developer should take to increase the number of messages the application receives?",
     answers: [
       "Use the API to update the WaitTimeSeconds parameter to a value other than 0",
@@ -336,6 +352,7 @@ export const paper1 = [
   },
   {
     id: "s1q17",
+    domain: "Troubleshooting and Optimization",
     text: "An application uses AWS Lambda which makes remote calls to several downstream services. A developer wishes to add data to custom subsegments in AWS X-Ray that can be used with filter expressions. Which type of data should be used?",
     answers: ["Metadata", "Annotations", "Trace ID", "Daemon"],
     correctAnswerIndex: 1,
@@ -352,6 +369,7 @@ export const paper1 = [
   },
   {
     id: "s1q18",
+    domain: "Development with AWS Services",
     text: "An application component writes thousands of item-level changes to a DynamoDB table per day. The developer requires that a record is maintained of the items before they were modified. What MUST the developer do to retain this information? (Select TWO.)",
     answers: [
       "Create a CloudWatch alarm that sends a notification when an item is modified",
@@ -375,6 +393,7 @@ export const paper1 = [
   },
   {
     id: "s1q19",
+    domain: "Deployment",
     text: "An X-Ray daemon is being used on an Amazon ECS cluster to assist with debugging stability issues. A developer requires more detailed timing information and data related to downstream calls to AWS services. What should the developer use to obtain this extra detail?",
     answers: ["Subsegments", "Annotations", "Metadata", "Filter expressions"],
     correctAnswerIndex: 0,
@@ -391,6 +410,7 @@ export const paper1 = [
   },
   {
     id: "s1q20",
+    domain: "Deployment",
     text: "A developer has deployed an application on an Amazon EC2 instance in a private subnet within a VPC. The subnet does not have Internet connectivity. The developer would like to write application logs to an Amazon S3 bucket. What MUST be configured to enable connectivity?",
     answers: [
       "An IAM role must be added to the instance that has permissions to write to the S3 bucket",
@@ -412,6 +432,7 @@ export const paper1 = [
   },
   {
     id: "s1q21",
+    domain: "Development with AWS Services",
     text: "A serverless application uses an Amazon API Gateway and AWS Lambda. The application processes data submitted in a form by users of the application and certain data must be stored and available to subsequent function calls. What is the BEST solution for storing this data?",
     answers: [
       "Store the data in an Amazon Kinesis Data Stream",
@@ -433,6 +454,7 @@ export const paper1 = [
   },
   {
     id: "s1q22",
+    domain: "Security",
     text: "A Development team need to push an update to an application that is running on AWS Elastic Beanstalk. The business SLA states that the application must maintain full performance capabilities during updates whilst minimizing cost. Which Elastic Beanstalk deployment policy should the development team select?",
     answers: [
       "Immutable",
@@ -454,6 +476,7 @@ export const paper1 = [
   },
   {
     id: "s1q23",
+    domain: "Security",
     text: "An organization developed an application that uses a set of APIs that are being served through Amazon API Gateway. The API calls must be authenticated based on OpenID identity providers such as Amazon, Google, or Facebook. The APIs should allow access based on a custom authorization model. Which is the simplest and MOST secure design to use to build an authentication and authorization model for the APIs?",
     answers: [
       "Use Amazon ElastiCache to store user credentials and pass them to the APIs for authentication and authorization",
@@ -475,6 +498,7 @@ export const paper1 = [
   },
   {
     id: "s1q24",
+    domain: "Deployment",
     text: "An AWS Lambda function has been packaged for deployment to multiple environments including development, test, and production. The Lambda function uses an Amazon RDS MySQL database for storing data. Each environment has a different RDS MySQL database. How can a Developer configure the Lambda function package to ensure the correct database connection string is used for each environment?",
     answers: [
       "Use a separate function for development and production",
@@ -496,6 +520,7 @@ export const paper1 = [
   },
   {
     id: "s1q25",
+    domain: "Deployment",
     text: "An application is being deployed on an Amazon EC2 instance running Linux. The EC2 instance will need to manage other AWS services. How can the EC2 instance be configured to make API calls to AWS service securely?",
     answers: [
       "Run the “aws configure” AWS CLI command and specify the access key ID and secret access key",
@@ -517,6 +542,7 @@ export const paper1 = [
   },
   {
     id: "s1q26",
+    domain: "Development with AWS Services",
     text: "A Developer is building an application that will store data relating to financial transactions in multiple DynamoDB tables. The Developer needs to ensure the transactions provide atomicity, isolation, and durability (ACID) and that changes are committed following an all-or nothing paradigm. What write API should be used for the DynamoDB table?",
     answers: [
       "Standard",
@@ -538,6 +564,7 @@ export const paper1 = [
   },
   {
     id: "s1q27",
+    domain: "Deployment",
     text: "A Developer will be launching several Docker containers on a new Amazon ECS cluster using the EC2 Launch Type. The containers will all run a web service on port 80. What is the EASIEST way the Developer can configure the task definition to ensure the web services run correctly and there are no port conflicts on the host instances?",
     answers: [
       "Specify port 80 for the container port and a unique port number for the host port",
@@ -559,6 +586,7 @@ export const paper1 = [
   },
   {
     id: "s1q28",
+    domain: "Development with AWS Services",
     text: "A Developer is designing a fault-tolerant application that will use Amazon EC2 instances and an Elastic Load Balancer. The Developer needs to ensure that if an EC2 instance fails session data is not lost. How can this be achieved?",
     answers: [
       "Enable Sticky Sessions on the Elastic Load Balancer",
@@ -580,6 +608,7 @@ export const paper1 = [
   },
   {
     id: "s1q29",
+    domain: "Deployment",
     text: "A CloudFormation stack needs to be deployed in several regions and requires a different Amazon Machine Image (AMI) in each region. Which AWS CloudFormation template key can be used to specify the correct AMI for each region?",
     answers: ["Outputs", "Parameters", "Resources", "Mappings"],
     correctAnswerIndex: 3,
@@ -596,6 +625,7 @@ export const paper1 = [
   },
   {
     id: "s1q30",
+    domain: "Deployment",
     text: "A company has an application that logs all information to Amazon S3. Whenever there is a new log file, an AWS Lambda function is invoked to process the log files. The code works, gathering all of the necessary information. However, when checking the Lambda function logs, duplicate entries with the same request ID are found. What is the BEST explanation for the duplicate entries?",
     answers: [
       "The S3 bucket name was specified incorrectly",
@@ -617,6 +647,7 @@ export const paper1 = [
   },
   {
     id: "s1q31",
+    domain: "Security",
     text: "An AWS Lambda function authenticates to an external web site using a regularly rotated user name and password. The credentials need to be stored securely and must not be stored in the function code. What combination of AWS services can be used to achieve this requirement? (Select TWO.)",
     answers: [
       "AWS Certificate Manager (ACM)",
@@ -640,6 +671,7 @@ export const paper1 = [
   },
   {
     id: "s1q32",
+    domain: "Deployment",
     text: "A Development team would use a GitHub repository and would like to migrate their application code to AWS CodeCommit. What needs to be created before they can migrate a cloned repository to CodeCommit over HTTPS?",
     answers: [
       "A GitHub secure authentication token",
@@ -661,6 +693,7 @@ export const paper1 = [
   },
   {
     id: "s1q33",
+    domain: "Development with AWS Services",
     text: "A company has a large Amazon DynamoDB table which they scan periodically so they can analyze several attributes. The scans are consuming a lot of provisioned throughput. What technique can a Developer use to minimize the impact of the scan on the table's provisioned throughput?",
     answers: [
       "Set a smaller page size for the scan",
@@ -682,6 +715,7 @@ export const paper1 = [
   },
   {
     id: "s1q34",
+    domain: "Deployment",
     text: "A Developer is deploying an application in a microservices architecture on Amazon ECS. The Developer needs to choose the best task placement strategy to MINIMIZE the number of instances that are used. Which task placement strategy should be used?",
     answers: ["spread", "random", "binpack", "weighted"],
     correctAnswerIndex: 2,
@@ -698,6 +732,7 @@ export const paper1 = [
   },
   {
     id: "s1q35",
+    domain: "Development with AWS Services",
     text: "A company has created a set of APIs using Amazon API Gateway and exposed them to partner companies. The APIs have caching enabled for all stages. The partners require a method of invalidating the cache that they can build into their applications. What can the partners use to invalidate the API cache?",
     answers: [
       "They can pass the HTTP header Cache-Control: max-age=0",
@@ -719,6 +754,7 @@ export const paper1 = [
   },
   {
     id: "s1q36",
+    domain: "Deployment",
     text: "A Developer is deploying an AWS Lambda update using AWS CodeDeploy. In the appspec.yaml file, which of the following is a valid structure for the order of hooks that should be specified?",
     answers: [
       "BeforeInstall > AfterInstall > AfterAllowTestTraffic > BeforeAllowTraffic > AfterAllowTraffic",
@@ -740,6 +776,7 @@ export const paper1 = [
   },
   {
     id: "s1q37",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer needs to scan a full DynamoDB 50GB table within non-peak hours. About half of the strongly consistent RCUs are typically used during non-peak hours and the scan duration must be minimized. How can the Developer optimize the scan execution time without impacting production workloads?",
     answers: [
       "Use sequential scans",
@@ -761,6 +798,7 @@ export const paper1 = [
   },
   {
     id: "s1q38",
+    domain: "Troubleshooting and Optimization",
     text: "A Development team is involved with migrating an on-premises MySQL database to Amazon RDS. The database usage is very read-heavy. The Development team wants re-factor the application code to achieve optimum read performance for queries. How can this objective be met?",
     answers: [
       "Add database retries to the code and vertically scale the Amazon RDS database",
@@ -782,6 +820,7 @@ export const paper1 = [
   },
   {
     id: "s1q39",
+    domain: "Development with AWS Services",
     text: "To reduce the cost of API actions performed on an Amazon SQS queue, a Developer has decided to implement long polling. Which of the following modifications should the Developer make to the API actions?",
     answers: [
       "Set the ReceiveMessage API with a WaitTimeSeconds of 20",
@@ -803,6 +842,7 @@ export const paper1 = [
   },
   {
     id: "s1q40",
+    domain: "Deployment",
     text: "A company is deploying an Amazon Kinesis Data Streams application that will collect streaming data from a gaming application. Consumers will run on Amazon EC2 instances. In this architecture, what can be deployed on consumers to act as an intermediary between the record processing logic and Kinesis Data Streams and instantiate a record processor for each shard?",
     answers: [
       "Amazon Kinesis API",
@@ -824,6 +864,7 @@ export const paper1 = [
   },
   {
     id: "s1q41",
+    domain: "Development with AWS Services",
     text: "A serverless application uses an AWS Lambda function to process Amazon S3 events. The Lambda function executes 20 times per second and takes 20 seconds to complete each execution. How many concurrent executions will the Lambda function require?",
     answers: ["5", "400", "40", "20"],
     correctAnswerIndex: 1,
@@ -840,6 +881,7 @@ export const paper1 = [
   },
   {
     id: "s1q42",
+    domain: "Deployment",
     text: "A Developer is setting up a code update to Amazon ECS using AWS CodeDeploy. The Developer needs to complete the code update quickly. Which of the following deployment types should the Developer use?",
     answers: ["In-place", "Canary", "Blue/green", "Linear"],
     correctAnswerIndex: 2,
@@ -856,6 +898,7 @@ export const paper1 = [
   },
   {
     id: "s1q43",
+    domain: "Troubleshooting and Optimization",
     text: "Change management procedures at an organization require that a log is kept recording activity within AWS accounts. The activity that must be recorded includes API activity related to creating, modifying or deleting AWS resources. Which AWS service should be used to record this information?",
     answers: [
       "Amazon CloudWatch",
@@ -877,6 +920,7 @@ export const paper1 = [
   },
   {
     id: "s1q44",
+    domain: "Security",
     text: "A company is deploying an on-premise application server that will connect to several AWS services. What is the BEST way to provide the application server with permissions to authenticate to AWS services?",
     answers: [
       "Create an IAM role with the necessary permissions and assign it to the application server",
@@ -898,6 +942,7 @@ export const paper1 = [
   },
   {
     id: "s1q45",
+    domain: "Development with AWS Services",
     text: "A Developer requires a multi-threaded in-memory cache to place in front of an Amazon RDS database. Which caching solution should the Developer choose?",
     answers: [
       "Amazon DynamoDB DAX",
@@ -919,6 +964,7 @@ export const paper1 = [
   },
   {
     id: "s1q46",
+    domain: "Development with AWS Services",
     text: "A Developer has recently created an application that uses an AWS Lambda function, an Amazon DynamoDB table, and also sends notifications using Amazon SNS. The application is not working as expected and the Developer needs to analyze what is happening across all components of the application. What is the BEST way to analyze the issue?",
     answers: [
       "Enable X-Ray tracing for the Lambda function",
@@ -940,6 +986,7 @@ export const paper1 = [
   },
   {
     id: "s1q47",
+    domain: "Security",
     text: "A company needs to store sensitive documents on Amazon S3. The documents should be encrypted in transit using SSL/TLS and then be encrypted for storage at the destination. The company do not want to manage any of the encryption infrastructure or customer master keys and require the most cost-effective solution. What is the MOST suitable option to encrypt the data?",
     answers: [
       "Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3)",
@@ -961,6 +1008,7 @@ export const paper1 = [
   },
   {
     id: "s1q48",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is building a three-tier web application that must be able to handle a minimum of 10,000 requests per minute. The requirements state that the web tier should be completely stateless while the application maintains session state data for users. How can the session state data be maintained externally, whilst keeping latency at the LOWEST possible value?",
     answers: [
       "Create an Amazon RedShift instance, then implement session handling at the application level to leverage a database inside the RedShift database instance for session data storage",
@@ -982,6 +1030,7 @@ export const paper1 = [
   },
   {
     id: "s1q49",
+    domain: "Deployment",
     text: "A Developer is writing an imaging microservice on AWS Lambda. The service is dependent on several libraries that are not available in the Lambda runtime environment. Which strategy should the Developer follow to create the Lambda deployment package?",
     answers: [
       "Create a ZIP file with the source code and all dependent libraries",
@@ -1003,6 +1052,7 @@ export const paper1 = [
   },
   {
     id: "s1q50",
+    domain: "Development with AWS Services",
     text: "An e-commerce web application that shares session state on-premises is being migrated to AWS. The application must be fault tolerant, natively highly scalable, and any service interruption should not affect the user experience. What is the best option to store the session state?",
     answers: [
       "Store the session state in Amazon ElastiCache",
@@ -1024,6 +1074,7 @@ export const paper1 = [
   },
   {
     id: "s1q51",
+    domain: "Development with AWS Services",
     text: "A Developer is writing a serverless application that will process data uploaded to a file share. The Developer has created an AWS Lambda function and requires the function to be invoked every 15 minutes to process the data. What is an automated and serverless way to trigger the function?",
     answers: [
       "Deploy an Amazon EC2 instance based on Linux, and edit it’s /etc/crontab file by adding a command to periodically invoke the Lambda function",
@@ -1045,6 +1096,7 @@ export const paper1 = [
   },
   {
     id: "s1q52",
+    domain: "Deployment",
     text: "A Developer attempted to run an AWS CodeBuild project, and received an error. The error stated that the length of all environment variables exceeds the limit for the combined maximum of characters. What is the recommended solution?",
     answers: [
       "Add the export LC_ALL=”en_US.utf8” command to the pre_build section to ensure POSIX localization",
@@ -1066,6 +1118,7 @@ export const paper1 = [
   },
   {
     id: "s1q53",
+    domain: "Deployment",
     text: "A Development team wants to run their container workloads on Amazon ECS. Each application container needs to share data with another container to collect logs and metrics. What should the Development team do to meet these requirements?",
     answers: [
       "Create two pod specifications. Make one to include the application container and the other to include the other container. Link the two pods together",
@@ -1087,6 +1140,7 @@ export const paper1 = [
   },
   {
     id: "s1q54",
+    domain: "Security",
     text: "An application deployed on AWS Elastic Beanstalk experienced increased error rates during deployments of new application versions, resulting in service degradation for users. The Development team believes that this is because of the reduction in capacity during the deployment steps. The team would like to change the deployment policy configuration of the environment to an option that maintains full capacity during deployment while using the existing instances. Which deployment policy will meet these requirements while using the existing instances?",
     answers: [
       "All at once",
@@ -1108,6 +1162,7 @@ export const paper1 = [
   },
   {
     id: "s1q55",
+    domain: "Deployment",
     text: "A company has implemented AWS CodePipeline to automate its release pipelines. The Development team is writing an AWS Lambda function that will send notifications for state changes of each of the actions in the stages. Which steps must be taken to associate the Lambda function with the event source?",
     answers: [
       "Create a trigger that invokes the Lambda function from the Lambda console by selecting CodePipeline as the event source",
@@ -1129,6 +1184,7 @@ export const paper1 = [
   },
   {
     id: "s1q56",
+    domain: "Deployment",
     text: "A Developer has made an update to an application. The application serves users around the world and uses Amazon CloudFront for caching content closer to users. It has been reported that after deploying the application updates, users are not able to see the latest changes. How can the Developer resolve this issue?",
     answers: [
       "Remove the origin from the CloudFront configuration and add it again",
@@ -1150,6 +1206,7 @@ export const paper1 = [
   },
   {
     id: "s1q57",
+    domain: "Deployment",
     text: "A company has three different environments: Development, QA, and Production. The company wants to deploy its code first in the Development environment, then QA, and then Production. Which AWS service can be used to meet this requirement?",
     answers: [
       "Use AWS CodeCommit to create multiple repositories to deploy the application",
@@ -1171,6 +1228,7 @@ export const paper1 = [
   },
   {
     id: "s1q58",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer has been tasked by a client to create an application. The client has provided the following requirements for the application: \n1.Performance efficiency of seconds with up to a minute of latency \n \n2.Data storage requirements will be up to thousands of terabytes \n3.Per-message sizes may vary between 100 KB and 100 MB \n4.Data can be stored as key/value stores supporting eventual consistency What is the MOST cost-effective AWS service to meet these requirements?",
     answers: [
       "Amazon DynamoDB",
@@ -1196,6 +1254,7 @@ export const paper1 = [
   },
   {
     id: "s1q59",
+    domain: "Development with AWS Services",
     text: "An application on-premises uses Linux servers and a relational database using PostgreSQL. The company will be migrating the application to AWS and require a managed service that will take care of capacity provisioning, load balancing, and auto-scaling. Which combination of services should the Developer use? (Select TWO.)",
     answers: [
       "AWS Elastic Beanstalk",
@@ -1219,6 +1278,7 @@ export const paper1 = [
   },
   {
     id: "s1q60",
+    domain: "Deployment",
     text: "A company runs many microservices applications that use Docker containers. The company are planning to migrate the containers to Amazon ECS. The workloads are highly variable and therefore the company prefers to be charged per running task. Which solution is the BEST fit for the company’s requirements?",
     answers: [
       "Amazon ECS with the EC2 launch type",
@@ -1240,6 +1300,7 @@ export const paper1 = [
   },
   {
     id: "s1q61",
+    domain: "Development with AWS Services",
     text: "A team of Developers require read-only access to an Amazon DynamoDB table. The Developers have been added to a group. What should an administrator do to provide the team with access whilst following the principal of least privilege?",
     answers: [
       "Assign the AmazonDynamoDBReadOnlyAccess AWS managed policy to the group",
@@ -1261,6 +1322,7 @@ export const paper1 = [
   },
   {
     id: "s1q62",
+    domain: "Development with AWS Services",
     text: "An application needs to generate SMS text messages and emails for a large number of subscribers. Which AWS service can be used to send these messages to customers?",
     answers: ["Amazon SES", "Amazon SQS", "Amazon SWF", "Amazon SNS"],
     correctAnswerIndex: 3,
@@ -1277,6 +1339,7 @@ export const paper1 = [
   },
   {
     id: "s1q63",
+    domain: "Deployment",
     text: "A website is deployed in several AWS regions. A Developer needs to direct global users to the website that provides the best performance. How can the Developer achieve this?",
     answers: [
       "Create Alias records in AWS Route 53 and direct the traffic to an Elastic Load Balancer",
@@ -1319,6 +1382,7 @@ export const paper1 = [
   },
   {
     id: "s1q65",
+    domain: "Troubleshooting and Optimization",
     text: "Users of an application using Amazon API Gateway, AWS Lambda and Amazon DynamoDB have reported errors when using the application. Which metrics should a Developer monitor in Amazon CloudWatch to determine the number of client-side and server-side errors?",
     answers: [
       "4XXError and 5XXError",
@@ -1343,6 +1407,7 @@ export const paper1 = [
 export const paper2 = [
   {
     id: "s2q1",
+    domain: "Security",
     text: "A team of Developers are working on a shared project and need to be able to collaborate on code. The shared application code must be encrypted at rest, stored on a highly available and durable architecture, and support multiple versions and batch change tracking. Which AWS service should the Developer use?",
     answers: ["AWS CodeBuild", "Amazon S3", "AWS CodeCommit", "AWS Cloud9"],
     correctAnswerIndex: 2,
@@ -1359,6 +1424,7 @@ export const paper2 = [
   },
   {
     id: "s2q2",
+    domain: "Security",
     text: "A Developer is creating a serverless application that will process sensitive data. The AWS Lambda function must encrypt all data that is written to /tmp storage at rest. How should the Developer encrypt this data?",
     answers: [
       "Configure Lambda to use an AWS KMS customer managed customer master key (CMK). Use the CMK to generate a data key and encrypt all data prior to writing to /tmp storage.",
@@ -1380,6 +1446,7 @@ export const paper2 = [
   },
   {
     id: "s2q3",
+    domain: "Security",
     text: "A serverless application uses an IAM role to authenticate and authorize access to an Amazon DynamoDB table. A Developer is troubleshooting access issues affecting the application. The Developer has access to the IAM role that the application is using. Which of the following commands will help the Developer to test the role permissions using the AWS CLI?",
     answers: [
       "aws sts get-session-token",
@@ -1401,6 +1468,7 @@ export const paper2 = [
   },
   {
     id: "s2q4",
+    domain: "Development with AWS Services",
     text: "An application runs on a fleet of Amazon EC2 instances in an Auto Scaling group. The application stores data in an Amazon DynamoDB table and all instances make updates to the table. When querying data, EC2 instances sometimes retrieve stale data. The Developer needs to update the application to ensure the most up-to-date data is retrieved for all queries. How can the Developer accomplish this?",
     answers: [
       "Set the ConsistentRead parameter to true when calling GetItem.",
@@ -1422,6 +1490,7 @@ export const paper2 = [
   },
   {
     id: "s2q5",
+    domain: "Deployment",
     text: "A Developer is deploying an application using Docker containers running on the Amazon Elastic Container Service (ECS). The Developer is testing application latency and wants to capture trace information between the microservices. Which solution will meet these requirements?",
     answers: [
       "Install the Amazon CloudWatch agent on the container image. Use the CloudWatch SDK to publish custom metrics from each of the microservices.",
@@ -1443,6 +1512,7 @@ export const paper2 = [
   },
   {
     id: "s2q6",
+    domain: "Development with AWS Services",
     text: "A Developer is building a WebSocket API using Amazon API Gateway. The payload sent to this API is JSON that includes an action key which can have multiple values. The Developer must integrate with different routes based on the value of the action key of the incoming JSON payload. How can the Developer accomplish this task with the LEAST amount of configuration?",
     answers: [
       "Create a separate stage for each possible value of the action key.",
@@ -1464,6 +1534,7 @@ export const paper2 = [
   },
   {
     id: "s2q7",
+    domain: "Security",
     text: "A company uses Amazon DynamoDB to store sensitive data that must be encrypted. The company security policy mandates that data must be encrypted before it is submitted to DynamoDB How can a Developer meet these requirements?",
     answers: [
       "Use the DynamoDB Encryption Client to enable end-to-end protection using client-side encryption.",
@@ -1485,6 +1556,7 @@ export const paper2 = [
   },
   {
     id: "s2q8",
+    domain: "Security",
     text: "A company has deployed a REST API using Amazon API Gateway with a Lambda authorizer. The company needs to log who has accessed the API and how the caller accessed the API. They also require logs that include errors and execution traces for the Lambda authorizer. Which combination of actions should the Developer take to meet these requirements? (Select TWO.)",
     answers: [
       "Enable API Gateway execution logging.",
@@ -1508,6 +1580,7 @@ export const paper2 = [
   },
   {
     id: "s2q9",
+    domain: "Troubleshooting and Optimization",
     text: "A company runs a popular website behind an Amazon CloudFront distribution that uses an Application Load Balancer as the origin. The Developer wants to set up custom HTTP responses to 404 errors for content that has been removed from the origin that redirects the users to another page. The Developer wants to use an AWS Lambda@Edge function that is associated with the current CloudFront distribution to accomplish this goal. The solution must use a minimum amount of resources. Which CloudFront event type should the Developer use to invoke the Lambda@Edge function that contains the redirect logic?",
     answers: [
       "Viewer request",
@@ -1529,6 +1602,7 @@ export const paper2 = [
   },
   {
     id: "s2q10",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is creating a serverless application. The application looks up information about a customer using a separate Lambda function for each item such as address and phone number. The Developer has created branches in AWS Step Functions for each lookup function. How can the Developer optimize the performance, so the lookups complete faster?",
     answers: [
       "Use a Parallel state to iterate over all the branches parallel.",
@@ -1550,6 +1624,7 @@ export const paper2 = [
   },
   {
     id: "s2q11",
+    domain: "Deployment",
     text: "A CloudFormation template is going to be used by a global team to deploy infrastructure in several regions around the world. Which section of the template file can be used to set values based on a region?",
     answers: ["Metadata", "Parameters", "Conditions", "Mappings"],
     correctAnswerIndex: 3,
@@ -1566,6 +1641,7 @@ export const paper2 = [
   },
   {
     id: "s2q12",
+    domain: "Troubleshooting and Optimization",
     text: "An application searches a DynamoDB table to return items based on primary key attributes. A developer noticed some ProvisionedThroughputExceeded exceptions being generated by DynamoDB. How can the application be optimized to reduce the load on DynamoDB and use the LEAST amount of RCU?",
     answers: [
       "Modify the application to issue query API calls with eventual consistency reads",
@@ -1587,6 +1663,7 @@ export const paper2 = [
   },
   {
     id: "s2q13",
+    domain: "Development with AWS Services",
     text: "A developer needs use the attribute of an Amazon S3 object that uniquely identifies the object in a bucket. Which of the following represents an Object Key?",
     answers: [
       "s3://dctlabs/Development/Projects.xls",
@@ -1608,6 +1685,7 @@ export const paper2 = [
   },
   {
     id: "s2q14",
+    domain: "Development with AWS Services",
     text: "A developer has created an Amazon API Gateway with caching enabled in front of AWS Lambda. For some requests, it is necessary to ensure the latest data is received from the endpoint. How can the developer ensure the data is not stale?",
     answers: [
       "Send requests with the Cache-Control: max-age=0 header",
@@ -1629,6 +1707,7 @@ export const paper2 = [
   },
   {
     id: "s2q15",
+    domain: "Deployment",
     text: "A developer needs to add sign-up and sign-in capabilities for a mobile app. The solution should integrate with social identity providers (IdPs) and SAML IdPs. Which service should the developer use?",
     answers: [
       "AWS Cognito user pool",
@@ -1650,6 +1729,7 @@ export const paper2 = [
   },
   {
     id: "s2q16",
+    domain: "Security",
     text: "An application is deployed using AWS Elastic Beanstalk and uses a Classic Load Balancer (CLB). A developer is performing a blue/green migration to change to an Application Load Balancer (ALB). After deployment, the developer has noticed that customers connecting to the ALB need to re-authenticate every time they connect. Normally they would only authenticate once and then be able to reconnect without re-authenticating for several hours. How can the developer resolve this issue?",
     answers: [
       "Enable IAM authentication on the ALBs listener",
@@ -1671,6 +1751,7 @@ export const paper2 = [
   },
   {
     id: "s2q17",
+    domain: "Development with AWS Services",
     text: "A DynamoDB table is being used to store session information for users of an online game. A developer has noticed that the table size has increased considerably and much of the data is not required after a gaming session is completed. What is the MOST cost-effective approach to reducing the size of the table?",
     answers: [
       "Use the batch-write-item API to delete the data",
@@ -1692,6 +1773,7 @@ export const paper2 = [
   },
   {
     id: "s2q18",
+    domain: "Security",
     text: "A developer created an operational dashboard for a serverless application using Amazon API Gateway, AWS Lambda, Amazon S3, and Amazon DynamoDB. Users will connect to the dashboard from a variety of mobile applications, desktops and tablets. The developer needs an authentication mechanism that can allow users to sign-in and will remember the devices users sign in from and suppress the second factor of authentication for remembered devices. Which AWS service should the developer use to support this scenario?",
     answers: [
       "Amazon Cognito",
@@ -1713,6 +1795,7 @@ export const paper2 = [
   },
   {
     id: "s2q19",
+    domain: "Development with AWS Services",
     text: "A developer is designing a web application that will run on Amazon EC2 Linux instances using an Auto Scaling Group. The application should scale based on a threshold for the number of users concurrently using the application. How should the Auto Scaling Group be configured to scale out?",
     answers: [
       "Create a custom Amazon CloudWatch metric for concurrent users",
@@ -1734,6 +1817,7 @@ export const paper2 = [
   },
   {
     id: "s2q20",
+    domain: "Deployment",
     text: "A Developer is creating an application and would like add AWS X-Ray to trace user requests end-to-end through the software stack. The Developer has implemented the changes and tested the application and the traces are successfully sent to X-Ray. The Developer then deployed the application on an Amazon EC2 instance, and noticed that the traces are not being sent to X-Ray. What is the most likely cause of this issue? (Select TWO.)",
     answers: [
       "The X-Ray API is not installed on the EC2 instance",
@@ -1757,6 +1841,7 @@ export const paper2 = [
   },
   {
     id: "s2q21",
+    domain: "Security",
     text: "A Developer needs to manage AWS services from a local development server using the AWS CLI. How can the Developer ensure that the CLI uses their IAM permissions?",
     answers: [
       "Create an IAM Role with the required permissions and attach it to the local server’s instance profile",
@@ -1778,6 +1863,7 @@ export const paper2 = [
   },
   {
     id: "s2q22",
+    domain: "Development with AWS Services",
     text: "A Developer is creating an application that will process some data and generate an image file from it. The application will use an AWS Lambda function which will require 150 MB of temporary storage while executing. The temporary files will not be needed after the function execution is completed. What is the best location for the Developer to store the files?",
     answers: [
       "Store the files in Amazon S3 and use a lifecycle policy to delete the files automatically",
@@ -1799,6 +1885,7 @@ export const paper2 = [
   },
   {
     id: "s2q23",
+    domain: "Deployment",
     text: "AWS CodeBuild builds code for an application, creates the Docker image, pushes the image to Amazon Elastic Container Registry (Amazon ECR), and tags the image with a unique identifier. If the Developers already have AWS CLI configured on their workstations, how can the Docker images be pulled to the workstations?",
     answers: [
       "Run the following: docker pull REPOSITORY URI : TAG",
@@ -1820,6 +1907,7 @@ export const paper2 = [
   },
   {
     id: "s2q24",
+    domain: "Troubleshooting and Optimization",
     text: "A company recently migrated a multi-tier application to AWS. The web tier runs on an Auto Scaling group of Amazon EC2 instances and the database tier uses Amazon DynamoDB. The database tier requires extremely high performance and most requests are repeated read requests. What service can be used to scale the database tier for BEST performance?",
     answers: [
       "Amazon CloudFront",
@@ -1841,6 +1929,7 @@ export const paper2 = [
   },
   {
     id: "s2q25",
+    domain: "Development with AWS Services",
     text: "A company runs multiple microservices that each use their own Amazon DynamoDB table. The “customers” microservice needs data that originates in the “orders” microservice. What approach represents the SIMPLEST method for the “customers” table to get near real-time updates from the “orders” table?",
     answers: [
       "Enable Amazon DynamoDB streams on the “orders” table, configure the “customers” microservice to read records from the stream",
@@ -1862,6 +1951,7 @@ export const paper2 = [
   },
   {
     id: "s2q26",
+    domain: "Deployment",
     text: "A company manages a web application that is deployed on AWS Elastic Beanstalk. A Developer has been instructed to update to a new version of the application code. There is no tolerance for downtime if the update fails and rollback should be fast. What is the SAFEST deployment method to use?",
     answers: [
       "All at once",
@@ -1883,6 +1973,7 @@ export const paper2 = [
   },
   {
     id: "s2q27",
+    domain: "Development with AWS Services",
     text: "A Lambda function is taking a long time to complete. The Developer has discovered that inadequate compute capacity is being allocated to the function. How can the Developer ensure that more compute capacity is allocated to the function?",
     answers: [
       "Allocate more memory to the function",
@@ -1904,6 +1995,7 @@ export const paper2 = [
   },
   {
     id: "s2q28",
+    domain: "Deployment",
     text: "A Developer is configuring an Amazon ECS Service with Auto Scaling. The tasks should scale based on user load in the previous 20 seconds. How can the Developer enable the scaling?",
     answers: [
       "Create a high-resolution custom Amazon CloudWatch metric for user activity data, then publish data every 10 seconds",
@@ -1925,6 +2017,7 @@ export const paper2 = [
   },
   {
     id: "s2q29",
+    domain: "Security",
     text: "An application exports documents to an Amazon S3 bucket. The data must be encrypted at rest and company policy mandates that encryption keys must be rotated annually. How can this be achieved automatically and with the LEAST effort?",
     answers: [
       "Use AWS KMS keys with automatic rotation enabled",
@@ -1946,6 +2039,7 @@ export const paper2 = [
   },
   {
     id: "s2q30",
+    domain: "Deployment",
     text: "A Development team are currently creating a new application that uses a microservices design pattern and runs on Docker containers. The team would like to run the platform on AWS using a managed platform. They want minimize management overhead for the platform. Which service should the Development team use?",
     answers: [
       "Amazon ECS with EC2 launch type",
@@ -1967,6 +2061,7 @@ export const paper2 = [
   },
   {
     id: "s2q31",
+    domain: "Development with AWS Services",
     text: "A company is using Amazon API Gateway to manage access to a set of microservices implemented as AWS Lambda functions. The company has made some minor changes to one of the APIs. The company wishes to give existing customers using the API up to 6 months to migrate from version 1 to version 2. What approach should a Developer use to implement the change?",
     answers: [
       "Update the underlying Lambda function and provide clients with the new Lambda invocation URL",
@@ -1982,6 +2077,7 @@ export const paper2 = [
   },
   {
     id: "s2q32",
+    domain: "Security",
     text: "A Developer has completed some code updates and needs to deploy the updates to an Amazon Elastic Beanstalk environment. The update must be deployed in the fastest possible time and application downtime is acceptable. Which deployment policy should the Developer choose?",
     answers: [
       "All at once",
@@ -2003,6 +2099,7 @@ export const paper2 = [
   },
   {
     id: "s2q33",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is creating a DynamoDB table for storing transaction logs. The table has 10 write capacity units (WCUs). The Developer needs to configure the read capacity units (RCUs) for the table in order to MAXIMIZE the number of requests allowed per second. Which of the following configurations should the Developer use?",
     answers: [
       "Eventually consistent reads of 5 RCUs reading items that are 4 KB in size",
@@ -2024,6 +2121,7 @@ export const paper2 = [
   },
   {
     id: "s2q34",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is attempting to call the Amazon CloudWatch API and is receiving HTTP 400: ThrottlingException errors intermittently. When a call fails, no data is retrieved. What best practice should the Developer first attempt to resolve this issue?",
     answers: [
       "Contact AWS Support for a limit increase",
@@ -2045,6 +2143,7 @@ export const paper2 = [
   },
   {
     id: "s2q35",
+    domain: "Deployment",
     text: "A Developer is using AWS SAM to create a template for deploying a serverless application. The Developer plans to leverage an application from the AWS Serverless Application Repository in the template as a nested application. Which resource type should the Developer specify?",
     answers: [
       "AWS::Serverless::Application",
@@ -2066,6 +2165,7 @@ export const paper2 = [
   },
   {
     id: "s2q36",
+    domain: "Development with AWS Services",
     text: "A Developer needs to be notified by email for all new object creation events in a specific Amazon S3 bucket. Amazon SNS will be used for sending the messages. How can the Developer enable these notifications?",
     answers: [
       "Create an event notification for all s3:ObjectCreated:Put API calls",
@@ -2087,6 +2187,7 @@ export const paper2 = [
   },
   {
     id: "s2q37",
+    domain: "Deployment",
     text: "An application will be hosted on the AWS Cloud. Developers will be using an Agile software development methodology with regular updates deployed through a continuous integration and delivery (CI/CD) model. Which AWS service can assist the Developers with automating the build, test, and deploy phases of the release process every time there is a code change?",
     answers: [
       "AWS CodeBuild",
@@ -2108,6 +2209,7 @@ export const paper2 = [
   },
   {
     id: "s2q38",
+    domain: "Deployment",
     text: "A Developer is creating a design for an application that will include Docker containers on Amazon ECS with the EC2 launch type. The Developer needs to control the placement of tasks onto groups of container instances organized by availability zone and instance type. Which Amazon ECS feature provides expressions that can be used to group container instances by the relevant attributes?",
     answers: [
       "Cluster Query Language",
@@ -2129,6 +2231,7 @@ export const paper2 = [
   },
   {
     id: "s2q39",
+    domain: "Security",
     text: "An organization has an account for each environment: Production, Testing, Development. A Developer with an IAM user in the Development account needs to launch resources in the Production and Testing accounts. What is the MOST efficient way to provide access?",
     answers: [
       "Create a role with the required permissions in the Production and Testing accounts and have the Developer assume that role",
@@ -2150,6 +2253,7 @@ export const paper2 = [
   },
   {
     id: "s2q40",
+    domain: "Security",
     text: "An application running on Amazon EC2 generates a large number of small files (1KB each) containing personally identifiable information that must be converted to ciphertext. The data will be stored on a proprietary network-attached file system. What is the SAFEST way to encrypt the data using AWS KMS?",
     answers: [
       "Create a data encryption key from a customer master key and encrypt the data with the data encryption key",
@@ -2171,6 +2275,7 @@ export const paper2 = [
   },
   {
     id: "s2q41",
+    domain: "Deployment",
     text: "A new application will be deployed using AWS CodeDeploy to Amazon Elastic Container Service (ECS). What must be supplied to CodeDeploy to specify the ECS service to deploy?",
     answers: [
       "The AppSpec file",
@@ -2192,6 +2297,7 @@ export const paper2 = [
   },
   {
     id: "s2q42",
+    domain: "Development with AWS Services",
     text: "An application requires an in-memory caching engine. The cache should provide high availability as repopulating data is expensive. How can this requirement be met?",
     answers: [
       "Use Amazon ElastiCache Redis with replicas",
@@ -2213,6 +2319,7 @@ export const paper2 = [
   },
   {
     id: "s2q43",
+    domain: "Development with AWS Services",
     text: "A new application will be hosted on the domain name dctlabs.com using an Amazon API Gateway REST API front end. The Developer needs to configure the API with a path to dctlabs.com/products that will be accessed using the HTTP GET verb. How MUST the Developer configure the API? (Select TWO.)",
     answers: [
       "Create a /products method",
@@ -2236,6 +2343,7 @@ export const paper2 = [
   },
   {
     id: "s2q44",
+    domain: "Deployment",
     text: "An application is hosted in AWS Elastic Beanstalk and is connected to a database running on Amazon RDS MySQL. A Developer needs to instrument the application to trace database queries and calls to downstream services using AWS X-Ray. How can the Developer enable tracing for the application?",
     answers: [
       "Enable active tracing in the Elastic Beanstalk console",
@@ -2257,6 +2365,7 @@ export const paper2 = [
   },
   {
     id: "s2q45",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer implemented a static website hosted in Amazon S3 that makes web service requests hosted in Amazon API Gateway and AWS Lambda. The site is showing an error that reads: “No ‘Access-Control-Allow-Origin’ header is present on the requested resource. Origin ‘null’ is therefore not allowed access.” What should the Developer do to resolve this issue?",
     answers: [
       "Enable cross-origin resource sharing (CORS) on the S3 bucket",
@@ -2278,6 +2387,7 @@ export const paper2 = [
   },
   {
     id: "s2q46",
+    domain: "Development with AWS Services",
     text: "A company runs an e-commerce website that uses Amazon DynamoDB where pricing for items is dynamically updated in real time. At any given time, multiple updates may occur simultaneously for pricing information on a particular product. This is causing the original editor’s changes to be overwritten without a proper review process. Which DynamoDB write option should be selected to prevent this overwriting?",
     answers: [
       "Concurrent writes",
@@ -2299,6 +2409,7 @@ export const paper2 = [
   },
   {
     id: "s2q47",
+    domain: "Troubleshooting and Optimization",
     text: "A company is using Amazon RDS MySQL instances for its application database tier and apache Tomcat servers for its web tier. Most of the database queries from web applications are repeated read requests. A Developer plans to add an in-memory store to improve performance for repeated read requests. Which AWS service would BEST fit these requirements?",
     answers: [
       "Amazon RDS Multi-AZ",
@@ -2320,6 +2431,7 @@ export const paper2 = [
   },
   {
     id: "s2q48",
+    domain: "Development with AWS Services",
     text: "An application that runs on an Amazon EC2 instance needs to access and make API calls to multiple AWS services. What is the MOST secure way to provide access to the AWS services with MINIMAL management overhead?",
     answers: [
       "Use AWS KMS to store and retrieve credentials",
@@ -2341,6 +2453,7 @@ export const paper2 = [
   },
   {
     id: "s2q49",
+    domain: "Troubleshooting and Optimization",
     text: "A company maintains a REST API service using Amazon API Gateway with native API key validation. The company recently launched a new registration page, which allows users to sign up for the service. The registration page creates a new API key using CreateApiKey and sends the new key to the user. When the user attempts to call the API using this key, the user receives a 403 Forbidden error. Existing users are unaffected and can still call the API. What code updates will grant these new users’ access to the API?",
     answers: [
       "The createDeployment method must be called so the API can be redeployed to include the newly created API key",
@@ -2362,6 +2475,7 @@ export const paper2 = [
   },
   {
     id: "s2q50",
+    domain: "Deployment",
     text: "A Developer has deployed an application that runs on an Auto Scaling group of Amazon EC2 instances. The application data is stored in an Amazon DynamoDB table and records are constantly updated by all instances. An instance sometimes retrieves old data. The Developer wants to correct this by making sure the reads are strongly consistent. How can the Developer accomplish this?",
     answers: [
       "Set ConsistentRead to true when calling GetItem",
@@ -2383,6 +2497,7 @@ export const paper2 = [
   },
   {
     id: "s2q51",
+    domain: "Development with AWS Services",
     text: "A Developer created a new AWS account and must create a scalable AWS Lambda function that meets the following requirements for concurrent execution:",
     answers: [
       "Average execution time of 100 seconds",
@@ -2408,6 +2523,7 @@ export const paper2 = [
   },
   {
     id: "s2q52",
+    domain: "Security",
     text: "A company is developing a new online game that will run on top of Amazon ECS. Four distinct Amazon ECS services will be part of the architecture, each requiring specific permissions to various AWS services. The company wants to optimize the use of the underlying Amazon EC2 instances by bin packing the containers based on memory reservation. Which configuration would allow the Development team to meet these requirements MOST securely?",
     answers: [
       "Create a new Identity and Access Management (IAM) instance profile containing the required permissions for the various ECS services, then associate that instance role with the underlying EC2 instances",
@@ -2429,6 +2545,7 @@ export const paper2 = [
   },
   {
     id: "s2q53",
+    domain: "Security",
     text: "A utilities company needs to ensure that documents uploaded by customers through a web portal are securely stored in Amazon S3 with encryption at rest. The company does not want to manage the security infrastructure in-house. However, the company still needs maintain control over its encryption keys due to industry regulations. Which encryption strategy should a Developer use to meet these requirements?",
     answers: [
       "Server-side encryption with Amazon S3 managed keys (SSE-S3)",
@@ -2450,6 +2567,7 @@ export const paper2 = [
   },
   {
     id: "s2q54",
+    domain: "Development with AWS Services",
     text: "A Developer is creating a REST service using Amazon API Gateway with AWS Lambda integration. The service adds data to a spreadsheet and the data is sent as query string parameters in the method request. How should the Developer convert the query string parameters to arguments for the Lambda function?",
     answers: [
       "Enable request validation",
@@ -2471,6 +2589,7 @@ export const paper2 = [
   },
   {
     id: "s2q55",
+    domain: "Deployment",
     text: "A Development team would like to migrate their existing application code from a GitHub repository to AWS CodeCommit. What needs to be created before they can migrate a cloned repository to CodeCommit over HTTPS?",
     answers: [
       "A GitHub secure authentication token",
@@ -2492,6 +2611,7 @@ export const paper2 = [
   },
   {
     id: "s2q56",
+    domain: "Deployment",
     text: "A team of Developers need to deploy a website for a development environment. The team do not want to manage the infrastructure and just need to upload Node.js code to the instances. Which AWS service should Developers do?",
     answers: [
       "Create an AWS CloudFormation template",
@@ -2513,6 +2633,7 @@ export const paper2 = [
   },
   {
     id: "s2q57",
+    domain: "Deployment",
     text: "A Developer is launching an application on Amazon ECS. The application should scale tasks automatically based on load and incoming connections must be spread across the containers. How should the Developer configure the ECS cluster?",
     answers: [
       "Create an ECS Service with Auto Scaling and attach an Elastic Load Balancer",
@@ -2534,6 +2655,7 @@ export const paper2 = [
   },
   {
     id: "s2q58",
+    domain: "Development with AWS Services",
     text: "An Amazon DynamoDB table has been created using provisioned capacity. A manager needs to understand whether the DynamoDB table is cost-effective. How can the manager query how much provisioned capacity is actually being used?",
     answers: [
       "Monitor the ConsumedReadCapacityUnits and ConsumedWriteCapacityUnits over a specified time period",
@@ -2555,6 +2677,7 @@ export const paper2 = [
   },
   {
     id: "s2q59",
+    domain: "Troubleshooting and Optimization",
     text: "A static website that serves a collection of images runs from an Amazon S3 bucket in the us-east-1 region. The website is gaining in popularity and a is now being viewed around the world. How can a Developer improve the performance of the website for global users?",
     answers: [
       "Use cross region replication to replicate the bucket to several global regions",
@@ -2576,6 +2699,7 @@ export const paper2 = [
   },
   {
     id: "s2q60",
+    domain: "Development with AWS Services",
     text: "A customer requires a relational database for a transactional workload. Which type of AWS database is BEST suited to this requirement?",
     answers: [
       "Amazon RDS",
@@ -2597,6 +2721,7 @@ export const paper2 = [
   },
   {
     id: "s2q61",
+    domain: "Development with AWS Services",
     text: "A Developer is developing a web application and will maintain separate sets of resources for the alpha, beta, and release stages. Each version runs on Amazon EC2 and uses an Elastic Load Balancer. How can the Developer create a single page to view and manage all of the resources?",
     answers: [
       "Create a resource group",
@@ -2618,6 +2743,7 @@ export const paper2 = [
   },
   {
     id: "s2q62",
+    domain: "Security",
     text: "A temporary Developer needs to be provided with access to specific resources for a one week period. Which element of an IAM policy statement can be used to allow access only on or before a specific date?",
     answers: ["Condition", "NotResource", "Action", "Version"],
     correctAnswerIndex: 0,
@@ -2634,6 +2760,7 @@ export const paper2 = [
   },
   {
     id: "s2q63",
+    domain: "Development with AWS Services",
     text: "A Developer has created an Amazon S3 bucket and uploaded some objects that will be used for a publicly available static website. What steps MUST be performed to configure the bucket as a static website? (Select TWO.)",
     answers: [
       "Upload an index and error document and enter the name of the index and error documents when enabling static website hosting",
@@ -2657,6 +2784,7 @@ export const paper2 = [
   },
   {
     id: "s2q64",
+    domain: "Troubleshooting and Optimization",
     text: "There are multiple AWS accounts across multiple regions managed by a company. The operations team require a single operational dashboard that displays some key performance metrics from these accounts and regions. What is the SIMPLEST solution?",
     answers: [
       "Create an Amazon CloudWatch cross-account cross-region dashboard",
@@ -2678,6 +2806,7 @@ export const paper2 = [
   },
   {
     id: "s2q65",
+    domain: "Troubleshooting and Optimization",
     text: "Customers who use a REST API have reported performance issues. A Developer needs to measure the time between when API Gateway receives a request from a client and when it returns a response to the client. Which metric should the Developer monitor?",
     answers: ["IntegrationLatency", "Latency", "CacheHitCount", "5XXError"],
     correctAnswerIndex: 1,
@@ -2697,6 +2826,7 @@ export const paper2 = [
 export const paper3 = [
   {
     id: "s3q1",
+    domain: "Security",
     text: "An Amazon EC2 instance requires permissions to read and write data in an Amazon S3 bucket. A Developer is creating an IAM role that will be assumed by the EC2 instance. When creating the role using the AWS CLI create-role command, which policy must be added to allow the instance to assume the role?",
     answers: [
       "Bucket policy",
@@ -2718,6 +2848,7 @@ export const paper3 = [
   },
   {
     id: "s3q2",
+    domain: "Troubleshooting and Optimization",
     text: "An application reads data from Amazon S3 and makes 55,000 read requests per second. A Developer must design the storage solution to ensure the performance requirements are met cost-effectively. How can the storage be optimized to meet these requirements?",
     answers: [
       "Create at least 10 prefixes and split the files across the prefixes.",
@@ -2739,6 +2870,7 @@ export const paper3 = [
   },
   {
     id: "s3q3",
+    domain: "Development with AWS Services",
     text: "An eCommerce application uses an Amazon RDS database with Amazon ElastiCache in front. Stock volume data is updated dynamically in listings as sales are made. Customers have complained that occasionally the stock volume data is incorrect, and they end up purchasing items that are out of stock. A Developer has checked the front end and indeed some items display the incorrect stock count. What could be causing this issue?",
     answers: [
       "The Amazon RDS database is deployed as Multi-AZ and the standby is inconsistent.",
@@ -2760,6 +2892,7 @@ export const paper3 = [
   },
   {
     id: "s3q4",
+    domain: "Security",
     text: "A Developer is creating a database solution using an Amazon ElastiCache caching layer. The solution must provide strong consistency to ensure that updates to product data are consistent between the backend database and the ElastiCache cache. Low latency performance is required for all items in the database. Which cache writing policy will satisfy these requirements?",
     answers: [
       "Use a lazy-loading caching strategy.",
@@ -2781,6 +2914,7 @@ export const paper3 = [
   },
   {
     id: "s3q5",
+    domain: "Security",
     text: "A Developer has created an Amazon Cognito user pool and configured a domain for it. The Developer wants to add sign-up and sign-in pages to an app with a company logo. What should the Developer do to meet these requirements?",
     answers: [
       "Customize the Amazon Cognito hosted web UI and add the company logo.",
@@ -2802,6 +2936,7 @@ export const paper3 = [
   },
   {
     id: "s3q6",
+    domain: "Development with AWS Services",
     text: "An AWS Lambda function has been connected to a VPC to access an application running a private subnet. The Lambda function also pulls data from an Internet-based service and is no longer able to connect to the Internet. How can this be rectified?",
     answers: [
       "Connect the Lambda function to an Internet Gateway",
@@ -2823,6 +2958,7 @@ export const paper3 = [
   },
   {
     id: "s3q7",
+    domain: "Development with AWS Services",
     text: "A batch job runs every 24 hours and writes around 1 million items into a DynamoDB table each day. The batch job completes quickly, and the items are processed within 2 hours and are no longer needed. What’s the MOST efficient way to provide an empty table each day?",
     answers: [
       "Use the BatchUpdateItem API with expressions",
@@ -2844,6 +2980,7 @@ export const paper3 = [
   },
   {
     id: "s3q8",
+    domain: "Security",
     text: "A development team is migrating data from various file shares to AWS from on-premises. The data will be migrated into a single Amazon S3 bucket. What is the SIMPLEST method to ensure the data is encrypted at rest in the S3 bucket?",
     answers: [
       "Use SSL to transmit the data over the Internet",
@@ -2865,6 +3002,7 @@ export const paper3 = [
   },
   {
     id: "s3q9",
+    domain: "Security",
     text: "A company needs to provide additional security for their APIs deployed on Amazon API Gateway. They would like to be able to authenticate their customers with a token. What is the SAFEST way to do this?",
     answers: [
       "Setup usage plans and distribute API keys to the customers",
@@ -2886,6 +3024,7 @@ export const paper3 = [
   },
   {
     id: "s3q10",
+    domain: "Development with AWS Services",
     text: "A developer is making updates to the code for a Lambda function. The developer is keen to test the code updates by directing a small amount of traffic to a new version. How can this BEST be achieved?",
     answers: [
       "Create two versions of the function code. Configure the application to direct a subset of requests to the new version",
@@ -2907,6 +3046,7 @@ export const paper3 = [
   },
   {
     id: "s3q11",
+    domain: "Troubleshooting and Optimization",
     text: "A company runs a popular online game on premises. The application stores players’ results in an in-memory database. The application is being migrated to AWS and the company needs to ensure there is no reduction in performance. Which database would be MOST suitable?",
     answers: [
       "Amazon RDS",
@@ -2928,6 +3068,7 @@ export const paper3 = [
   },
   {
     id: "s3q12",
+    domain: "Troubleshooting and Optimization",
     text: "An Amazon RDS database that stores product information for an online eCommerce marketplace is experiencing heavy demand. An increase in read requests is causing the database performance to be impacted and is affecting database writes. What is the best way to offload the read traffic from the database with MINIMAL code changes and cost?",
     answers: [
       "Change the RDS database instance type to an instance with more CPU/RAM",
@@ -2949,6 +3090,7 @@ export const paper3 = [
   },
   {
     id: "s3q13",
+    domain: "Deployment",
     text: "A developer has deployed a serverless application with AWS Lambda. The function must make remote calls to external endpoints. Which configuration element in Lambda can be used store the connection strings related to the external endpoints?",
     answers: ["Aliases", "Tags", "Environment variables", "Versions"],
     correctAnswerIndex: 2,
@@ -2965,6 +3107,7 @@ export const paper3 = [
   },
   {
     id: "s3q14",
+    domain: "Development with AWS Services",
     text: "A developer is building a web application that will be hosted on Amazon EC2 instances. The EC2 instances will store configuration data in an Amazon S3 bucket. What is the SAFEST way to allow the EC2 instances to access the S3 bucket?",
     answers: [
       "Store an access key and secret ID that has the necessary permissions on the EC2 instances",
@@ -2986,6 +3129,7 @@ export const paper3 = [
   },
   {
     id: "s3q15",
+    domain: "Development with AWS Services",
     text: "An AWS Lambda functions downloads a 50MB from an object storage system each time it is invoked. The download delays the function completion and causes intermittent timeouts which is slowing down the application. How can the application be refactored to resolve the timeout?",
     answers: [
       "Increase the memory allocation of the function",
@@ -3007,6 +3151,7 @@ export const paper3 = [
   },
   {
     id: "s3q16",
+    domain: "Deployment",
     text: "The development team is working on an API that will be served from Amazon API Gateway. The API will serve three environments PROD, DEV, and TEST and requires a cache size of 250GB. What is the MOST cost-efficient deployment strategy?",
     answers: [
       "Create three API Gateways, one for each environment and enable the cache for the DEV and TEST environments only when required",
@@ -3028,6 +3173,7 @@ export const paper3 = [
   },
   {
     id: "s3q17",
+    domain: "Security",
     text: "A developer is creating an Auto Scaling group of Amazon EC2 instances. The developer needs to publish a custom metric to Amazon CloudWatch. Which method would be the MOST secure way to authenticate a CloudWatch PUT request?",
     answers: [
       "Modify the CloudWatch metric policies to allow the PutMetricData permission to instances from the Auto Scaling group",
@@ -3049,6 +3195,7 @@ export const paper3 = [
   },
   {
     id: "s3q18",
+    domain: "Security",
     text: "A company uses an Amazon S3 bucket to store a large number of sensitive files relating to eCommerce transactions. The company has a policy that states that all data written to the S3 bucket must be encrypted. How can a Developer ensure compliance with this policy?",
     answers: [
       "Create a bucket policy that denies the S3 PutObject request with the attribute x-amz-acl having values public- read, public-read-write, or authenticated-read",
@@ -3070,6 +3217,7 @@ export const paper3 = [
   },
   {
     id: "s3q19",
+    domain: "Development with AWS Services",
     text: "An application uses Amazon API Gateway, an AWS Lambda function and a DynamoDB table. The developer requires that another Lambda function is triggered when an item lifecycle activity occurs in the DynamoDB table. How can this be achieved?",
     answers: [
       "Configure an Amazon CloudWatch alarm that sends an Amazon SNS notification. Trigger the Lambda function asynchronously from the SNS notification",
@@ -3091,6 +3239,7 @@ export const paper3 = [
   },
   {
     id: "s3q20",
+    domain: "Development with AWS Services",
     text: "An application is using Amazon DynamoDB as its data store and needs to be able to read 100 items per second as strongly consistent reads. Each item is 5 KB in size. What value should be set for the table's provisioned throughput for reads?",
     answers: [
       "50 Read Capacity Units",
@@ -3112,6 +3261,7 @@ export const paper3 = [
   },
   {
     id: "s3q21",
+    domain: "Development with AWS Services",
     text: "A company runs an application on a fleet of web servers running on Amazon EC2 instances. The web servers are behind an Elastic Load Balancer (ELB) and use an Amazon DynamoDB table for storing session state. A Developer has been asked to implement a mechanism for automatically deleting session state data that is older than 24 hours. What is the SIMPLEST solution to this requirement?",
     answers: [
       "Add an attribute with the expiration time; enable the Time To Live feature based on that attribute",
@@ -3133,6 +3283,7 @@ export const paper3 = [
   },
   {
     id: "s3q22",
+    domain: "Development with AWS Services",
     text: "A gaming company is building an application to track the scores for their games using an Amazon DynamoDB table. Each item in the table is identified by a partition key (user_id) and a sort key (game_name). The table also includes the attribute “TopScore”. The table design is shown below: A Developer has been asked to write a leaderboard application to display the highest achieved scores for each game (game_name), based on the score identified in the “TopScore” attribute. What process will allow the Developer to extract results MOST efficiently from the DynamoDB table?",
     answers: [
       "Create a local secondary index with a primary key of “game_name” and a sort key of “TopScore” and get the results based on the score attribute",
@@ -3154,6 +3305,7 @@ export const paper3 = [
   },
   {
     id: "s3q23",
+    domain: "Security",
     text: "A company is running a web application on Amazon EC2 behind an Elastic Load Balancer (ELB). The company is concerned about the security of the web application and would like to secure the application with SSL certificates. The solution should not have any performance impact on the EC2 instances. What steps should be taken to secure the web application? (Select TWO.)",
     answers: [
       "Configure the Elastic Load Balancer with SSL passthrough",
@@ -3177,6 +3329,7 @@ export const paper3 = [
   },
   {
     id: "s3q24",
+    domain: "Development with AWS Services",
     text: "An application is running on an Amazon EC2 Linux instance. The instance needs to make AWS API calls to several AWS services. What is the MOST secure way to provide access to the AWS services with MINIMAL management overhead?",
     answers: [
       "Use AWS KMS to store and retrieve credentials",
@@ -3198,6 +3351,7 @@ export const paper3 = [
   },
   {
     id: "s3q25",
+    domain: "Deployment",
     text: "A Developer is creating a serverless application that includes Amazon API Gateway, Amazon DynamoDB and AWS Lambda. The Developer will use AWS CloudFormation to deploy the application and is creating a template. Which tool should the Developer use to define simplified syntax for expressing serverless resources?",
     answers: [
       "AWS Step Functions State Machine",
@@ -3219,6 +3373,7 @@ export const paper3 = [
   },
   {
     id: "s3q26",
+    domain: "Development with AWS Services",
     text: "A Developer has added a Global Secondary Index (GSI) to an existing Amazon DynamoDB table. The GSI is used mainly for read operations whereas the primary table is extremely write-intensive. Recently, the Developer has noticed throttling occurring under heavy write activity on the primary table. However, the write capacity units on the primary table are not fully utilized. What is the best explanation for why the writes are being throttled on the primary table?",
     answers: [
       "There are insufficient read capacity units on the primary table",
@@ -3240,6 +3395,7 @@ export const paper3 = [
   },
   {
     id: "s3q27",
+    domain: "Development with AWS Services",
     text: "A development team manage a high-traffic e-Commerce site with dynamic pricing that is updated in real-time. There have been incidents where multiple updates occur simultaneously and cause an original editor’s updates to be overwritten. How can the developers ensure that overwriting does not occur?",
     answers: [
       "Use concurrent writes",
@@ -3261,6 +3417,7 @@ export const paper3 = [
   },
   {
     id: "s3q28",
+    domain: "Development with AWS Services",
     text: "A Development team are creating a new REST API that uses Amazon API Gateway and AWS Lambda. To support testing there need to be different versions of the service. What is the BEST way to provide multiple versions of the REST API?",
     answers: [
       "Create an API Gateway resource policy to isolate versions and provide context to the Lambda functions",
@@ -3282,6 +3439,7 @@ export const paper3 = [
   },
   {
     id: "s3q29",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is creating an AWS Lambda function that will process data from an Amazon Kinesis data stream. The function is expected to be invoked 50 times per second and take 100 seconds to complete each request. What MUST the Developer do to ensure the functions runs without errors?",
     answers: [
       "Contact AWS and request to increase the limit for concurrent executions",
@@ -3303,6 +3461,7 @@ export const paper3 = [
   },
   {
     id: "s3q30",
+    domain: "Development with AWS Services",
     text: "A legacy service has an XML-based SOAP interface. The Developer wants to expose the functionality of the service to external clients with the Amazon API Gateway. Which technique will accomplish this?",
     answers: [
       "Create a RESTful API with the API Gateway; transform the incoming JSON into a valid XML message for the SOAP interface using mapping templates",
@@ -3324,6 +3483,7 @@ export const paper3 = [
   },
   {
     id: "s3q31",
+    domain: "Security",
     text: "A Developer has completed some code updates and needs to deploy the updates to an Amazon Elastic Beanstalk environment. The environment includes twelve Amazon EC2 instances and there can be no reduction in application performance and availability during the update. Which deployment policy is the most cost-effective choice to suit these requirements?",
     answers: [
       "All at once",
@@ -3345,6 +3505,7 @@ export const paper3 = [
   },
   {
     id: "s3q32",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is creating a DynamoDB table for storing application logs. The table has 5 write capacity units (WCUs). The Developer needs to configure the read capacity units (RCUs) for the table. Which of the following configurations represents the most efficient use of throughput?",
     answers: [
       "Eventually consistent reads of 5 RCUs reading items that are 4 KB in size",
@@ -3366,6 +3527,7 @@ export const paper3 = [
   },
   {
     id: "s3q33",
+    domain: "Deployment",
     text: "The source code for an application is stored in a file named index.js that is in a folder along with a template file that includes the following code: AWSTemplateFormatVersion: '2010-09-09' Transform: 'AWS::Serverless-2016-10-31' Resources: LambdaFunctionWithAPI: Type: AWS::Serverless::Function Properties: Handler: index.handler Runtime: nodejs12.x What does a Developer need to do to prepare the template so it can be deployed using an AWS CLI command?",
     answers: [
       "Run the aws cloudformation compile command to base64 encode and embed the source file into a modified CloudFormation template",
@@ -3387,6 +3549,7 @@ export const paper3 = [
   },
   {
     id: "s3q34",
+    domain: "Deployment",
     text: "A Developer is using AWS SAM to create a template for deploying a serverless application. The Developer plans deploy an AWS Lambda function and an Amazon DynamoDB table using the template. Which resource types should the Developer specify? (Select TWO.)",
     answers: [
       "AWS::Serverless::Application",
@@ -3410,6 +3573,7 @@ export const paper3 = [
   },
   {
     id: "s3q35",
+    domain: "Development with AWS Services",
     text: "An application is being migrated into the cloud. The application is stateless and will run on a fleet of Amazon EC2 instances. The application should scale elastically. How can a Developer ensure that the number of instances available is sufficient for current demand?",
     answers: [
       "Create a launch configuration and use Amazon CodeDeploy",
@@ -3431,6 +3595,7 @@ export const paper3 = [
   },
   {
     id: "s3q36",
+    domain: "Security",
     text: "An application uses an Auto Scaling group of Amazon EC2 instances, an Application Load Balancer (ALB), and an Amazon Simple Queue Service (SQS) queue. An Amazon CloudFront distribution caches content for global users. A Developer needs to add in- transit encryption to the data by configuring end-to-end SSL between the CloudFront Origin and the end users. How can the Developer meet this requirement? (Select TWO.)",
     answers: [
       "Configure the Origin Protocol Policy",
@@ -3454,6 +3619,7 @@ export const paper3 = [
   },
   {
     id: "s3q37",
+    domain: "Deployment",
     text: "A Developer is creating a microservices architecture for a modern application. The application will run on Docker containers. The Developer requires a serverless service. Which AWS service is MOST suitable?",
     answers: [
       "Amazon ECS",
@@ -3475,6 +3641,7 @@ export const paper3 = [
   },
   {
     id: "s3q38",
+    domain: "Development with AWS Services",
     text: "A Developer needs to create an instance profile for an Amazon EC2 instance using the AWS CLI. How can this be achieved? (Select THREE.)",
     answers: [
       "Run the aws iam create-instance-profile command",
@@ -3498,6 +3665,7 @@ export const paper3 = [
   },
   {
     id: "s3q39",
+    domain: "Development with AWS Services",
     text: "An application will use AWS Lambda and an Amazon RDS database. The Developer needs to secure the database connection string and enable automatic rotation every 30 days. What is the SIMPLEST way to achieve this requirement?",
     answers: [
       "Store a SecureString in Systems Manager Parameter Store and enable automatic rotation every 30 days",
@@ -3519,6 +3687,7 @@ export const paper3 = [
   },
   {
     id: "s3q40",
+    domain: "Development with AWS Services",
     text: "A Developer needs to choose the best data store for a new application. The application requires a data store that supports key/value pairs and optimistic locking. Which of the following would provide the MOST suitable solution?",
     answers: ["Amazon RDS", "Amazon RedShift", "Amazon DynamoDB", "Amazon S3"],
     correctAnswerIndex: 2,
@@ -3535,6 +3704,7 @@ export const paper3 = [
   },
   {
     id: "s3q41",
+    domain: "Development with AWS Services",
     text: "A financial application is hosted on an Auto Scaling group of EC2 instance with an Elastic Load Balancer. A Developer needs to capture information about the IP traffic going to and from network interfaces in the VPC. How can the Developer capture this information?",
     answers: [
       "Capture the information directly into Amazon CloudWatch Logs",
@@ -3556,6 +3726,7 @@ export const paper3 = [
   },
   {
     id: "s3q42",
+    domain: "Development with AWS Services",
     text: "A Developer is designing a cloud native application. The application will use several AWS Lambda functions that will process items that the functions read from an event source. Which AWS services are supported for Lambda event source mappings? (Select THREE.)",
     answers: [
       "Amazon Kinesis",
@@ -3579,6 +3750,7 @@ export const paper3 = [
   },
   {
     id: "s3q43",
+    domain: "Troubleshooting and Optimization",
     text: "An application is instrumented to generate traces using AWS X-Ray and generates a large amount of trace data. A Developer would like to use filter expressions to filter the results to specific key-value pairs added to custom subsegments. How should the Developer add the key-value pairs to the custom subsegments?",
     answers: [
       "Add metadata to the custom subsegments",
@@ -3600,6 +3772,7 @@ export const paper3 = [
   },
   {
     id: "s3q44",
+    domain: "Development with AWS Services",
     text: "A website is running on a single Amazon EC2 instance. A Developer wants to publish the website on the Internet and is creating an A record on Amazon Route 53 for the website’s public DNS name. What type of IP address MUST be assigned to the EC2 instance and used in the A record to ensure ongoing connectivity?",
     answers: [
       "Public IP address",
@@ -3621,6 +3794,7 @@ export const paper3 = [
   },
   {
     id: "s3q45",
+    domain: "Development with AWS Services",
     text: "A company needs a version control system for collaborative software development. The solution must include support for batches of changes across multiple files and parallel branching. Which AWS service will meet these requirements?",
     answers: [
       "AWS CodePipeline",
@@ -3642,6 +3816,7 @@ export const paper3 = [
   },
   {
     id: "s3q46",
+    domain: "Deployment",
     text: "To include objects defined by the AWS Serverless Application Model (SAM) in an AWS CloudFormation template, in addition to Resources, what section MUST be included in the document root?",
     answers: ["Conditions", "Globals", "Transform", "Properties"],
     correctAnswerIndex: 2,
@@ -3658,6 +3833,7 @@ export const paper3 = [
   },
   {
     id: "s3q47",
+    domain: "Security",
     text: "A company is creating an application that will require users to access AWS services and allow them to reset their own passwords. Which of the following would allow the company to manage users and authorization while allowing users to reset their own passwords?",
     answers: [
       "Amazon Cognito identity pools and AWS STS",
@@ -3679,6 +3855,7 @@ export const paper3 = [
   },
   {
     id: "s3q48",
+    domain: "Troubleshooting and Optimization",
     text: "An application writes items to an Amazon DynamoDB table. As the application scales to thousands of instances, calls to the DynamoDB API generate occasional ThrottlingException errors. The application is coded in a language incompatible with the AWS SDK. How should the error be handled?",
     answers: [
       "Add exponential backoff to the application logic",
@@ -3700,6 +3877,7 @@ export const paper3 = [
   },
   {
     id: "s3q49",
+    domain: "Deployment",
     text: "A Development team has deployed several applications running on an Auto Scaling fleet of Amazon EC2 instances. The Operations team have asked for a display that shows a key performance metric for each application on a single screen for monitoring purposes. What steps should a Developer take to deliver this capability using Amazon CloudWatch?",
     answers: [
       "Create a custom namespace with a unique metric name for each application",
@@ -3721,6 +3899,7 @@ export const paper3 = [
   },
   {
     id: "s3q50",
+    domain: "Security",
     text: "A Developer is storing sensitive documents in Amazon S3. The documents must be encrypted at rest and company policy mandates that the encryption keys must be rotated annually. What is the EASIEST way to achieve this?",
     answers: [
       "Encrypt the data before sending it to Amazon S3",
@@ -3742,6 +3921,7 @@ export const paper3 = [
   },
   {
     id: "s3q51",
+    domain: "Development with AWS Services",
     text: "A Developer is designing a fault-tolerant environment where client sessions will be saved. How can the Developer ensure that no sessions are lost if an Amazon EC2 instance fails?",
     answers: [
       "Use sticky sessions with an Elastic Load Balancer target group",
@@ -3763,6 +3943,7 @@ export const paper3 = [
   },
   {
     id: "s3q52",
+    domain: "Security",
     text: "A company wants to implement authentication for its new REST service using Amazon API Gateway. To authenticate the calls, each request must include HTTP headers with a client ID and user ID. These credentials must be compared to authentication data in an Amazon DynamoDB table. What MUST the company do to implement this authentication in API Gateway?",
     answers: [
       "Implement an AWS Lambda authorizer that references the DynamoDB authentication table",
@@ -3784,6 +3965,7 @@ export const paper3 = [
   },
   {
     id: "s3q53",
+    domain: "Deployment",
     text: "AWS CodeBuild builds code for an application, creates a Docker image, pushes the image to Amazon Elastic Container Registry (ECR), and tags the image with a unique identifier. If the Developers already have AWS CLI configured on their workstations, how can the Docker images be pulled to the workstations?",
     answers: [
       "Run the following: docker pull REPOSITORY URI : TAG",
@@ -3805,6 +3987,7 @@ export const paper3 = [
   },
   {
     id: "s3q54",
+    domain: "Development with AWS Services",
     text: "A company needs to ingest several terabytes of data every hour from a large number of distributed sources. The messages are delivered continually 24 hrs a day. Messages must be delivered in real time for security analysis and live operational dashboards. Which approach will meet these requirements?",
     answers: [
       "Send the messages to an Amazon SQS queue, then process the messages by using a fleet of Amazon EC2 instances",
@@ -3826,6 +4009,7 @@ export const paper3 = [
   },
   {
     id: "s3q55",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer wants to debug an application by searching and filtering log data. The application logs are stored in Amazon CloudWatch Logs. The Developer creates a new metric filter to count exceptions in the application logs. However, no results are returned from the logs. What is the reason that no filtered results are being returned?",
     answers: [
       "A setup of the Amazon CloudWatch interface VPC endpoint is required for filtering the CloudWatch Logs in the VPC",
@@ -3847,6 +4031,7 @@ export const paper3 = [
   },
   {
     id: "s3q56",
+    domain: "Troubleshooting and Optimization",
     text: "A serverless application requires a storage location for log files. Which storage solution is the BEST fit?",
     answers: [
       "Amazon EBS",
@@ -3868,6 +4053,7 @@ export const paper3 = [
   },
   {
     id: "s3q57",
+    domain: "Development with AWS Services",
     text: "Fault tolerance needs to be increased for a stateless application that runs on Amazon EC2 instances. The application runs in an Auto Scaling group of EC2 instances in a single subnet behind an Application Load Balancer. How can the application be made more fault tolerant?",
     answers: [
       "Add a subnet in another AZ to the ASG and add the same subnet to the ALB",
@@ -3889,6 +4075,7 @@ export const paper3 = [
   },
   {
     id: "s3q58",
+    domain: "Development with AWS Services",
     text: "A customer-facing web application runs on Amazon EC2 with an Application Load Balancer and an Amazon RDS database back end. Recently, the security team noticed some SQL injection attacks and cross-site scripting attacks targeting the web application. Which service can a Developer use to protect against future attacks?",
     answers: ["Security Groups", "Network ACLs", "AWS WAF", "AWS KMS"],
     correctAnswerIndex: 2,
@@ -3905,6 +4092,7 @@ export const paper3 = [
   },
   {
     id: "s3q59",
+    domain: "Deployment",
     text: "A developer is planning the deployment of a new version of an application to AWS Elastic Beanstalk. The new version of the application should be deployed only to new EC2 instances. Which deployment methods will meet these requirements? (Select TWO.)",
     answers: [
       "Rolling with additional batch",
@@ -3928,6 +4116,7 @@ export const paper3 = [
   },
   {
     id: "s3q60",
+    domain: "Development with AWS Services",
     text: "A customer requires a schema-less, key/value database that can be used for storing customer orders. Which type of AWS database is BEST suited to this requirement?",
     answers: [
       "Amazon DynamoDB",
@@ -3949,6 +4138,7 @@ export const paper3 = [
   },
   {
     id: "s3q61",
+    domain: "Security",
     text: "A highly secured AWS environment has strict policies for granting access to Developers. A Developer requires the ability to use the API to call ec2:StartInstances and ec2:StopInstances. Which element of an IAM policy statement should be used to specify which APIs can be called?",
     answers: ["Action", "Effect", "Resource", "Condition"],
     correctAnswerIndex: 0,
@@ -3965,6 +4155,7 @@ export const paper3 = [
   },
   {
     id: "s3q62",
+    domain: "Development with AWS Services",
     text: "A team of Developers are building a continuous integration and delivery pipeline using AWS Developer Tools. Which services should they use for running tests against source code and installing compiled code on their AWS resources? (Select TWO.)",
     answers: [
       "AWS CodeBuild for running tests against source code",
@@ -3988,6 +4179,7 @@ export const paper3 = [
   },
   {
     id: "s3q63",
+    domain: "Development with AWS Services",
     text: "Messages produced by an application must be pushed to multiple Amazon SQS queues. What is the BEST solution for this requirement?",
     answers: [
       "Create an Amazon SWF workflow that receives the messages and pushes them to multiple SQS queues",
@@ -4009,6 +4201,7 @@ export const paper3 = [
   },
   {
     id: "s3q64",
+    domain: "Troubleshooting and Optimization",
     text: "An application has been instrumented to use the AWS X-Ray SDK to collect data about the requests the application serves. The Developer has set the user field on segments to a string that identifies the user who sent the request. How can the Developer search for segments associated with specific users?",
     answers: [
       "Use a filter expression to search for the user field in the segment metadata",
@@ -4054,6 +4247,7 @@ export const paper3 = [
 export const paper4 = [
   {
     id: "s4q1",
+    domain: "Deployment",
     text: "A developer is completing the configuration for an Amazon ECS cluster. Which task placement strategy will MINIMIZE the number of instances in use?",
     answers: ["binpack", "random", "spread", "Canary"],
     correctAnswerIndex: 0,
@@ -4070,6 +4264,7 @@ export const paper4 = [
   },
   {
     id: "s4q2",
+    domain: "Troubleshooting and Optimization",
     text: "A company is using AWS Lambda for processing small images that are uploaded to Amazon S3. This was working well until a large number of small files (several thousand) were recently uploaded and an error was generated by AWS Lambda (status code 429). What is the MOST likely cause?",
     answers: [
       "The concurrency execution limit for the account has been exceeded",
@@ -4091,6 +4286,7 @@ export const paper4 = [
   },
   {
     id: "s4q3",
+    domain: "Development with AWS Services",
     text: "A developer is creating a serverless application that will use a DynamoDB table. The average item size is 7KB. The application will make 3 strongly consistent reads/sec, and 1 standard write/sec. How many RCUs/WCUs are required?",
     answers: [
       "3 RCU and 7 WCU",
@@ -4112,6 +4308,7 @@ export const paper4 = [
   },
   {
     id: "s4q4",
+    domain: "Security",
     text: "A developer is building a multi-tier web application that accesses an Amazon RDS MySQL database. The application must use a credentials to connect and these need to be stored securely. The application will take care of secret rotation. Which AWS service represents the LOWEST cost solution for storing credentials?",
     answers: [
       "AWS IAM with the Security Token Service (STS)",
@@ -4133,6 +4330,7 @@ export const paper4 = [
   },
   {
     id: "s4q5",
+    domain: "Security",
     text: "A mobile application is being developed that will use AWS Lambda, Amazon API Gateway and Amazon DynamoDB. A developer would like to securely authenticate the users of the mobile application and then grant them access to the API. What is the BEST way to achieve this?",
     answers: [
       "Create a Lambda authorizer in API Gateway",
@@ -4154,6 +4352,7 @@ export const paper4 = [
   },
   {
     id: "s4q6",
+    domain: "Deployment",
     text: "A developer is preparing the resources for creating a multicontainer Docker environment on AWS Elastic Beanstalk. How can the developer define the Docker containers?",
     answers: [
       "Define the containers in the Dockerrun.aws.json file in JSON format and save at the root of the source directory",
@@ -4175,6 +4374,7 @@ export const paper4 = [
   },
   {
     id: "s4q7",
+    domain: "Deployment",
     text: "A developer is planning to launch as serverless application composed of AWS Lambda, Amazon API Gateway, and Amazon DynamoDB. What is the EASIEST way to deploy the application using simple syntax?",
     answers: [
       "Use AWS CloudFormation",
@@ -4196,6 +4396,7 @@ export const paper4 = [
   },
   {
     id: "s4q8",
+    domain: "Deployment",
     text: "A web application has been deployed on AWS. A developer is concerned about exposure to common exploits that could affect application availability or compromise security. Which AWS service can protect from these threats?",
     answers: [
       "AWS Web Application Firewall (WAF)",
@@ -4217,6 +4418,7 @@ export const paper4 = [
   },
   {
     id: "s4q9",
+    domain: "Deployment",
     text: "A team of developers are adding an API layer to a multicontainer Docker environment running on AWS Elastic Beanstalk. The client-submitted method requests should be passed directly to the backend, without modification. Which integration type is MOST suitable for this solution?",
     answers: ["AWS", "HTTP", "HTTP_PROXY", "AWS_PROXY"],
     correctAnswerIndex: 2,
@@ -4233,6 +4435,7 @@ export const paper4 = [
   },
   {
     id: "s4q10",
+    domain: "Development with AWS Services",
     text: "A company runs a booking system for a medical practice. The AWS SDK is used to communicate with between several AWS services. Due to compliance requirements, the security department has requested that a record is made of all API calls. How can this requirement be met?",
     answers: [
       "Use Amazon CloudWatch logs to keep a history of API calls",
@@ -4254,6 +4457,7 @@ export const paper4 = [
   },
   {
     id: "s4q11",
+    domain: "Development with AWS Services",
     text: "A company is in the process of migrating an application from a monolithic architecture to a microservices-based architecture. The developers need to refactor the application so that the many microservices can asynchronously communicate with each other in a decoupled manner. Which AWS services can be used for asynchronous message passing? (Select TWO.)",
     answers: [
       "Amazon SQS",
@@ -4277,6 +4481,7 @@ export const paper4 = [
   },
   {
     id: "s4q12",
+    domain: "Development with AWS Services",
     text: "A developer needs to implement a caching layer in front of an Amazon RDS database. If the caching layer fails, it is time consuming to repopulate cached data so the solution should be designed for maximum uptime. Which solution is best for this scenario?",
     answers: [
       "Implement Amazon ElastiCache Memcached",
@@ -4298,6 +4503,7 @@ export const paper4 = [
   },
   {
     id: "s4q13",
+    domain: "Security",
     text: "An application running on a fleet of EC2 instances use the AWS SDK for Java to copy files into several AWS buckets using access keys stored in environment variables. A Developer has modified the instances to use an assumed IAM role with a more restrictive policy that allows access to only one bucket. However, after applying the change the Developer logs into one of the instances and is still able to write to all buckets. What is the MOST likely explanation for this situation?",
     answers: [
       "An IAM inline policy is being used on the IAM role",
@@ -4319,6 +4525,7 @@ export const paper4 = [
   },
   {
     id: "s4q14",
+    domain: "Development with AWS Services",
     text: "A static website is hosted on Amazon S3 using the bucket name of dctlabs.com. Some HTML pages on the site use JavaScript to download images that are located in the bucket https://dctlabsimages.s3.amazonaws.com/. Users have reported that the images are not being displayed. What is the MOST likely cause?",
     answers: [
       "Cross Origin Resource Sharing is not enabled on the dctlabsimages bucket",
@@ -4340,6 +4547,7 @@ export const paper4 = [
   },
   {
     id: "s4q15",
+    domain: "Security",
     text: "A Developer received the following error when attempting to launch an Amazon EC2 instance using the AWS CLI. An error occurred (UnauthorizedOperation) when calling the RunInstances operation: You are not authorized to perform this operation. Encoded authorization failure message: VNVaHFdCohROkbyT_rIXoRyNTp7vXFJCqnGiwPuyKnsSVf- WSSGK_06H3vKnrkUa3qx5D40hqj9HEG8kznr04Acmi6lvc8m51tfqtsomFSDylK15x96ZrxMW7MjDJLrMkM0BasPvy8ixo1wi6X2b0C -J1ThyWU9IcrGd7WbaRDOiGbBhJtKs1z01WSn2rVa5_7sr5PwEK- ARrC9y5Pl54pmeF6wh7QhSv2pFO0y39WVBajL2GmByFmQ4p8s-6Lcgxy23b4NJdJwWOF4QGxK9HcKof1VTVZ2oIpsI- dH6_0t2DI0BTwaIgmaT7ldontI1p7OGz-3wPgXm67x2NVNgaK63zPxjYNbpl32QuXLKUKNlB9DdkSdoLvsuFIvf- lQOXLPHnZKCWMqrkI87eqKHYpYKyV5c11TIZTAJ3MntTGO_TJ4U9ySYvTzU2LgswYOtKF_O76- 13fryGG5dhgOW5NxwCWBj6WT2NSJvqOeLykAFjR_ET4lM6Dl1XYfQITWCqIzlvlQdLmHJ1jqjp4gW56VcQCdqozLv2UAg8IdrZIXd0O J047RQcvvN1IyZN0ElL7dR6RzAAQrftoKMRhZQng6THZs8PZM6wep6-yInzwfg8J5_FW6G_PwYqO- 4VunVtJSTzM_F_8kojGlRmzqy7eCk5or__bIisUoslw What action should the Developer perform to make this error more human-readable?",
     answers: [
       "Make a call to AWS KMS to decode the message",
@@ -4361,6 +4569,7 @@ export const paper4 = [
   },
   {
     id: "s4q16",
+    domain: "Development with AWS Services",
     text: "A company is developing a game for the Android and iOS platforms. The mobile game will securely store user game history and other data locally on the device. The company would like users to be able to use multiple mobile devices and synchronize data between devices. Which service can be used to synchronize the data across mobile devices without the need to create a backend application?",
     answers: [
       "AWS Lambda",
@@ -4382,6 +4591,7 @@ export const paper4 = [
   },
   {
     id: "s4q17",
+    domain: "Development with AWS Services",
     text: "An application is using Amazon DynamoDB as its data store and needs to be able to read 200 items per second as eventually consistent reads. Each item is 12 KB in size. What value should be set for the table's provisioned throughput for reads?",
     answers: [
       "300 Read Capacity Units",
@@ -4403,6 +4613,7 @@ export const paper4 = [
   },
   {
     id: "s4q18",
+    domain: "Development with AWS Services",
     text: "An application uses AWS Lambda to process many files. The Lambda function takes approximately 3 minutes to process each file and does not return any important data. A Developer has written a script that will invoke the function using the AWS CLI. What is the FASTEST way to process all the files?",
     answers: [
       "Invoke the Lambda function synchronously with the invocation type Event and process the files in parallel",
@@ -4424,6 +4635,7 @@ export const paper4 = [
   },
   {
     id: "s4q19",
+    domain: "Troubleshooting and Optimization",
     text: "A development team are creating a mobile application that customers will use to receive notifications and special offers. Users will not be required to log in. What is the MOST efficient method to grant users access to AWS resources?",
     answers: [
       "Use an IAM SAML 2.0 identity provider to establish trust",
@@ -4445,6 +4657,7 @@ export const paper4 = [
   },
   {
     id: "s4q20",
+    domain: "Security",
     text: "A serverless application is used to process customer information and outputs a JSON file to an Amazon S3 bucket. AWS Lambda is used for processing the data. The data is sensitive and should be encrypted. How can a Developer modify the Lambda function to ensure the data is encrypted before it is uploaded to the S3 bucket?",
     answers: [
       "Use the GenerateDataKey API, then use the data key to encrypt the file using the Lambda code",
@@ -4466,6 +4679,7 @@ export const paper4 = [
   },
   {
     id: "s4q21",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is troubleshooting an issue with a DynamoDB table. The table is used to store order information for a busy online store and uses the order date as the partition key. During busy periods writes to the table are being throttled despite the consumed throughput being well below the provisioned throughput. According to AWS best practices, how can the Developer resolve the issue at the LOWEST cost?",
     answers: [
       "Increase the read and write capacity units for the table",
@@ -4487,6 +4701,7 @@ export const paper4 = [
   },
   {
     id: "s4q22",
+    domain: "Development with AWS Services",
     text: "A company is migrating a stateful web service into the AWS cloud. The objective is to refactor the application to realize the benefits of cloud computing. How can the Developer leading the project refactor the application to enable more elasticity? (Select TWO.)",
     answers: [
       "Use Amazon CloudFormation and the Serverless Application Model",
@@ -4510,6 +4725,7 @@ export const paper4 = [
   },
   {
     id: "s4q23",
+    domain: "Deployment",
     text: "A company uses continuous integration and continuous delivery (CI/CD) systems. A Developer needs to automate the deployment of a software package to Amazon EC2 instances as well as to on-premises virtual servers. Which AWS service can be used for the software deployment?",
     answers: [
       "AWS CodePipeline",
@@ -4531,6 +4747,7 @@ export const paper4 = [
   },
   {
     id: "s4q24",
+    domain: "Development with AWS Services",
     text: "A company uses Amazon SQS to decouple an online application that generates memes. The SQS consumers poll the queue regularly to keep throughput high and this is proving to be costly and resource intensive. A Developer has been asked to review the system and propose changes that can reduce costs and the number of empty responses. What would be the BEST approach to MINIMIZING cost?",
     answers: [
       "Set the imaging queue visibility Timeout attribute to 20 seconds",
@@ -4552,6 +4769,7 @@ export const paper4 = [
   },
   {
     id: "s4q25",
+    domain: "Development with AWS Services",
     text: "A Developer has updated an AWS Lambda function and published a new version. To ensure the code is working as expected the Developer needs to initially direct a percentage of traffic to the new version and gradually increase this over time. It is important to be able to rollback if there are any issues reported. What is the BEST way the Developer can implement the migration to the new version SAFELY?",
     answers: [
       "Create an Alias, assign the current and new versions and use traffic shifting to assign a percentage of traffic to the new version",
@@ -4573,6 +4791,7 @@ export const paper4 = [
   },
   {
     id: "s4q26",
+    domain: "Deployment",
     text: "A Development team is creating a microservices application running on Amazon ECS. The release process workflow of the application requires a manual approval step before the code is deployed into the production environment. What is the BEST way to achieve this using AWS CodePipeline?",
     answers: [
       "Use an Amazon SNS notification from the deployment stage",
@@ -4594,6 +4813,7 @@ export const paper4 = [
   },
   {
     id: "s4q27",
+    domain: "Security",
     text: "A web application is using Amazon Kinesis Data Streams for ingesting IoT data that is then stored before processing for up to 24 hours. How can the Developer implement encryption at rest for data stored in Amazon Kinesis Data Streams?",
     answers: [
       "Add a certificate and enable SSL/TLS connections to Kinesis Data Streams",
@@ -4615,6 +4835,7 @@ export const paper4 = [
   },
   {
     id: "s4q28",
+    domain: "Security",
     text: "A Developer has completed some code updates and needs to deploy the updates to an Amazon Elastic Beanstalk environment. Due to the criticality of the application, the ability to quickly roll back must be prioritized of any other considerations. Which deployment policy should the Developer choose?",
     answers: [
       "All at once",
@@ -4636,6 +4857,7 @@ export const paper4 = [
   },
   {
     id: "s4q29",
+    domain: "Deployment",
     text: "A Developer needs to configure an Elastic Load Balancer that is deployed through AWS Elastic Beanstalk. Where should the Developer place the load-balancer.config file in the application source bundle?",
     answers: [
       "In the root of the source code",
@@ -4657,6 +4879,7 @@ export const paper4 = [
   },
   {
     id: "s4q30",
+    domain: "Deployment",
     text: "A Developer has created the code for a Lambda function saved the code in a file named lambda_function.py. He has also created a template that named template.yaml. The following code is included in the template file: AWSTemplateFormatVersion: '2010-09-09' Transform: 'AWS::Serverless-2016-10-31' Resources: microservicehttpendpointpython3: Type: 'AWS::Serverless::Function' Properties: Handler: lambda_function.lambda_handler CodeUri: . What commands can the Developer use to prepare and then deploy this template? (Select TWO.)",
     answers: [
       "Run aws cloudformation package and then aws cloudformation deploy",
@@ -4680,6 +4903,7 @@ export const paper4 = [
   },
   {
     id: "s4q31",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer manages a monitoring service for a fleet of IoT sensors in a major city. The monitoring application uses an Amazon Kinesis Data Stream with a group of EC2 instances processing the data. Amazon CloudWatch custom metrics show that the instances a reaching maximum processing capacity and there are insufficient shards in the Data Stream to handle the rate of data flow. What course of action should the Developer take to resolve the performance issues?",
     answers: [
       "Increase the number of EC2 instances to match the number of shards",
@@ -4701,6 +4925,7 @@ export const paper4 = [
   },
   {
     id: "s4q32",
+    domain: "Development with AWS Services",
     text: "A company uses an Amazon Simple Queue Service (SQS) Standard queue for an application. An issue has been identified where applications are picking up messages from the queue that are still being processed causing duplication. What can a Developer do to resolve this issue?",
     answers: [
       "Increase the DelaySeconds API action on the queue",
@@ -4722,6 +4947,7 @@ export const paper4 = [
   },
   {
     id: "s4q33",
+    domain: "Deployment",
     text: "A Developer is using AWS SAM to create a template for deploying a serverless application. The Developer plans deploy a Lambda function using the template. Which resource type should the Developer specify?",
     answers: [
       "AWS::Serverless::Application",
@@ -4743,6 +4969,7 @@ export const paper4 = [
   },
   {
     id: "s4q34",
+    domain: "Development with AWS Services",
     text: "A team of Developers have been assigned to a new project. The team will be collaborating on the development and delivery of a new application and need a centralized private repository for managing source code. The repository should support updates from multiple sources. Which AWS service should the development team use?",
     answers: [
       "AWS CodeCommit",
@@ -4764,6 +4991,7 @@ export const paper4 = [
   },
   {
     id: "s4q35",
+    domain: "Deployment",
     text: "A development team have deployed a new application and users have reported some performance issues. The developers need to enable monitoring for specific metrics with a data granularity of one second. How can this be achieved?",
     answers: [
       "Do nothing, CloudWatch uses standard resolution metrics by default",
@@ -4785,6 +5013,7 @@ export const paper4 = [
   },
   {
     id: "s4q36",
+    domain: "Deployment",
     text: "A Developer is deploying an application using Docker containers on Amazon ECS. One of the containers runs a database and should be placed on instances in the “databases” task group. What should the Developer use to control the placement of the database task?",
     answers: [
       "Cluster Query Language",
@@ -4806,6 +5035,7 @@ export const paper4 = [
   },
   {
     id: "s4q37",
+    domain: "Security",
     text: "An organization has a new AWS account and is setting up IAM users and policies. According to AWS best practices, which of the following strategies should be followed? (Select TWO.)",
     answers: [
       "Use groups to assign permissions to users",
@@ -4829,6 +5059,7 @@ export const paper4 = [
   },
   {
     id: "s4q38",
+    domain: "Deployment",
     text: "A Developer is deploying an update to a serverless application that includes AWS Lambda using the AWS Serverless Application Model (SAM). The traffic needs to move from the old Lambda version to the new Lambda version gradually, within the shortest period of time. Which deployment configuration is MOST suitable for these requirements?",
     answers: [
       "CodeDeployDefault.LambdaCanary10Percent5Minutes",
@@ -4850,6 +5081,7 @@ export const paper4 = [
   },
   {
     id: "s4q39",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer recently created an Amazon DynamoDB table. The table has the following configuration: The Developer attempted to add two items for userid “user0001” with unique timestamps and received an error for the second item stating: “The conditional request failed”. What MUST the Developer do to resolve the issue?",
     answers: [
       "Use the SDK to add the items",
@@ -4871,6 +5103,7 @@ export const paper4 = [
   },
   {
     id: "s4q40",
+    domain: "Deployment",
     text: "A Developer has deployed an AWS Lambda function and an Amazon DynamoDB table. The function code returns data from the DynamoDB table when it receives a request. The Developer needs to implement a front end that can receive HTTP GET requests and proxy the request information to the Lambda function. What is the SIMPLEST and most COST-EFFECTIVE solution?",
     answers: [
       "Implement an API Gateway API with Lambda proxy integration",
@@ -4892,6 +5125,7 @@ export const paper4 = [
   },
   {
     id: "s4q41",
+    domain: "Development with AWS Services",
     text: "A Developer needs to write some code to invoke an AWS Lambda function using the AWS Command Line Interface (CLI). Which option must be specified to cause the function to be invoked asynchronously?",
     answers: [
       "Set the –invocation-type option to Event",
@@ -4913,6 +5147,7 @@ export const paper4 = [
   },
   {
     id: "s4q42",
+    domain: "Security",
     text: "A serverless application uses Amazon API Gateway an AWS Lambda function and a Lambda authorizer function. There is a failure with the application and a developer needs to trace and analyze user requests that pass through API Gateway through to the back end services. Which AWS service is MOST suitable for this purpose?",
     answers: [
       "Amazon CloudWatch",
@@ -4934,6 +5169,7 @@ export const paper4 = [
   },
   {
     id: "s4q43",
+    domain: "Development with AWS Services",
     text: "A website is being delivered using Amazon CloudFront and a Developer recently modified some images that are displayed on website pages. Upon testing the changes, the Developer noticed that the new versions of the images are not displaying. What should the Developer do to force the new images to be displayed?",
     answers: [
       "Delete the images from the origin and then save the new version on the origin",
@@ -4955,6 +5191,7 @@ export const paper4 = [
   },
   {
     id: "s4q44",
+    domain: "Security",
     text: "A company is using Amazon CloudFront to provide low-latency access to a web application to its global users. The organization must encrypt all traffic between users and CloudFront, and all traffic between CloudFront and the web application. How can these requirements be met? (Select TWO.)",
     answers: [
       "Use AWS KMS to encrypt traffic between CloudFront and the web application",
@@ -4978,6 +5215,7 @@ export const paper4 = [
   },
   {
     id: "s4q45",
+    domain: "Security",
     text: "A Developer is working on an AWS Lambda function that accesses Amazon DynamoDB. The Lambda function must retrieve an item and update some of its attributes or create the item if it does not exist. The Lambda function has access to the primary key. Which IAM permission should the Developer request for the Lambda function to achieve this functionality?",
     answers: [
       "“dynamodb:DeleteItem”, “dynamodb:GetItem”, and “dynamodb:PutItem”",
@@ -4999,6 +5237,7 @@ export const paper4 = [
   },
   {
     id: "s4q46",
+    domain: "Security",
     text: "A Developer is trying to make API calls using AWS SDK. The IAM user credentials used by the application require multi-factor authentication for all API calls. Which method should the Developer use to access the multi-factor authentication protected API?",
     answers: [
       "GetFederationToken",
@@ -5020,6 +5259,7 @@ export const paper4 = [
   },
   {
     id: "s4q47",
+    domain: "Development with AWS Services",
     text: "A company is creating a REST service using an Amazon API Gateway with AWS Lambda integration. The service must run different versions for testing purposes. What would be the BEST way to accomplish this?",
     answers: [
       "Use an X-Version header to denote which version is being called and pass that header to the Lambda function(s)",
@@ -5041,6 +5281,7 @@ export const paper4 = [
   },
   {
     id: "s4q48",
+    domain: "Development with AWS Services",
     text: "A set of APIs are exposed to customers using Amazon API Gateway. These APIs have caching enabled on the API Gateway. Customers have asked for an option to invalidate this cache for each of the APIs. What action can be taken to allow API customers to invalidate the API Cache?",
     answers: [
       "Ask customers to use AWS credentials to call the InvalidateCache API",
@@ -5062,6 +5303,7 @@ export const paper4 = [
   },
   {
     id: "s4q49",
+    domain: "Security",
     text: "A Developer is writing a web application that allows users to view images from an Amazon S3 bucket. The users will log in with their Amazon login, as well as Facebook and/or Google accounts. How can the Developer provide this authentication capability?",
     answers: [
       "Use Amazon Cognito with web identity federation",
@@ -5083,6 +5325,7 @@ export const paper4 = [
   },
   {
     id: "s4q50",
+    domain: "Development with AWS Services",
     text: "A mobile application has hundreds of users. Each user may use multiple devices to access the application. The Developer wants to assign unique identifiers to these users regardless of the device they use. Which of the following methods should be used to obtain unique identifiers?",
     answers: [
       "Create a user table in Amazon DynamoDB as key-value pairs of users and their devices. Use these keys as unique identifiers",
@@ -5104,6 +5347,7 @@ export const paper4 = [
   },
   {
     id: "s4q51",
+    domain: "Security",
     text: "A gaming application stores scores for players in an Amazon DynamoDB table that has four attributes: user_id, user_name, user_score, and user_rank. The users are allowed to update their names only. A user is authenticated by web identity federation. Which set of conditions should be added in the policy attached to the role for the dynamodb:PutItem API call?",
     answers: [
       '"Condition": { "ForAllValues:StringEquals": { "dynamodb:LeadingKeys": [ "${www.amazon.com:user_id}" ], "dynamodb:Attributes": [ "user_name" ] } }',
@@ -5125,6 +5369,7 @@ export const paper4 = [
   },
   {
     id: "s4q52",
+    domain: "Troubleshooting and Optimization",
     text: "A company is running an order processing system on AWS. Amazon SQS is used to queue orders and an AWS Lambda function processes them. The company recently started noticing a lot of orders are failing to process. How can a Developer MOST effectively manage these failures to debug the failed orders later and reprocess them, as necessary?",
     answers: [
       "Implement dead-letter queues for failed orders from the order queue",
@@ -5146,6 +5391,7 @@ export const paper4 = [
   },
   {
     id: "s4q53",
+    domain: "Deployment",
     text: "A Developer must deploy a new AWS Lambda function using an AWS CloudFormation template. Which procedures will deploy a Lambda function? (Select TWO.)",
     answers: [
       "Upload the code to an AWS CodeCommit repository, then add a reference to it in an AWS::Lambda::Function resource in the template",
@@ -5169,6 +5415,7 @@ export const paper4 = [
   },
   {
     id: "s4q54",
+    domain: "Troubleshooting and Optimization",
     text: "A company is running an application built on AWS Lambda functions. One Lambda function has performance issues when it has to download a 50 MB file from the internet every execution. This function is called multiple times a second. What solution would give the BEST performance increase?",
     answers: [
       "Cache the file in the /tmp directory",
@@ -5190,6 +5437,7 @@ export const paper4 = [
   },
   {
     id: "s4q55",
+    domain: "Troubleshooting and Optimization",
     text: "A company is migrating several applications to the AWS cloud. The security team has strict security requirements and mandate that a log of all API calls to AWS resources must be maintained. Which AWS service should be used to record this information for the security team?",
     answers: [
       "Amazon CloudWatch",
@@ -5211,6 +5459,7 @@ export const paper4 = [
   },
   {
     id: "s4q56",
+    domain: "Development with AWS Services",
     text: "A Developer has written some code that will connect and pull information from several hundred websites. The code needs to run on a daily schedule and execution time will be less than 60 seconds. Which AWS service will be most suitable and cost-effective?",
     answers: [
       "Amazon ECS Fargate",
@@ -5232,6 +5481,7 @@ export const paper4 = [
   },
   {
     id: "s4q57",
+    domain: "Development with AWS Services",
     text: "A team of Developers require access to an AWS account that is a member account in AWS Organizations. The administrator of the master account needs to restrict the AWS services, resources, and API actions that can be accessed by the users in the account. What should the administrator create?",
     answers: [
       "A Service Control Policy (SCP)",
@@ -5253,6 +5503,7 @@ export const paper4 = [
   },
   {
     id: "s4q58",
+    domain: "Deployment",
     text: "A three tier web application has been deployed on Amazon EC2 instances using Amazon EC2 Auto Scaling. The EC2 instances in the web tier sometimes receive bursts of traffic and the application tier cannot scale fast enough to keep up with messages sometimes resulting in message loss. How can a Developer decouple the application to prevent loss of messages?",
     answers: [
       "Add an Amazon SQS queue between the application tier and the database tier",
@@ -5274,6 +5525,7 @@ export const paper4 = [
   },
   {
     id: "s4q59",
+    domain: "Troubleshooting and Optimization",
     text: "A security officer has requested that a Developer enable logging for API actions for all AWS regions to a single Amazon S3 bucket. What is the EASIEST way for the Developer to achieve this requirement?",
     answers: [
       "Create an AWS CloudTrail trail and apply it to all regions, configure logging to a single S3 bucket",
@@ -5295,6 +5547,7 @@ export const paper4 = [
   },
   {
     id: "s4q60",
+    domain: "Security",
     text: "A small team of Developers require access to an Amazon S3 bucket. An admin has created a resource-based policy. Which element of the policy should be used to specify the ARNs of the user accounts that will be granted access?",
     answers: ["Sid", "Condition", "Principal", "Id"],
     correctAnswerIndex: 2,
@@ -5311,6 +5564,7 @@ export const paper4 = [
   },
   {
     id: "s4q61",
+    domain: "Security",
     text: "An Amazon DynamoDB table will store authentication credentials for a mobile app. The table must be secured so only a small group of Developers are able to access it. How can table access be secured according to this requirement and following AWS best practice?",
     answers: [
       "Attach a permissions policy to an IAM group containing the Developer’s IAM user accounts that grants access to the table",
@@ -5353,6 +5607,7 @@ export const paper4 = [
   },
   {
     id: "s4q63",
+    domain: "Deployment",
     text: "A Developer is creating a service on Amazon ECS and needs to ensure that each task is placed on a different container instance. How can this be achieved?",
     answers: [
       "Use a task placement strategy",
@@ -5374,6 +5629,7 @@ export const paper4 = [
   },
   {
     id: "s4q64",
+    domain: "Development with AWS Services",
     text: "An application exports files which must be saved for future use but are not frequently accessed. Compliance requirements necessitate redundant retention of data across AWS regions. Which solution is the MOST cost-effective for these requirements?",
     answers: [
       "Amazon S3 with Same-Region Replication (CRR)",
@@ -5395,6 +5651,7 @@ export const paper4 = [
   },
   {
     id: "s4q65",
+    domain: "Security",
     text: "An AWS Lambda function requires several environment variables with secret values. The secret values should be obscured in the Lambda console and API output even for users who have permission to use the key. What is the best way to achieve this outcome and MINIMIZE complexity and latency?",
     answers: [
       "Encrypt the secret values client-side using encryption helpers",
@@ -5419,6 +5676,7 @@ export const paper4 = [
 export const paper5 = [
   {
     id: "s5q1",
+    domain: "Development with AWS Services",
     text: "An application uses Amazon EC2, and Application Load Balancer and Amazon CloudFront to serve content. The security team have reported malicious activity from a specific range of IP addresses. How can a Developer prevent the application from being targeted by these addresses again?",
     answers: [
       "Create a security group rule denying the address range and apply it to the EC2 instances",
@@ -5440,6 +5698,7 @@ export const paper5 = [
   },
   {
     id: "s5q2",
+    domain: "Development with AWS Services",
     text: "A developer is making some updates to an AWS Lambda function that is part of a serverless application and will be saving a new version. The application is used by hundreds of users and the developer needs to be able to test the updates and be able to rollback if there any issues with user experience. What is the SAFEST way to do this with minimal changes to the application code?",
     answers: [
       "Create an alias and point it to the new version. Update the application code to point to the new alias",
@@ -5461,6 +5720,7 @@ export const paper5 = [
   },
   {
     id: "s5q3",
+    domain: "Development with AWS Services",
     text: "A developer is creating a new application that will store data in a DynamoDB table. Which APIs can be used to read, write and modify individual items in the table?",
     answers: [
       "GetItem, PutItem, UpdateItem",
@@ -5482,6 +5742,7 @@ export const paper5 = [
   },
   {
     id: "s5q4",
+    domain: "Troubleshooting and Optimization",
     text: "An application running on Amazon EC2 is experiencing intermittent technical difficulties. The developer needs to find a solution for tracking the errors that occur in the application logs and setting up a notification when the error rate exceeds a certain threshold. How can this be achieved with the LEAST complexity?",
     answers: [
       "Use CloudTrail to monitor the application log files and send an SNS notification",
@@ -5503,6 +5764,7 @@ export const paper5 = [
   },
   {
     id: "s5q5",
+    domain: "Troubleshooting and Optimization",
     text: "A website consisting of HTML, images, and client-side JavaScript is being hosted on Amazon S3. The website will be used globally, what’s the best way to MINIMIZE latency for global users?",
     answers: [
       "Create a CloudFront distribution and configure the S3 website as an origin",
@@ -5524,6 +5786,7 @@ export const paper5 = [
   },
   {
     id: "s5q6",
+    domain: "Deployment",
     text: "A team of developers need to be able to collaborate and synchronize multiple distributed code repositories and leverage a pre- configured continuous delivery toolchain for deploying their projects on AWS. The team also require a centralized project dashboard to monitor application activity. Which AWS service should they use?",
     answers: [
       "AWS CodePipeline",
@@ -5545,6 +5808,7 @@ export const paper5 = [
   },
   {
     id: "s5q7",
+    domain: "Deployment",
     text: "A developer has created a YAML template file that includes the following header: 'AWS::Serverless-2016-10-31'. Which commands should the developer use to deploy the application?",
     answers: [
       "sam package and sam deploy",
@@ -5566,6 +5830,7 @@ export const paper5 = [
   },
   {
     id: "s5q8",
+    domain: "Deployment",
     text: "An application uses multiple Lambda functions to write data to an Amazon RDS database. The Lambda functions must share the same connection string. What is the BEST solution to ensure security and operational efficiency?",
     answers: [
       "Use KMS encrypted environment variables within each Lambda function",
@@ -5587,6 +5852,7 @@ export const paper5 = [
   },
   {
     id: "s5q9",
+    domain: "Deployment",
     text: "A company has several AWS accounts used by different departments. Developers use the same CloudFormation template to deploy an application across accounts. What can the developers use to deploy and manage the application with the LEAST operational effort?",
     answers: [
       "Create a CloudFormation Stack in an administrator account and use StackSets to update the stacks across multiple accounts",
@@ -5608,6 +5874,7 @@ export const paper5 = [
   },
   {
     id: "s5q10",
+    domain: "Security",
     text: "A company uses an Amazon EC2 web application with Amazon CloudFront to distribute content to its customers globally. The company requires that all traffic is encrypted between the customers and CloudFront, and CloudFront and the web application. What steps need to be taken to enforce this encryption? (Select TWO.)",
     answers: [
       "Enable Field Level Encryption",
@@ -5631,6 +5898,7 @@ export const paper5 = [
   },
   {
     id: "s5q11",
+    domain: "Development with AWS Services",
     text: "A developer has a user account in the Development AWS account. He has been asked to modify resources in a Production AWS account. What is the MOST secure way to provide temporary access to the developer?",
     answers: [
       "Generate an access key on the second account using the root account and share the access keys with the developer for API access",
@@ -5652,6 +5920,7 @@ export const paper5 = [
   },
   {
     id: "s5q12",
+    domain: "Development with AWS Services",
     text: "An application scans an Amazon DynamoDB table once per day to produce a report. The scan is performed in non-peak hours when production usage uses around 50% of the provisioned throughput. How can you MINIMIZE the time it takes to produce the report without affecting production workloads? (Select TWO.)",
     answers: [
       "Use a Parallel Scan API operation",
@@ -5675,6 +5944,7 @@ export const paper5 = [
   },
   {
     id: "s5q13",
+    domain: "Security",
     text: "A Developer is creating a banking application that will be used to view financial transactions and statistics. The application requires multi-factor authentication to be added to the login protocol. Which service should be used to meet this requirement?",
     answers: [
       "AWS IAM with MFA",
@@ -5696,6 +5966,7 @@ export const paper5 = [
   },
   {
     id: "s5q14",
+    domain: "Security",
     text: "An application is running on a fleet of EC2 instances running behind an Elastic Load Balancer (ELB). The EC2 instances session data in a shared Amazon S3 bucket. Security policy mandates that data must be encrypted in transit. How can the Developer ensure that all data that is sent to the S3 bucket is encrypted in transit?",
     answers: [
       "Create an S3 bucket policy that denies any S3 Put request that does not include the x-amz-server-side-encryption",
@@ -5717,6 +5988,7 @@ export const paper5 = [
   },
   {
     id: "s5q15",
+    domain: "Development with AWS Services",
     text: "A gaming application displays the results of games in a leaderboard. The leaderboard is updated by 4 KB messages that are retrieved from an Amazon SQS queue. The updates are received infrequently but the Developer needs to minimize the time between the messages arriving in the queue and the leaderboard being updated. Which technique provides the shortest delay in updating the leaderboard?",
     answers: [
       "Reduce the size of the messages with compression before sending them",
@@ -5738,6 +6010,7 @@ export const paper5 = [
   },
   {
     id: "s5q16",
+    domain: "Development with AWS Services",
     text: "A developer is creating a serverless application that will use a DynamoDB table. The average item size is 9KB. The application will make 4 strongly consistent reads/sec, and 2 standard write/sec. How many RCUs/WCUs are required?",
     answers: [
       "24 RCU and 18 WCU",
@@ -5759,6 +6032,7 @@ export const paper5 = [
   },
   {
     id: "s5q17",
+    domain: "Troubleshooting and Optimization",
     text: "A monitoring application that keeps track of a large eCommerce website uses Amazon Kinesis for data ingestion. During periods of peak data rates, the Kinesis stream cannot keep up with the incoming data. What step will allow Kinesis data streams to accommodate the traffic during peak hours?",
     answers: [
       "Install the Kinesis Producer Library (KPL) for ingesting data into the stream",
@@ -5780,6 +6054,7 @@ export const paper5 = [
   },
   {
     id: "s5q18",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer has created a serverless function that processes log files. The function should be invoked once every 15 minutes. How can the Developer automatically invoke the function using serverless services?",
     answers: [
       "Launch an EC2 Linux instance and add a command to periodically invoke the function to its /etc/crontab file",
@@ -5801,6 +6076,7 @@ export const paper5 = [
   },
   {
     id: "s5q19",
+    domain: "Development with AWS Services",
     text: "A Developer wants to find a list of items in a global secondary index from an Amazon DynamoDB table. Which DynamoDB API call can the Developer use in order to consume the LEAST number of read capacity units?",
     answers: [
       "Scan operation using eventually-consistent reads",
@@ -5822,6 +6098,7 @@ export const paper5 = [
   },
   {
     id: "s5q20",
+    domain: "Development with AWS Services",
     text: "A company provides a large number of services on AWS to customers. The customers connect to one or more services directly and the architecture is becoming complex. How can the architecture be refactored to provide a single interface for the services?",
     answers: [
       "Amazon API Gateway",
@@ -5843,6 +6120,7 @@ export const paper5 = [
   },
   {
     id: "s5q21",
+    domain: "Troubleshooting and Optimization",
     text: "An application writes items to an Amazon DynamoDB table. As the application scales to thousands of instances, calls to the DynamoDB API generate occasional ThrottlingException errors. The application is coded in a language that is incompatible with the AWS SDK. What can be done to prevent the errors from occurring?",
     answers: [
       "Add exponential backoff to the application logic",
@@ -5864,6 +6142,7 @@ export const paper5 = [
   },
   {
     id: "s5q22",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer has created an AWS Lambda function in a new AWS account. The function is expected to be invoked 40 times per second and the execution duration will be around 100 seconds. What MUST the Developer do to ensure there are no errors?",
     answers: [
       "Contact AWS Support to increase the concurrent execution limits",
@@ -5885,6 +6164,7 @@ export const paper5 = [
   },
   {
     id: "s5q23",
+    domain: "Development with AWS Services",
     text: "You run an ad-supported photo sharing website using Amazon S3 to serve photos to visitors of your site. At some point you find out that other sites have been linking to the photos on your site, causing loss to your business. What is an effective method to mitigate this?",
     answers: [
       "Store photos on an EBS volume of the web server",
@@ -5906,6 +6186,7 @@ export const paper5 = [
   },
   {
     id: "s5q24",
+    domain: "Deployment",
     text: "A company manages an application that stores data in an Amazon DynamoDB table. The company need to keep a record of all new changes made to the DynamoDB table in another table within the same AWS region. What is the MOST suitable way to deliver this requirement?",
     answers: [
       "Use Amazon DynamoDB streams",
@@ -5927,6 +6208,7 @@ export const paper5 = [
   },
   {
     id: "s5q25",
+    domain: "Development with AWS Services",
     text: "An IT automation architecture uses many AWS Lambda functions invoking one another as a large state machine. The coordination of this state machine is legacy custom code that breaks easily. Which AWS Service can help refactor and manage the state machine?",
     answers: [
       "AWS CodePipeline",
@@ -5948,6 +6230,7 @@ export const paper5 = [
   },
   {
     id: "s5q26",
+    domain: "Deployment",
     text: "A Developer is deploying an Amazon ECS update using AWS CodeDeploy. In the appspec.yaml file, which of the following is a valid structure for the order of hooks that should be specified?",
     answers: [
       "BeforeInstall > AfterInstall > AfterAllowTestTraffic > BeforeAllowTraffic > AfterAllowTraffic",
@@ -5969,6 +6252,7 @@ export const paper5 = [
   },
   {
     id: "s5q27",
+    domain: "Development with AWS Services",
     text: "A Developer has setup an Amazon Kinesis Data Stream with 6 shards to ingest a maximum of 2000 records per second. An AWS Lambda function has been configured to process these records. In which order will these records be processed?",
     answers: [
       "Lambda will receive each record in the reverse order it was placed into the stream",
@@ -5990,6 +6274,7 @@ export const paper5 = [
   },
   {
     id: "s5q28",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer created an AWS Lambda function for a serverless application. The Lambda function has been executing for several minutes and the Developer cannot find any log data in CloudWatch Logs. What is the MOST likely explanation for this issue?",
     answers: [
       "The Lambda function does not have any explicit log statements for the log data to send it to CloudWatch Logs",
@@ -6011,6 +6296,7 @@ export const paper5 = [
   },
   {
     id: "s5q29",
+    domain: "Deployment",
     text: "A Developer is looking for a way to use shorthand syntax to express functions, APIs, databases, and event source mappings. The Developer will test using AWS SAM to create a simple Lambda function using Nodejs.12x. What is the SIMPLEST way for the Developer to get started with a Hello World Lambda function?",
     answers: [
       "Install the AWS SAM CLI, run sam init and use one of the AWS Quick Start Templates",
@@ -6032,6 +6318,7 @@ export const paper5 = [
   },
   {
     id: "s5q30",
+    domain: "Troubleshooting and Optimization",
     text: "An Amazon Kinesis Data Stream has recently been configured to receive data from sensors in a manufacturing facility. A consumer EC2 instance is configured to process the data every 48 hours and save processing results to an Amazon RedShift data warehouse. Testing has identified a large amount of data is missing. A review of monitoring logs has identified that the sensors are sending data correctly and the EC2 instance is healthy. What is the MOST likely explanation for this issue?",
     answers: [
       "Records are retained for 24 hours in the Kinesis Data Stream by default",
@@ -6053,6 +6340,7 @@ export const paper5 = [
   },
   {
     id: "s5q31",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is managing an application that includes an Amazon SQS queue. The consumers that process the data from the queue are connecting in short cycles and the queue often does not return messages. The cost for API calls is increasing. How can the Developer optimize the retrieval of messages and reduce cost?",
     answers: [
       "Call the ReceiveMessage API with the VisibilityTimeout parameter set to 30",
@@ -6074,6 +6362,7 @@ export const paper5 = [
   },
   {
     id: "s5q32",
+    domain: "Development with AWS Services",
     text: "A company currently runs a number of legacy automated batch processes for system update management and operational activities. The company are looking to refactor these processes and require a service that can coordinate multiple AWS services into serverless workflows. What is the MOST suitable service for this requirement?",
     answers: ["Amazon SWF", "AWS Batch", "AWS Step Functions", "AWS Lambda"],
     correctAnswerIndex: 2,
@@ -6090,6 +6379,7 @@ export const paper5 = [
   },
   {
     id: "s5q33",
+    domain: "Deployment",
     text: "A Development team have moved their continuous integration and delivery (CI/CD) pipeline into the AWS Cloud. The team is leveraging AWS CodeCommit for management of source code. The team need to compile their source code, run tests, and produce software packages that are ready for deployment. Which AWS service can deliver these outcomes?",
     answers: [
       "AWS CodePipeline",
@@ -6111,6 +6401,7 @@ export const paper5 = [
   },
   {
     id: "s5q34",
+    domain: "Development with AWS Services",
     text: "Every time an Amazon EC2 instance is launched, certain metadata about the instance should be recorded in an Amazon DynamoDB table. The data is gathered and written to the table by an AWS Lambda function. What is the MOST efficient method of invoking the Lambda function?",
     answers: [
       "Create a CloudWatch Event with an event pattern looking for EC2 state changes and a target set to use the Lambda function",
@@ -6132,6 +6423,7 @@ export const paper5 = [
   },
   {
     id: "s5q35",
+    domain: "Deployment",
     text: "A Developer is migrating Docker containers to Amazon ECS. A large number of containers will be deployed across some newly deployed ECS containers instances using the same instance type. High availability is provided within the microservices architecture. Which task placement strategy requires the LEAST configuration for this scenario?",
     answers: ["binpack", "random", "spread", "Fargate"],
     correctAnswerIndex: 1,
@@ -6148,6 +6440,7 @@ export const paper5 = [
   },
   {
     id: "s5q36",
+    domain: "Security",
     text: "A Developer has noticed some suspicious activity in her AWS account and is concerned that the access keys associated with her IAM user account may have been compromised. What is the first thing the Developer do in should do in this situation?",
     answers: [
       "Delete her IAM user account",
@@ -6169,6 +6462,7 @@ export const paper5 = [
   },
   {
     id: "s5q37",
+    domain: "Deployment",
     text: "A Developer needs to setup a new serverless application that includes AWS Lambda and Amazon API Gateway as part of a single stack. The Developer needs to be able to locally build and test the serverless applications before deployment on AWS. Which service should the Developer use?",
     answers: [
       "AWS CloudFormation",
@@ -6190,6 +6484,7 @@ export const paper5 = [
   },
   {
     id: "s5q38",
+    domain: "Troubleshooting and Optimization",
     text: "An application needs to read up to 100 items at a time from an Amazon DynamoDB. Each item is up to 100 KB in size and all attributes must be retrieved. What is the BEST way to minimize latency?",
     answers: [
       "Use GetItem and use a projection expression",
@@ -6211,6 +6506,7 @@ export const paper5 = [
   },
   {
     id: "s5q39",
+    domain: "Deployment",
     text: "A Developer manages a website running behind an Elastic Load Balancer in the us-east-1 region. The Developer has recently deployed an identical copy of the website in us-west-1 and needs to send 20% of the traffic to the new site. How can the Developer achieve this requirement?",
     answers: [
       "Use an Amazon Route 53 Geolocation Routing Policy",
@@ -6232,6 +6528,7 @@ export const paper5 = [
   },
   {
     id: "s5q40",
+    domain: "Deployment",
     text: "A Development team are deploying an AWS Lambda function that will be used by a production application. The function code will be updated regularly, and new versions will be published. The development team do not want to modify application code to point to each new version. How can the Development team setup a static ARN that will point to the latest published version?",
     answers: [
       "Publish a mutable version and point it to the $LATEST version",
@@ -6253,6 +6550,7 @@ export const paper5 = [
   },
   {
     id: "s5q41",
+    domain: "Troubleshooting and Optimization",
     text: "An application is being instrumented to send trace data using AWS X-Ray. A Developer needs to upload segment documents using JSON-formatted strings to X-Ray using the API. Which API action should the developer use?",
     answers: [
       "The PutTraceSegments API action",
@@ -6274,6 +6572,7 @@ export const paper5 = [
   },
   {
     id: "s5q42",
+    domain: "Development with AWS Services",
     text: "A three-tier application is being migrated from an on-premises data center. The application includes an Apache Tomcat web tier, an application tier running on Linux, and a MySQL back end. A Developer must refactor the application to run on the AWS cloud. The cloud-based application must be fault tolerant and elastic. How can the Developer refactor the web tier and application tier? (Select TWO.)",
     answers: [
       "Create an Amazon CloudFront distribution for the web tier",
@@ -6297,6 +6596,7 @@ export const paper5 = [
   },
   {
     id: "s5q43",
+    domain: "Deployment",
     text: "A Developer has joined a team and needs to connect to the AWS CodeCommit repository using SSH. What should the Developer do to configure access using Git?",
     answers: [
       "On the Developer’s IAM account, under security credentials, choose to create HTTPS Git credentials for AWS CodeCommit",
@@ -6318,6 +6618,7 @@ export const paper5 = [
   },
   {
     id: "s5q44",
+    domain: "Security",
     text: "A large quantity of sensitive data must be encrypted. A Developer will use a custom CMK to generate the encryption key. The key policy currently looks like this: What API action must be added to the key policy?",
     answers: [
       "kms:EnableKey",
@@ -6360,6 +6661,7 @@ export const paper5 = [
   },
   {
     id: "s5q46",
+    domain: "Deployment",
     text: "An application uses Amazon Kinesis Data Streams to ingest and process large streams of data records in real time. Amazon EC2 instances consume and process the data using the Amazon Kinesis Client Library (KCL). The application handles the failure scenarios and does not require standby workers. The application reports that a specific shard is receiving more data than expected. To adapt to the changes in the rate of data flow, the “hot” shard is resharded. Assuming that the initial number of shards in the Kinesis data stream is 6, and after resharding the number of shards increased to 8, what is the maximum number of EC2 instances that can be deployed to process data from all the shards?",
     answers: ["12", "8", "6", "1"],
     correctAnswerIndex: 1,
@@ -6376,6 +6678,7 @@ export const paper5 = [
   },
   {
     id: "s5q47",
+    domain: "Development with AWS Services",
     text: "What does an Amazon SQS delay queue accomplish?",
     answers: [
       "Messages are hidden for a configurable amount of time when they are first added to the queue",
@@ -6397,6 +6700,7 @@ export const paper5 = [
   },
   {
     id: "s5q48",
+    domain: "Security",
     text: "An organization needs to add encryption in-transit to an existing website running behind an Elastic Load Balancer. The website’s Amazon EC2 instances are CPU-constrained and therefore load on their CPUs should not be increased. What should be done to secure the website? (Select TWO.)",
     answers: [
       "Configure an Elastic Load Balancer with SSL pass-through",
@@ -6420,6 +6724,7 @@ export const paper5 = [
   },
   {
     id: "s5q49",
+    domain: "Deployment",
     text: "A company is running a Docker application on Amazon ECS. The application must scale based on user load in the last 15 seconds. How should the Developer instrument the code so that the requirement can be met?",
     answers: [
       "Create a high-resolution custom Amazon CloudWatch metric for user activity data, then publish data every 30 seconds",
@@ -6441,6 +6746,7 @@ export const paper5 = [
   },
   {
     id: "s5q50",
+    domain: "Development with AWS Services",
     text: "A company needs a fully-managed source control service that will work in AWS. The service must ensure that revision control synchronizes multiple distributed repositories by exchanging sets of changes peer-to-peer. All users need to work productively even when not connected to a network. Which source control service should be used?",
     answers: ["Subversion", "AWS CodeBuild", "AWS CodeCommit", "AWS CodeStar"],
     correctAnswerIndex: 2,
@@ -6457,6 +6763,7 @@ export const paper5 = [
   },
   {
     id: "s5q51",
+    domain: "Development with AWS Services",
     text: "A Developer needs to return a list of items in a global secondary index from an Amazon DynamoDB table. Which DynamoDB API call can the Developer use in order to consume the LEAST number of read capacity units?",
     answers: [
       "Scan operation using eventually-consistent reads",
@@ -6478,6 +6785,7 @@ export const paper5 = [
   },
   {
     id: "s5q52",
+    domain: "Development with AWS Services",
     text: "A Developer is writing an AWS Lambda function that processes records from an Amazon Kinesis Data Stream. The Developer must write the function so that it sends a notice to Administrators if it fails to process a batch of records. How should the Developer write the function?",
     answers: [
       "Separate the Lambda handler from the core logic",
@@ -6499,6 +6807,7 @@ export const paper5 = [
   },
   {
     id: "s5q53",
+    domain: "Security",
     text: "An application is running on a cluster of Amazon EC2 instances. The application has received an error when trying to read objects stored within an Amazon S3 bucket. The bucket is encrypted with server-side encryption and AWS KMS managed keys (SSE-KMS). The error is as follows: Service: AWSKMS; Status Code: 400, Error Code: ThrottlingException Which combination of steps should be taken to prevent this failure? (Select TWO.)",
     answers: [
       "Contact AWS support to request an AWS KMS rate limit increase",
@@ -6522,6 +6831,7 @@ export const paper5 = [
   },
   {
     id: "s5q54",
+    domain: "Deployment",
     text: "A Developer is creating an AWS Lambda function that generates a new file each time it runs. Each new file must be checked into an AWS CodeCommit repository hosted in the same AWS account. How should the Developer accomplish this?",
     answers: [
       "When the Lambda function starts, use the Git CLI to clone the repository. Check the new file into the cloned repository and push the change",
@@ -6543,6 +6853,7 @@ export const paper5 = [
   },
   {
     id: "s5q55",
+    domain: "Development with AWS Services",
     text: "A Developer needs to run some code using Lambda in response to an event and forward the execution result to another application using a pub/sub notification. How can the Developer accomplish this?",
     answers: [
       "Configure a CloudWatch Events alarm the triggers based on Lambda execution success and route the execution results to Amazon SNS",
@@ -6564,6 +6875,7 @@ export const paper5 = [
   },
   {
     id: "s5q56",
+    domain: "Troubleshooting and Optimization",
     text: "An application runs on Amazon EC2 and generates log files. A Developer needs to centralize the log files so they can be queried and retained. What is the EASIEST way for the Developer to centralize the log files?",
     answers: [
       "Install the Amazon CloudWatch Logs agent and collect the logs from the instances",
@@ -6585,6 +6897,7 @@ export const paper5 = [
   },
   {
     id: "s5q57",
+    domain: "Security",
     text: "A company needs to encrypt a large quantity of data. The data encryption keys must be generated from a dedicated, tamper- resistant hardware device. To deliver these requirements, which AWS service should the company use?",
     answers: ["AWS KMS", "AWS CloudHSM", "AWS Certificate Manager", "AWS IAM"],
     correctAnswerIndex: 1,
@@ -6601,6 +6914,7 @@ export const paper5 = [
   },
   {
     id: "s5q58",
+    domain: "Security",
     text: "A Developer needs to restrict all users and roles from using a list of API actions within a member account in AWS Organizations. The Developer needs to deny access to a few specific API actions. What is the MOST efficient way to do this?",
     answers: [
       "Create a deny list and specify the API actions to deny",
@@ -6622,6 +6936,7 @@ export const paper5 = [
   },
   {
     id: "s5q59",
+    domain: "Development with AWS Services",
     text: "A development team require a fully-managed source control service that is compatible with Git. Which service should they use?",
     answers: [
       "AWS CodeDeploy",
@@ -6643,6 +6958,7 @@ export const paper5 = [
   },
   {
     id: "s5q60",
+    domain: "Deployment",
     text: "How can a Developer view a summary of proposed changes to an AWS CloudFormation stack without implementing the changes in production?",
     answers: [
       "Create a StackSet",
@@ -6685,6 +7001,7 @@ export const paper5 = [
   },
   {
     id: "s5q62",
+    domain: "Development with AWS Services",
     text: "A Developer must run a shell script on Amazon EC2 Linux instances each time they are launched by an Amazon EC2 Auto Scaling group. What is the SIMPLEST way to run the script?",
     answers: [
       "Add the script to the user data when creating the launch configuration",
@@ -6727,6 +7044,7 @@ export const paper5 = [
   },
   {
     id: "s5q64",
+    domain: "Troubleshooting and Optimization",
     text: "Data must be loaded into an application each week for analysis. The data is uploaded to an Amazon S3 bucket from several offices around the world. Latency is slowing the uploads and delaying the analytics job. What is the SIMPLEST way to improve upload times?",
     answers: [
       "Upload to a local Amazon S3 bucket within each region and enable Cross-Region Replication (CRR)",
@@ -6748,6 +7066,7 @@ export const paper5 = [
   },
   {
     id: "s5q65",
+    domain: "Development with AWS Services",
     text: "An AWS Lambda function must be connected to an Amazon VPC private subnet that does not have Internet access. The function also connects to an Amazon DynamoDB table. What MUST a Developer do to enable access to the DynamoDB table?",
     answers: [
       "Attach an Internet Gateway",
@@ -6772,6 +7091,7 @@ export const paper5 = [
 export const paper6 = [
   {
     id: "s6q1",
+    domain: "Deployment",
     text: "A developer has created a Docker image and uploaded it to an Amazon Elastic Container Registry (ECR) repository. How can the developer pull the image to his workstation using the docker client?",
     answers: [
       "Run aws ecr get-login-password use the output to login in then issue a docker pull command specifying the image name using registry/repository[:tag]",
@@ -6793,6 +7113,7 @@ export const paper6 = [
   },
   {
     id: "s6q2",
+    domain: "Troubleshooting and Optimization",
     text: "A company is designing a new application that will store thousands of terabytes of data. They need a fully managed NoSQL data store that provides low-latency and can store key-value pairs. Which type of database should they use?",
     answers: [
       "Amazon RDS",
@@ -6814,6 +7135,7 @@ export const paper6 = [
   },
   {
     id: "s6q3",
+    domain: "Security",
     text: "The manager of a development team is setting up a shared S3 bucket for team members. The manager would like to use a single policy to allow each user to have access to their objects in the S3 bucket. Which feature can be used to generalize the policy?",
     answers: ["Principal", "Condition", "Variable", "Resource"],
     correctAnswerIndex: 2,
@@ -6830,6 +7152,7 @@ export const paper6 = [
   },
   {
     id: "s6q4",
+    domain: "Development with AWS Services",
     text: "An independent software vendor (ISV) uses Amazon S3 and Amazon CloudFront to distribute software updates. They would like to provide their premium customers with access to updates faster. What is the MOST efficient way to distribute these updates only to the premium customers? (Select TWO.)",
     answers: [
       "Create a signed cookie and associate it with the Amazon S3 distribution",
@@ -6853,6 +7176,7 @@ export const paper6 = [
   },
   {
     id: "s6q5",
+    domain: "Development with AWS Services",
     text: "An Amazon RDS database is experiencing a high volume of read requests that are slowing down the database. Which fully managed, in-memory AWS database service can assist with offloading reads from the RDS database?",
     answers: [
       "Amazon RDS Read Replica",
@@ -6874,6 +7198,7 @@ export const paper6 = [
   },
   {
     id: "s6q6",
+    domain: "Development with AWS Services",
     text: "A developer is creating a multi-tier web application. The front-end will place messages in an Amazon SQS queue for the back- end to process. Each job includes a file that is 1GB in size. What MUST the developer do to ensure this works as expected?",
     answers: [
       "Increase the maximum message size of the queue from 256KB to 1GB",
@@ -6895,6 +7220,7 @@ export const paper6 = [
   },
   {
     id: "s6q7",
+    domain: "Deployment",
     text: "A serverless application composed of multiple Lambda functions has been deployed. A developer is setting up AWS CodeDeploy to manage the deployment of code updates. The developer would like a 10% of the traffic to be shifted to the new version in equal increments, 10 minutes apart. Which setting should be chosen for configuring how traffic is shifted?",
     answers: ["Canary", "Linear", "All-at-once", "Blue/green"],
     correctAnswerIndex: 1,
@@ -6911,6 +7237,7 @@ export const paper6 = [
   },
   {
     id: "s6q8",
+    domain: "Development with AWS Services",
     text: "A company has a global presence and managers must submit large quantities of reporting data to an Amazon S3 bucket located in the us-east-1 region on weekly basis. Uploads have been slow recently, how can you improve data throughput and upload times?",
     answers: [
       "Enable S3 Transfer Acceleration on the S3 bucket",
@@ -6932,6 +7259,7 @@ export const paper6 = [
   },
   {
     id: "s6q9",
+    domain: "Deployment",
     text: "A developer is building a Docker application on Amazon ECS that will use an Application Load Balancer (ALB). The developer needs to configure the port mapping between the host port and container port. Where is this setting configured?",
     answers: [
       "Host definition",
@@ -6953,6 +7281,7 @@ export const paper6 = [
   },
   {
     id: "s6q10",
+    domain: "Development with AWS Services",
     text: "A developer is designing a web application that will be used by thousands of users. The users will sign up using their email addresses and the application will store attributes for each user. Which service should the developer use to enable users to sign-up for the web application?",
     answers: [
       "Amazon Cognito Sync",
@@ -6974,6 +7303,7 @@ export const paper6 = [
   },
   {
     id: "s6q11",
+    domain: "Development with AWS Services",
     text: "An application resizes images that are uploaded to an Amazon S3 bucket. Amazon S3 event notifications are used to trigger an AWS Lambda function that resizes the images. The processing time for each image is less than one second. A large amount of images are expected to be received in a short burst of traffic. How will AWS Lambda accommodate the workload?",
     answers: [
       "Lambda will scale out and execute the requests concurrently",
@@ -6995,6 +7325,7 @@ export const paper6 = [
   },
   {
     id: "s6q12",
+    domain: "Development with AWS Services",
     text: "A Developer is creating multiple AWS Lambda functions that will be using an external library that is not included in the standard Lambda libraries. What is the BEST way to make these libraries available to the functions?",
     answers: [
       "Include the external library with the function code",
@@ -7016,6 +7347,7 @@ export const paper6 = [
   },
   {
     id: "s6q13",
+    domain: "Development with AWS Services",
     text: "A Developer is creating a social networking app for games that uses a single Amazon DynamoDB table. All users’ saved game data is stored in the single table, but users should not be able to view each other’s data. How can the Developer restrict user access so they can only view their own data?",
     answers: [
       "Restrict access to specific items based on certain primary key values",
@@ -7037,6 +7369,7 @@ export const paper6 = [
   },
   {
     id: "s6q14",
+    domain: "Security",
     text: "A Development team are developing a micro-services application that will use Docker containers on Amazon ECS. There will be 6 distinct services included in the architecture. Each service requires specific permissions to various AWS services. What is the MOST secure way to grant the services the necessary permissions?",
     answers: [
       "Create a new Identity and Access Management (IAM) instance profile containing the required permissions for the various ECS services, then associate that instance role with the underlying EC2 instances",
@@ -7058,6 +7391,7 @@ export const paper6 = [
   },
   {
     id: "s6q15",
+    domain: "Development with AWS Services",
     text: "A company is reviewing their security practices. According to AWS best practice, how should access keys be managed to improve security? (Select TWO.)",
     answers: [
       "Delete all access keys for the root account IAM user",
@@ -7081,6 +7415,7 @@ export const paper6 = [
   },
   {
     id: "s6q16",
+    domain: "Development with AWS Services",
     text: "A Developer is creating an application that will utilize an Amazon DynamoDB table for storing session data. The data being stored is expected to be around 4.5KB in size and the application will make 20 eventually consistent reads/sec, and 12 standard writes/sec. How many RCUs/WCUs are required?",
     answers: [
       "40 RCU and 60 WCU",
@@ -7102,6 +7437,7 @@ export const paper6 = [
   },
   {
     id: "s6q17",
+    domain: "Troubleshooting and Optimization",
     text: "A monitoring application that keeps track of a large eCommerce website uses Amazon Kinesis for data ingestion. During periods of peak data rates, the producers are not making best use of the available shards. What step will allow the producers to better utilize the available shards and increase write throughput to the Kinesis data stream?",
     answers: [
       "Install the Kinesis Producer Library (KPL) for ingesting data into the stream",
@@ -7123,6 +7459,7 @@ export const paper6 = [
   },
   {
     id: "s6q18",
+    domain: "Deployment",
     text: "A Developer is creating an AWS Lambda function that will process medical images. The function is dependent on several libraries that are not available in the Lambda runtime environment. Which strategy should be used to create the Lambda deployment package?",
     answers: [
       "Create a ZIP file with the source code and all dependent libraries",
@@ -7144,6 +7481,7 @@ export const paper6 = [
   },
   {
     id: "s6q19",
+    domain: "Development with AWS Services",
     text: "A company use Amazon CloudFront to deliver application content to users around the world. A Developer has made an update to some files in the origin however users have reported that they are still getting the old files. How can the Developer ensure that the old files are replaced in the cache with the LEAST disruption?",
     answers: [
       "Invalidate the files from the edge caches",
@@ -7165,6 +7503,7 @@ export const paper6 = [
   },
   {
     id: "s6q20",
+    domain: "Development with AWS Services",
     text: "A Developer is creating a serverless website with content that includes HTML files, images, videos, and JavaScript (client-side scripts). Which combination of services should the Developer use to create the website?",
     answers: [
       "Amazon S3 and Amazon CloudFront",
@@ -7186,6 +7525,7 @@ export const paper6 = [
   },
   {
     id: "s6q21",
+    domain: "Deployment",
     text: "A Developer needs to update an Amazon ECS application that was deployed using AWS CodeDeploy. What file does the Developer need to update to push the change through CodeDeploy?",
     answers: [
       "dockerrun.aws.json",
@@ -7207,6 +7547,7 @@ export const paper6 = [
   },
   {
     id: "s6q22",
+    domain: "Troubleshooting and Optimization",
     text: "A Development team wants to instrument their code to provide more detailed information to AWS X-Ray than simple outgoing and incoming requests. This will generate large amounts of data, so the Development team wants to implement indexing so they can filter the data. What should the Development team do to achieve this?",
     answers: [
       "Add metadata to the segment document",
@@ -7228,6 +7569,7 @@ export const paper6 = [
   },
   {
     id: "s6q23",
+    domain: "Development with AWS Services",
     text: "An organization has an Amazon S3 bucket containing premier content that they intend to make available to only paid subscribers of their website. The objects in the S3 bucket are private to prevent inadvertent exposure of the premier content to non-paying website visitors. How can the organization provide only paid subscribers the ability to download the premier content in the S3 bucket?",
     answers: [
       "Apply a bucket policy that grants anonymous users to download the content from the S3 bucket",
@@ -7249,6 +7591,7 @@ export const paper6 = [
   },
   {
     id: "s6q24",
+    domain: "Troubleshooting and Optimization",
     text: "A serverless application uses Amazon API Gateway, AWS Lambda and DynamoDB. The application writes statistical data that is constantly received from sensors. The data is analyzed soon after it is written to the database and is then not required. What is the EASIEST method to remove stale data and optimize database size?",
     answers: [
       "Enable the TTL attribute and add expiry timestamps to items",
@@ -7270,6 +7613,7 @@ export const paper6 = [
   },
   {
     id: "s6q25",
+    domain: "Troubleshooting and Optimization",
     text: "A Development team are creating a financial trading application. The application requires sub-millisecond latency for processing trading requests. Amazon DynamoDB is used to store the trading data. During load testing the Development team found that in periods of high utilization the latency is too high and read capacity must be significantly over-provisioned to avoid throttling. How can the Developers meet the latency requirements of the application?",
     answers: [
       "Use Amazon DynamoDB Accelerator (DAX) to cache the data",
@@ -7291,6 +7635,7 @@ export const paper6 = [
   },
   {
     id: "s6q26",
+    domain: "Deployment",
     text: "A Developer is deploying an Amazon EC2 update using AWS CodeDeploy. In the appspec.yml file, which of the following is a valid structure for the order of hooks that should be specified?",
     answers: [
       "BeforeInstall > AfterInstall > AfterAllowTestTraffic > BeforeAllowTraffic > AfterAllowTraffic",
@@ -7312,6 +7657,7 @@ export const paper6 = [
   },
   {
     id: "s6q27",
+    domain: "Development with AWS Services",
     text: "An application will ingest data at a very high throughput from several sources and stored in an Amazon S3 bucket for subsequent analysis. Which AWS service should a Developer choose for this requirement?",
     answers: [
       "Amazon Kinesis Data Firehose",
@@ -7333,6 +7679,7 @@ export const paper6 = [
   },
   {
     id: "s6q28",
+    domain: "Development with AWS Services",
     text: "A mobile application has thousands of users. Each user may use multiple devices to access the application. The Developer wants to assign unique identifiers to these users regardless of the device they use. Which of the below is the BEST method to obtain unique identifiers?",
     answers: [
       "Create a user table in Amazon DynamoDB with key-value pairs of users and their devices. Use these keys as unique identifiers",
@@ -7354,6 +7701,7 @@ export const paper6 = [
   },
   {
     id: "s6q29",
+    domain: "Development with AWS Services",
     text: "A manufacturing company is creating a new RESTful API that their customers can use to query the status of orders. The endpoint for customer queries will be https://www.manufacturerdomain.com/status/customerID Which of the following application designs will meet the requirements? (Select TWO.)",
     answers: [
       "Amazon SQS; Amazon SNS",
@@ -7377,6 +7725,7 @@ export const paper6 = [
   },
   {
     id: "s6q30",
+    domain: "Development with AWS Services",
     text: "A solution requires a serverless service for receiving streaming data and loading it directly into an Amazon Elasticsearch datastore. Which AWS service would be suitable for this requirement?",
     answers: [
       "Amazon Kinesis Data Streams",
@@ -7398,6 +7747,7 @@ export const paper6 = [
   },
   {
     id: "s6q31",
+    domain: "Development with AWS Services",
     text: "A serverless application uses an AWS Lambda function, Amazon API Gateway API and an Amazon DynamoDB table. The Lambda function executes 10 times per second and takes 3 seconds to complete each execution. How many concurrent executions will the Lambda function require?",
     answers: ["3", "12", "10", "30"],
     correctAnswerIndex: 3,
@@ -7414,6 +7764,7 @@ export const paper6 = [
   },
   {
     id: "s6q32",
+    domain: "Development with AWS Services",
     text: "An application that is being migrated to AWS and refactored requires a storage service. The storage service should provide a standards-based REST web service interface and store objects based on keys. Which AWS service would be MOST suitable?",
     answers: ["Amazon S3", "Amazon DynamoDB", "Amazon EBS", "Amazon EFS"],
     correctAnswerIndex: 0,
@@ -7430,6 +7781,7 @@ export const paper6 = [
   },
   {
     id: "s6q33",
+    domain: "Troubleshooting and Optimization",
     text: "A company will be hiring a large number of Developers for a series of projects. The Develops will bring their own devices to work and the company want to ensure consistency in tooling. The Developers must be able to write, run, and debug applications with just a browser, without needing to install or maintain a local Integrated Development Environment (IDE). Which AWS service should the Developers use?",
     answers: ["AWS CodeCommit", "AWS Cloud9", "AWS X-Ray", "AWS CodeDeploy"],
     correctAnswerIndex: 1,
@@ -7446,6 +7798,7 @@ export const paper6 = [
   },
   {
     id: "s6q34",
+    domain: "Troubleshooting and Optimization",
     text: "A Development team manage a hybrid cloud environment. They would like to collect system-level metrics from on-premises servers and Amazon EC2 instances. How can the Development team collect this information MOST efficiently?",
     answers: [
       "Use CloudWatch for monitoring EC2 instances and custom AWS CLI scripts using the put-metric-data API",
@@ -7467,6 +7820,7 @@ export const paper6 = [
   },
   {
     id: "s6q35",
+    domain: "Deployment",
     text: "A Developer is migrating Docker containers to Amazon ECS. A large number of containers will be deployed onto an existing ECS cluster that uses container instances of different instance types. Which task placement strategy can be used to minimize the number of container instances used based on available memory?",
     answers: ["binpack", "random", "spread", "distinctInstance"],
     correctAnswerIndex: 0,
@@ -7483,6 +7837,7 @@ export const paper6 = [
   },
   {
     id: "s6q36",
+    domain: "Security",
     text: "An organization has encrypted a large quantity of data. To protect their data encryption keys they are planning to use envelope encryption. Which of the following processes is a correct implementation of envelope encryption?",
     answers: [
       "Encrypt plaintext data with a data key and then encrypt the data key with a top-level plaintext master key.",
@@ -7504,6 +7859,7 @@ export const paper6 = [
   },
   {
     id: "s6q37",
+    domain: "Development with AWS Services",
     text: "A mobile application runs as a serverless application on AWS. A Developer needs to create a push notification feature that sends periodic message to subscribers. How can the Developer send the notification from the application?",
     answers: [
       "Publish a message to an Amazon SQS Queue",
@@ -7525,6 +7881,7 @@ export const paper6 = [
   },
   {
     id: "s6q38",
+    domain: "Troubleshooting and Optimization",
     text: "An Amazon ElastiCache cluster has been placed in front of a large Amazon RDS database. To reduce cost the ElastiCache cluster should only cache items that are actually requested. How should ElastiCache be optimized?",
     answers: [
       "Only cache database writes",
@@ -7546,6 +7903,7 @@ export const paper6 = [
   },
   {
     id: "s6q39",
+    domain: "Troubleshooting and Optimization",
     text: "A retail organization stores stock information in an Amazon RDS database. An application reads and writes data to the database. A Developer has been asked to provide read access to the database from a reporting application in another region. Which configuration would provide BEST performance for the reporting application without impacting the performance of the main database?",
     answers: [
       "Implement a cross-region multi-AZ deployment in the region where the reporting application will run",
@@ -7567,6 +7925,7 @@ export const paper6 = [
   },
   {
     id: "s6q40",
+    domain: "Security",
     text: "An Auto Scaling Group (ASG) of Amazon EC2 instances is being created for processing messages from an Amazon SQS queue. To ensure the EC2 instances are cost-effective a Developer would like to configure the ASG to maintain aggregate CPU utilization at 70%. Which type of scaling policy should the Developer choose?",
     answers: [
       "Step Scaling Policy",
@@ -7588,6 +7947,7 @@ export const paper6 = [
   },
   {
     id: "s6q41",
+    domain: "Development with AWS Services",
     text: "An application collects data from sensors in a manufacturing facility. The data is stored in an Amazon SQS Standard queue by an AWS Lambda function and an Amazon EC2 instance processes the data and stores it in an Amazon RedShift data warehouse. A fault in the sensors’ software is causing occasional duplicate messages to be sent. Timestamps on the duplicate messages show they are generated within a few seconds of the primary message. How a can a Developer prevent duplicate data being stored in the data warehouse?",
     answers: [
       "Use a FIFO queue and configure the Lambda function to add a message deduplication token to the message body",
@@ -7609,6 +7969,7 @@ export const paper6 = [
   },
   {
     id: "s6q42",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is publishing custom metrics for Amazon EC2 using the Amazon CloudWatch CLI. The Developer needs to add further context to the metrics being published by organizing them by EC2 instance and Auto Scaling Group. What should the Developer add to the CLI command when publishing the metrics using put-metric-data",
     answers: [
       "The --dimensions parameter",
@@ -7630,6 +7991,7 @@ export const paper6 = [
   },
   {
     id: "s6q43",
+    domain: "Development with AWS Services",
     text: "A legacy application is being refactored into a microservices architecture running on AWS. The microservice will include several AWS Lambda functions. A Developer will use AWS Step Functions to coordinate function execution. How should the Developer proceed?",
     answers: [
       "Create an AWS CloudFormation stack using a YAML-formatted template",
@@ -7651,6 +8013,7 @@ export const paper6 = [
   },
   {
     id: "s6q44",
+    domain: "Security",
     text: "A company has sensitive data that must be encrypted. The data is made up of 1 GB objects and there is a total of 150 GB of data. What is the BEST approach for a Developer to encrypt the data using AWS KMS?",
     answers: [
       "Make an Encrypt API call to encrypt the plaintext data as ciphertext using a customer master key (CMK)",
@@ -7672,6 +8035,7 @@ export const paper6 = [
   },
   {
     id: "s6q45",
+    domain: "Development with AWS Services",
     text: "A nightly batch job loads 1 million new records in to a DynamoDB table. The records are only needed for one hour, and the table needs to be empty by the next night’s batch job. Which is the MOST efficient and cost-effective method to provide an empty table?",
     answers: [
       "Use DeleteItem using a ConditionExpression",
@@ -7693,6 +8057,7 @@ export const paper6 = [
   },
   {
     id: "s6q46",
+    domain: "Troubleshooting and Optimization",
     text: "A Developer is creating an AWS Lambda function to process a stream of data from an Amazon Kinesis Data Stream. When the Lambda function parses the data and encounters a missing field, it exits the function with an error. The function is generating duplicate records from the Kinesis stream. When the Developer looks at the stream output without the Lambda function, there are no duplicate records. What is the reason for the duplicates?",
     answers: [
       "The Lambda function did not advance the Kinesis stream point to the next record after the error",
@@ -7714,6 +8079,7 @@ export const paper6 = [
   },
   {
     id: "s6q47",
+    domain: "Development with AWS Services",
     text: "A Developer has code running on Amazon EC2 instances that needs read-only access to an Amazon DynamoDB table. What is the MOST secure approach the Developer should take to accomplish this task?",
     answers: [
       "Create a user access key for each EC2 instance with read-only access to DynamoDB. Place the keys in the code. Redeploy the code as keys rotate",
@@ -7735,6 +8101,7 @@ export const paper6 = [
   },
   {
     id: "s6q48",
+    domain: "Development with AWS Services",
     text: "A company is migrating an on-premises web application to AWS. The web application runs on a single server and stores session data in memory. On AWS the company plan to implement multiple Amazon EC2 instances behind an Elastic Load Balancer (ELB). The company want to refactor the application so that data is resilient if an instance fails and user downtime is minimized. Where should the company move session data to MOST effectively reduce downtime and make users’ session data more fault tolerant?",
     answers: [
       "An Amazon ElastiCache for Redis cluster",
@@ -7756,6 +8123,7 @@ export const paper6 = [
   },
   {
     id: "s6q49",
+    domain: "Deployment",
     text: "A Developer is creating a script to automate the deployment process for a serverless application. The Developer wants to use an existing AWS Serverless Application Model (SAM) template for the application. What should the Developer use for the project? (Select TWO.)",
     answers: [
       "Call aws cloudformation package to create the deployment package. Call aws cloudformation deploy to deploy the package afterward",
@@ -7779,6 +8147,7 @@ export const paper6 = [
   },
   {
     id: "s6q50",
+    domain: "Security",
     text: "A website delivers images stored in an Amazon S3 bucket. The site uses Amazon Cognito-enabled and guest users without logins need to be able to view the images from the S3 bucket. How can a Developer enable access for guest users to the AWS resources?",
     answers: [
       "Create a blank user ID in a user pool, add to the user group, and grant access to AWS resources",
@@ -7800,6 +8169,7 @@ export const paper6 = [
   },
   {
     id: "s6q51",
+    domain: "Deployment",
     text: "A company has a website that is developed in PHP and WordPress and is launched using AWS Elastic Beanstalk. There is a new version of the website that needs to be deployed in the Elastic Beanstalk environment. The company cannot tolerate having the website offline if an update fails. Deployments must have minimal impact and rollback as soon as possible. What deployment method should be used?",
     answers: ["All at once", "Rolling", "Snapshots", "Immutable"],
     correctAnswerIndex: 3,
@@ -7816,6 +8186,7 @@ export const paper6 = [
   },
   {
     id: "s6q52",
+    domain: "Troubleshooting and Optimization",
     text: "A company is building an application to track athlete performance using an Amazon DynamoDB table. Each item in the table is identified by a partition key (user_id) and a sort key (sport_name). The table design is shown below:",
     answers: [
       "Partition key: user_id",
@@ -7843,6 +8214,7 @@ export const paper6 = [
   },
   {
     id: "s6q53",
+    domain: "Deployment",
     text: "A Developer wants the ability to roll back to a previous version of an AWS Lambda function in the event of errors caused by a new deployment. How can the Developer achieve this with MINIMAL impact on users?",
     answers: [
       "Change the application to use an alias that points to the current version. Deploy the new version of the code. Update the alias to use the newly deployed version. If too many errors are encountered, point the alias back to the previous version",
@@ -7864,6 +8236,7 @@ export const paper6 = [
   },
   {
     id: "s6q54",
+    domain: "Development with AWS Services",
     text: "A company is migrating an application with a website and MySQL database to the AWS Cloud. The company require the application to be refactored so it offers high availability and fault tolerance. How should a Developer refactor the application? (Select TWO.)",
     answers: [
       "Migrate the website to an Auto Scaling group of EC2 instances across a single AZ and use an Elastic Load Balancer",
@@ -7887,6 +8260,7 @@ export const paper6 = [
   },
   {
     id: "s6q55",
+    domain: "Deployment",
     text: "A company runs many microservices applications that use Docker containers. The company are planning to migrate the containers to Amazon ECS. The workloads are highly variable and therefore the company prefers to be charged per running task. Which solution is the BEST fit for the company’s requirements?",
     answers: [
       "Amazon ECS with the EC2 launch type",
@@ -7908,6 +8282,7 @@ export const paper6 = [
   },
   {
     id: "s6q56",
+    domain: "Security",
     text: "A company has hired a team of remote Developers. The Developers need to work programmatically with AWS resources from their laptop computers. Which security components MUST the Developers use to authenticate? (Select TWO.)",
     answers: [
       "Access key ID",
@@ -7931,6 +8306,7 @@ export const paper6 = [
   },
   {
     id: "s6q57",
+    domain: "Security",
     text: "A Developer created an AWS Lambda function and then attempted to add an on failure destination but received the following error: The function's execution role does not have permissions to call SendMessage on arn:aws:sqs:us-east- 1:515148212435:FailureDestination How can the Developer resolve this issue MOST securely?",
     answers: [
       "Add the AWSLambdaSQSQueueExecutionRole AWS managed policy to the function’s execution role",
@@ -7952,6 +8328,7 @@ export const paper6 = [
   },
   {
     id: "s6q58",
+    domain: "Development with AWS Services",
     text: "A Developer is creating an application that uses Amazon EC2 instances and must be highly available and fault tolerant. How should the Developer configure the VPC?",
     answers: [
       "Create multiple subnets within a single availability zone in the region",
@@ -7973,6 +8350,7 @@ export const paper6 = [
   },
   {
     id: "s6q59",
+    domain: "Development with AWS Services",
     text: "A company has released a new application on AWS. The company are concerned about security and require a tool that can automatically assess applications for exposure, vulnerabilities, and deviations from best practices. Which AWS service should they use?",
     answers: [
       "Amazon Inspector",
@@ -7994,6 +8372,7 @@ export const paper6 = [
   },
   {
     id: "s6q60",
+    domain: "Security",
     text: "A Developer has lost their access key ID and secret access key for programmatic access. What should the Developer do?",
     answers: [
       "Contact AWS support and request a password reset",
@@ -8015,6 +8394,7 @@ export const paper6 = [
   },
   {
     id: "s6q61",
+    domain: "Development with AWS Services",
     text: "An application includes multiple Auto Scaling groups of Amazon EC2 instances. Each group corresponds to a different subdomain of example.com, including forum.example.com and myaccount.example.com. An Elastic Load Balancer will be used to distribute load from a single HTTPS listener. Which type of Elastic Load Balancer MUST a Developer use in this scenario?",
     answers: [
       "Application Load Balancer",
@@ -8057,6 +8437,7 @@ export const paper6 = [
   },
   {
     id: "s6q63",
+    domain: "Development with AWS Services",
     text: "A Java based application generates email notifications to customers using Amazon SNS. The emails must contain links to access data in a secured Amazon S3 bucket. What is the SIMPLEST way to maintain security of the bucket whilst allowing the customers to access specific objects?",
     answers: [
       "Use the AWS SDK for Java with GeneratePresignedUrlRequest to create a presigned URL",
@@ -8099,6 +8480,7 @@ export const paper6 = [
   },
   {
     id: "s6q65",
+    domain: "Development with AWS Services",
     text: "An application uses Amazon EC2 instances, AWS Lambda functions and an Amazon SQS queue. The Developer must ensure all communications are within an Amazon VPC using private IP addresses. How can this be achieved? (Select TWO.)",
     answers: [
       "Create the Amazon SQS queue within a VPC",
@@ -8125,6 +8507,7 @@ export const paper6 = [
 export const paper7 = [
   {
     id: "s7q1",
+    domain: "Security",
     text: "Which of the following security credentials can only be created by the AWS Account root user? ",
     answers: [
       "IAM User passwords",
@@ -8147,6 +8530,7 @@ export const paper7 = [
   },
   {
     id: "s7q2",
+    domain: "Development with AWS Services",
     text: "A cybersecurity firm wants to run their applications on single-tenant hardware to meet security guidelines.\nWhich of the following is the MOST cost-effective way of isolating their Amazon EC2 instances to a single tenant?",
     answers: [
       "On-Demand Instances",
@@ -8168,6 +8552,7 @@ export const paper7 = [
   },
   {
     id: "s7q3",
+    domain: "Deployment",
     text: "You're a developer working on a large scale order processing application. After developing the features, you commit your code to AWS CodeCommit and begin building the project with AWS CodeBuild before it gets deployed to the server. The build is taking too long and the error points to an issue resolving dependencies from a third-party. You would like to prevent a build running this long in the future for similar underlying reasons.Which of the following options represents the best solution to address this use-case?",
     answers: [
       "Use Amazon CloudWatch",
@@ -8189,6 +8574,7 @@ export const paper7 = [
   },
   {
     id: "s7q4",
+    domain: "Development with AWS Services",
     text: "A development team has configured inbound traffic for the relevant ports in both the Security Group of the EC2 instance as well as the Network Access Control List (NACL) of the subnet for the EC2 instance. The team is, however, unable to connect to the service running on the Amazon EC2 instance. As a developer associate, which of the following will you recommend to fix this issue?",
     answers: [
       "Rules associated with Network ACLs should never be modified from the command line. An attempt to modify rules from the command line blocks the rule and results in an erratic behavior",
@@ -8210,6 +8596,7 @@ export const paper7 = [
   },
   {
     id: "s7q5",
+    domain: "Security",
     text: "A media company has created a video streaming application and it would like their Brazilian users to be served by the company's Brazilian servers. Other users around the globe should not be able to access the servers through DNS queries. Which Route 53 routing policy meets this requirement?",
     answers: ["Failover", "Latency", "Weighted", "Geolocation"],
     correctAnswerIndex: 3,
@@ -8226,6 +8613,7 @@ export const paper7 = [
   },
   {
     id: "s7q6",
+    domain: "Security",
     text: "You are running workloads on AWS and have embedded RDS database connection strings within each web server hosting your applications. After failing a security audit, you are looking at a different approach to store your secrets securely and automatically rotate the database credentials. Which AWS service can you use to address this use-case?",
     answers: [
       "Systems Manager",
@@ -8247,6 +8635,7 @@ export const paper7 = [
   },
   {
     id: "s7q7",
+    domain: "Security",
     text: "A Developer has been entrusted with the job of securing certain S3 buckets that are shared by a large team of users. Last time, a bucket policy was changed, the bucket was erroneously available for everyone, outside the organization too. Which feature/service will help the developer identify similar security issues with minimum effort?",
     answers: [
       "Access Advisor feature on IAM console",
@@ -8268,6 +8657,7 @@ export const paper7 = [
   },
   {
     id: "s7q8",
+    domain: "Troubleshooting and Optimization",
     text: "A firm runs its technology operations on a fleet of Amazon EC2 instances. The firm needs a certain software to be available on the instances to support their daily workflows. The developer team has been told to use the user data feature of EC2 instances. Which of the following are true about the user data EC2 configuration? (Select two)",
     answers: [
       "By default, user data is executed every time an EC2 instance is re-started",
@@ -8291,6 +8681,7 @@ export const paper7 = [
   },
   {
     id: "s7q9",
+    domain: "Security",
     text: "A developer is configuring a bucket policy that denies upload object permission to any requests that do not include the x-amz-server-side-encryption header requesting server-side encryption with SSE-KMS for an Amazon S3 bucket - examplebucket. Which of the following policies is the right fit for the given requirement?",
     answers: [
       `{
@@ -8372,6 +8763,7 @@ export const paper7 = [
   },
   {
     id: "s7q10",
+    domain: "Troubleshooting and Optimization",
     text: "An organization has offices across multiple locations and the technology team has configured an Application Load Balancer across targets in multiple Availability Zones. The team wants to analyze the incoming requests for latencies and the client's IP address patterns. Which feature of the Load Balancer will help collect the required information?",
     answers: [
       "CloudWatch metrics",
@@ -8393,6 +8785,7 @@ export const paper7 = [
   },
   {
     id: "s7q11",
+    domain: "Deployment",
     text: "An e-commerce company has developed an API that is hosted on Amazon ECS. Variable traffic spikes on the application are causing order processing to take too long. The application processes orders using Amazon SQS queues. The ApproximateNumberOfMessagesVisible metric spikes at very high values throughout the day which triggers the CloudWatch alarm. Other ECS metrics for the API containers are well within limits. As a Developer Associate, which of the following will you recommend for improving performance while keeping costs low?",
     answers: [
       "Use ECS step scaling policy",
@@ -8414,6 +8807,7 @@ export const paper7 = [
   },
   {
     id: "s7q12",
+    domain: "Deployment",
     text: "You are creating a Cloud Formation template to deploy your CMS application running on an EC2 instance within your AWS account. Since the application will be deployed across multiple regions, you need to create a map of all the possible values for the base AMI. How will you invoke the !FindInMap function to fulfill this use case?",
     answers: [
       "!FindInMap [ MapName ]",
@@ -8435,6 +8829,7 @@ export const paper7 = [
   },
   {
     id: "s7q13",
+    domain: "Security",
     text: "Your company has stored all application secrets in SSM Parameter Store. The audit team has requested to get a report to better understand when and who has issued API calls against SSM Parameter Store. Which of the following options can be used to produce your report?",
     answers: [
       "Use SSM Parameter Store Access Logs in CloudWatch Logs to get a record of actions taken by a user",
@@ -8456,6 +8851,7 @@ export const paper7 = [
   },
   {
     id: "s7q14",
+    domain: "Security",
     text: "The development team at a company creates serverless solutions using AWS Lambda. Functions are invoked by clients via AWS API Gateway which anyone can access. The team lead would like to control access using a 3rd party authorization mechanism. As a Developer Associate, which of the following options would you recommend for the given use-case?",
     answers: [
       "Lambda Authorizer",
@@ -8477,6 +8873,7 @@ export const paper7 = [
   },
   {
     id: "s7q15",
+    domain: "Deployment",
     text: "You are a developer in a manufacturing company that has several servers on-site. The company decides to move new development to the cloud using serverless technology. You decide to use the AWS Serverless Application Model (AWS SAM) and work with an AWS SAM template file to represent your serverless architecture. Which of the following is NOT a valid serverless resource type?",
     answers: [
       "AWS::Serverless::UserPool",
@@ -8498,6 +8895,7 @@ export const paper7 = [
   },
   {
     id: "s7q16",
+    domain: "Development with AWS Services",
     text: "A developer is testing Amazon Simple Queue Service (SQS) queues in a development environment. The queue along with all its contents has to be deleted after testing. Which SQS API should be used for this requirement?",
     answers: ["DeleteQueue", "RemoveQueue", "PurgeQueue", "RemovePermission"],
     correctAnswerIndex: 0,
@@ -8514,6 +8912,7 @@ export const paper7 = [
   },
   {
     id: "s7q17",
+    domain: "Development with AWS Services",
     text: "As an AWS Certified Developer Associate, you are given a document written in YAML that represents the architecture of a serverless application. The first line of the document contains Transform: 'AWS::Serverless-2016-10-31'. What does the Transform section in the document represent?",
     answers: [
       "Presence of Transform section indicates it is a CloudFormation Parameter",
@@ -8535,6 +8934,7 @@ export const paper7 = [
   },
   {
     id: "s7q18",
+    domain: "Security",
     text: "A development team lead is responsible for managing access for her IAM principals. At the start of the cycle, she has granted excess privileges to users to keep them motivated for trying new things. She now wants to ensure that the team has only the minimum permissions required to finish their work. Which of the following will help her identify unused IAM roles and remove them without disrupting any service?",
     answers: [
       "IAM Access Analyzer",
@@ -8556,6 +8956,7 @@ export const paper7 = [
   },
   {
     id: "s7q19",
+    domain: "Development with AWS Services",
     text: "You have created an Elastic Load Balancer that has marked all the EC2 instances in the target group as unhealthy. Surprisingly, when you enter the IP address of the EC2 instances in your web browser, you can access your website. What could be the reason your instances are being marked as unhealthy? (Select two)",
     answers: [
       "Your web-app has a runtime that is not supported by the Application Load Balancer",
@@ -8579,6 +8980,7 @@ export const paper7 = [
   },
   {
     id: "s7q20",
+    domain: "Development with AWS Services",
     text: "An application is hosted by a 3rd party and exposed at yourapp.3rdparty.com. You would like to have your users access your application using www.mydomain.com, which you own and manage under Route 53. What Route 53 record should you create?",
     answers: [
       "Create an A record",
@@ -8600,6 +9002,7 @@ export const paper7 = [
   },
   {
     id: "s7q21",
+    domain: "Development with AWS Services",
     text: "A gaming company wants to store information about all the games that the company has released. Each game has a name, version number, and category (such as sports, puzzles, strategy, etc). The game information also can include additional properties about the supported platforms and technical specifications. This additional information is inconsistent across games. You have been hired as an AWS Certified Developer Associate to build a solution that addresses the following use cases: (1) For a given name and version number, get all details about the game that has that name and version number. (2) For a given name, get all details about all games that have that name. (3) For a given category, get all details about all games in that category. What will you recommend as the most efficient solution?",
     answers: [
       "Set up an Amazon DynamoDB table with a primary key that consists of the category as the partition key and the version number as the sort key. Create a global secondary index that has the name as the partition key",
@@ -8621,6 +9024,7 @@ export const paper7 = [
   },
   {
     id: "s7q22",
+    domain: "Development with AWS Services",
     text: "A SaaS company runs a HealthCare web application that is used worldwide by users. There have been requests by mobile developers to expose public APIs for the application-specific functionality. You decide to make the APIs available to mobile developers as product offerings. Which of the following options will allow you to do that?",
     answers: [
       "Use AWS Lambda Custom Authorizers",
@@ -8642,6 +9046,7 @@ export const paper7 = [
   },
   {
     id: "s7q23",
+    domain: "Security",
     text: "As part of his development work, an AWS Certified Developer Associate is creating policies and attaching them to IAM identities. After creating necessary Identity-based policies, he is now creating Resource-based policies. Which is the only resource-based policy that the IAM service supports?",
     answers: [
       "Trust policy",
@@ -8663,6 +9068,7 @@ export const paper7 = [
   },
   {
     id: "s7q24",
+    domain: "Troubleshooting and Optimization",
     text: "A startup with newly created AWS account is testing different EC2 instances. They have used Burstable performance instance - T2.micro - for 35 seconds and stopped the instance. At the end of the month, what is the instance usage duration that the company is charged for?",
     answers: ["35 seconds", "30 seconds", "60 seconds", "0 seconds"],
     correctAnswerIndex: 3,
@@ -8679,6 +9085,7 @@ export const paper7 = [
   },
   {
     id: "s7q25",
+    domain: "Deployment",
     text: "You have chosen AWS Elastic Beanstalk to upload your application code and allow it to handle details such as provisioning resources and monitoring. When creating configuration files for AWS Elastic Beanstalk which naming convention should you follow?",
     answers: [
       ".ebextensions_<mysettings>.config",
@@ -8700,6 +9107,7 @@ export const paper7 = [
   },
   {
     id: "s7q26",
+    domain: "Development with AWS Services",
     text: "A multi-national company has just moved to AWS Cloud and it has configured forecast-based AWS Budgets alerts for cost management. However, no alerts have been received even though the account and the budgets have been created almost three weeks ago. What could be the issue with the AWS Budgets configuration?",
     answers: [
       "Account has to be part of AWS Organizations to receive AWS Budgets alerts",
@@ -8721,6 +9129,7 @@ export const paper7 = [
   },
   {
     id: "s7q27",
+    domain: "Security",
     text: "To enable HTTPS connections for his web application deployed on the AWS Cloud, a developer is in the process of creating server certificate. Which AWS entities can be used to deploy SSL/TLS server certificates? (Select two)",
     answers: [
       "AWS Systems Manager",
@@ -8744,6 +9153,7 @@ export const paper7 = [
   },
   {
     id: "s7q28",
+    domain: "Troubleshooting and Optimization",
     text: "A retail company is migrating its on-premises database to Amazon RDS for PostgreSQL. The company has read-heavy workloads. The development team at the company is looking at refactoring the code to achieve optimum read performance for SQL queries. Which solution will address this requirement with the least current as well as future development effort?",
     answers: [
       "Set up Amazon RDS in the multi-AZ configuration with a single standby instance. Refactor the application code so that the queries use the standby instance endpoint",
@@ -8765,6 +9175,7 @@ export const paper7 = [
   },
   {
     id: "s7q29",
+    domain: "Deployment",
     text: "A developer has been asked to create a web application to be deployed on EC2 instances. The developer just wants to focus on writing application code without worrying about server provisioning, configuration and deployment. As a Developer Associate, which AWS service would you recommend for the given use-case?",
     answers: [
       "Elastic Beanstalk",
@@ -8786,6 +9197,7 @@ export const paper7 = [
   },
   {
     id: "s7q30",
+    domain: "Development with AWS Services",
     text: "A development team wants to build an application using serverless architecture. The team plans to use AWS Lambda functions extensively to achieve this goal. The developers of the team work on different programming languages like Python, .NET and Javascript. The team wants to model the cloud infrastructure using any of these programming languages. Which AWS service/tool should the team use for the given use-case?",
     answers: [
       "AWS Cloud Development Kit (CDK)",
@@ -8807,6 +9219,7 @@ export const paper7 = [
   },
   {
     id: "s7q31",
+    domain: "Troubleshooting and Optimization",
     text: "A company has built its technology stack on AWS serverless architecture for managing all its business functions. To expedite development for a new business requirement, the company is looking at using pre-built serverless applications. Which AWS service represents the easiest solution to address this use-case?",
     answers: [
       "AWS Marketplace",
@@ -8828,6 +9241,7 @@ export const paper7 = [
   },
   {
     id: "s7q32",
+    domain: "Deployment",
     text: "A development team wants to deploy an AWS Lambda function that requires significant CPU utilization. As a Developer Associate, which of the following would you suggest for reducing the average runtime of the function?",
     answers: [
       "Deploy the function with its CPU allocation set to the maximum amount",
@@ -8849,6 +9263,7 @@ export const paper7 = [
   },
   {
     id: "s7q33",
+    domain: "Deployment",
     text: "A company uses Elastic Beanstalk to manage its IT infrastructure on AWS Cloud and it would like to deploy the new application version to the EC2 instances. When the deployment is executed, some instances should serve requests with the old application version, while other instances should serve requests using the new application version until the deployment is completed. Which deployment meets this requirement without incurring additional costs?",
     answers: [
       "Immutable",
@@ -8870,6 +9285,7 @@ export const paper7 = [
   },
   {
     id: "s7q34",
+    domain: "Development with AWS Services",
     text: "You are storing bids information on your betting application and you would like to automatically expire DynamoDB table data after one week. What should you use?",
     answers: [
       "Use a Lambda function",
@@ -8891,6 +9307,7 @@ export const paper7 = [
   },
   {
     id: "s7q35",
+    domain: "Development with AWS Services",
     text: "An IT company is configuring Auto Scaling for its Amazon EC2 instances spread across different AZs and Regions. Which of the following scenarios are NOT correct about EC2 Auto Scaling? (Select two)",
     answers: [
       "Auto Scaling groups that span across multiple Regions need to be enabled for all the Regions specified",
@@ -8914,6 +9331,7 @@ export const paper7 = [
   },
   {
     id: "s7q36",
+    domain: "Deployment",
     text: "You have created a Java application that uses RDS for its main data storage and ElastiCache for user session storage. The application needs to be deployed using Elastic Beanstalk and every new deployment should allow the application servers to reuse the RDS database. On the other hand, user session data stored in ElastiCache can be re-created for every deployment. Which of the following configurations will allow you to achieve this? (Select two)",
     answers: [
       "RDS database defined externally and referenced through environment variables",
@@ -8937,6 +9355,7 @@ export const paper7 = [
   },
   {
     id: "s7q37",
+    domain: "Deployment",
     text: "A Developer at a company is working on a CloudFormation template to set up resources. Resources will be defined using code and provisioned based on certain conditions defined in the Conditions section. Which section of a CloudFormation template cannot be associated with Condition?",
     answers: ["Conditions", "Parameters", "Outputs", "Resources"],
     correctAnswerIndex: 1,
@@ -8953,6 +9372,7 @@ export const paper7 = [
   },
   {
     id: "s7q38",
+    domain: "Deployment",
     text: "As an AWS Certified Developer Associate, you have been asked to create an AWS Elastic Beanstalk environment to handle deployment for an application that has high traffic and high availability needs. You need to deploy the new version using Beanstalk while making sure that performance and availability are not affected. Which of the following is the MOST optimal way to do this while keeping the solution cost-effective?",
     answers: [
       "Deploy using 'Immutable' deployment policy",
@@ -8974,6 +9394,7 @@ export const paper7 = [
   },
   {
     id: "s7q39",
+    domain: "Security",
     text: "A company wants to provide beta access to some developers on its development team for a new version of the company's Amazon API Gateway REST API, without causing any disturbance to the existing customers who are using the API via a frontend UI and Amazon Cognito authentication. The new version has new endpoints and backward-incompatible interface changes, and the company's development team is responsible for its maintenance. Which of the following will satisfy these requirements in the MOST operationally efficient manner?",
     answers: [
       "Configure a canary release deployment on the API Gateway API and then have the developers point to the relevant deployment by referencing the stage variable in the endpoint",
@@ -8995,6 +9416,7 @@ export const paper7 = [
   },
   {
     id: "s7q40",
+    domain: "Security",
     text: "CodeCommit is a managed version control service that hosts private Git repositories in the AWS cloud. Which of the following credential types is NOT supported by IAM for CodeCommit?",
     answers: [
       "IAM username and password",
@@ -9016,6 +9438,7 @@ export const paper7 = [
   },
   {
     id: "s7q41",
+    domain: "Development with AWS Services",
     text: "Amazon Simple Queue Service (SQS) has a set of APIs for various actions supported by the service. As a developer associate, which of the following would you identify as correct regarding the CreateQueue API? (Select two)",
     answers: [
       "Queue tags are case insensitive. A new tag with a key identical to that of an existing tag overwrites the existing tag",
@@ -9039,6 +9462,7 @@ export const paper7 = [
   },
   {
     id: "s7q42",
+    domain: "Deployment",
     text: "A company is creating a gaming application that will be deployed on mobile devices. The application will send data to a Lambda function-based RESTful API. The application will assign each API request a unique identifier. The volume of API requests from the application can randomly vary at any given time of day. During request throttling, the application might need to retry requests. The API must be able to address duplicate requests without inconsistencies or data loss. Which of the following would you recommend to handle these requirements?",
     answers: [
       "Persist the unique identifier for each request in a DynamoDB table. Change the Lambda function to send a client error response when the function receives a duplicate request",
@@ -9060,6 +9484,7 @@ export const paper7 = [
   },
   {
     id: "s7q43",
+    domain: "Development with AWS Services",
     text: "An organization has hosted its EC2 instances in two AZs. AZ1 has two instances and AZ2 has 8 instances. The Elastic Load Balancer managing the instances in the two AZs has cross-zone load balancing enabled in its configuration. What percentage traffic will each of the instances in AZ1 receive?",
     answers: ["10", "25", "20", "15"],
     correctAnswerIndex: 0,
@@ -9076,6 +9501,7 @@ export const paper7 = [
   },
   {
     id: "s7q44",
+    domain: "Security",
     text: "As an AWS Certified Developer Associate, you have configured the AWS CLI on your workstation. Your default region is us-east-1 and your IAM user has permissions to operate commands on services such as EC2, S3 and RDS in any region. You would like to execute a command to stop an EC2 instance in the us-east-2 region. What of the following is the MOST optimal solution to address this use-case?",
     answers: [
       "You need to override the default region by using aws configure",
@@ -9097,6 +9523,7 @@ export const paper7 = [
   },
   {
     id: "s7q45",
+    domain: "Security",
     text: "The development team has just configured and attached the IAM policy needed to access AWS Billing and Cost Management for all users under the Finance department. But, the users are unable to see AWS Billing and Cost Management service in the AWS console. What could be the reason for this issue?",
     answers: [
       "You need to activate IAM user access to the Billing and Cost Management console for all the users who need access",
@@ -9118,6 +9545,7 @@ export const paper7 = [
   },
   {
     id: "s7q46",
+    domain: "Development with AWS Services",
     text: "You are a developer working on AWS Lambda functions that are invoked via REST API's using Amazon API Gateway. Currently, when a GET request is invoked by the consumer, the entire data-set returned by the Lambda function is visible. Your team lead asked you to format the data response. Which feature of the API Gateway can be used to solve this issue?",
     answers: [
       "Use a Lambda custom interceptor",
@@ -9139,6 +9567,7 @@ export const paper7 = [
   },
   {
     id: "s7q47",
+    domain: "Development with AWS Services",
     text: "As a developer, you are working on creating an application using AWS Cloud Development Kit (CDK). Which of the following represents the correct order of steps to be followed for creating an app using AWS CDK?",
     answers: [
       "Create the app from a template provided by AWS CloudFormation -> Add code to the app to create resources within stacks -> Build the app (optional) -> Synthesize one or more stacks in the app -> Deploy stack(s) to your AWS account",
@@ -9160,6 +9589,7 @@ export const paper7 = [
   },
   {
     id: "s7q48",
+    domain: "Troubleshooting and Optimization",
     text: "A multi-national company has multiple business units with each unit having its own AWS account. The development team at the company would like to debug and trace data across accounts and visualize it in a centralized account. As a Developer Associate, which of the following solutions would you suggest for the given use-case?",
     answers: ["CloudTrail", "VPC Flow Logs", "EventBridge", "X-Ray"],
     correctAnswerIndex: 3,
@@ -9176,6 +9606,7 @@ export const paper7 = [
   },
   {
     id: "s7q49",
+    domain: "Deployment",
     text: "You have deployed a Java application to an EC2 instance where it uses the X-Ray SDK. When testing from your personal computer, the application sends data to X-Ray but when the application runs from within EC2, the application fails to send data to X-Ray. Which of the following does NOT help with debugging the issue?",
     answers: [
       "CloudTrail",
@@ -9197,6 +9628,7 @@ export const paper7 = [
   },
   {
     id: "s7q50",
+    domain: "Security",
     text: "The manager at an IT company wants to set up member access to user-specific folders in an Amazon S3 bucket - bucket-a. So, user x can only access files in his folder - bucket-a/user/user-x/ and user y can only access files in her folder - bucket-a/user/user-y/ and so on. As a Developer Associate, which of the following IAM constructs would you recommend so that the policy snippet can be made generic for all team members and the manager does not need to create separate IAM policy for each team member?",
     answers: [
       "IAM policy principal",
@@ -9218,6 +9650,7 @@ export const paper7 = [
   },
   {
     id: "s7q51",
+    domain: "Deployment",
     text: "After a test deployment in ElasticBeanstalk environment, a developer noticed that all accumulated Amazon EC2 burst balances were lost. Which of the following options can lead to this behavior?",
     answers: [
       "The deployment was run as a All-at-once deployment, flushing all the accumulated EC2 burst balances",
@@ -9239,6 +9672,7 @@ export const paper7 = [
   },
   {
     id: "s7q52",
+    domain: "Deployment",
     text: "The Technical Lead of your team has reviewed a CloudFormation YAML template written by a new recruit and specified that an invalid section has been added to the template. Which of the following represents an invalid section of the CloudFormation template?",
     answers: [
       "'Dependencies' section of the template",
@@ -9260,6 +9694,7 @@ export const paper7 = [
   },
   {
     id: "s7q53",
+    domain: "Security",
     text: "A developer has an application that stores data in an Amazon S3 bucket. The application uses an HTTP API to store and retrieve objects. When the PutObject API operation adds objects to the S3 bucket the developer must encrypt these objects at rest by using server-side encryption with Amazon S3-managed keys (SSE-S3). Which solution will guarantee that any upload request without the mandated encryption is not processed?",
     answers: [
       "Invoke the PutObject API operation and set the x-amz-server-side-encryption header as aws:kms. Use an S3 bucket policy to deny permission to upload an object unless the request has this header",
@@ -9281,6 +9716,7 @@ export const paper7 = [
   },
   {
     id: "s7q54",
+    domain: "Deployment",
     text: "Your company has configured AWS Organizations to manage multiple AWS accounts. Within each AWS account, there are many CloudFormation scripts running. Your manager has requested that each script output the account number of the account the script was executed in. Which Pseudo parameter will you use to get this information?",
     answers: [
       "AWS::NoValue",
@@ -9302,6 +9738,7 @@ export const paper7 = [
   },
   {
     id: "s7q55",
+    domain: "Development with AWS Services",
     text: "An E-commerce business has its applications built on a fleet of Amazon EC2 instances, spread across various Regions and AZs. The technical team has suggested using Elastic Load Balancers for better architectural design. What characteristics of an Elastic Load Balancer make it a winning choice? (Select two)",
     answers: [
       "Deploy EC2 instances across multiple AWS Regions",
@@ -9325,6 +9762,7 @@ export const paper7 = [
   },
   {
     id: "s7q56",
+    domain: "Troubleshooting and Optimization",
     text: "A data analytics company processes Internet-of-Things (IoT) data using Amazon Kinesis. The development team has noticed that the IoT data feed into Kinesis experiences periodic spikes. The PutRecords API call occasionally fails and the logs show a ProvisionedThroughputExceededException and InternalFailure for some records. As an AWS Certified Developer Associate, which of the following options would you recommend to address this use case? (Select two)",
     answers: [
       "Increase the frequency or size of your requests",
@@ -9348,6 +9786,7 @@ export const paper7 = [
   },
   {
     id: "s7q57",
+    domain: "Security",
     text: "You are a developer for a web application written in .NET which uses the AWS SDK. You need to implement an authentication mechanism that returns a JWT (JSON Web Token). Which AWS service will help you with token handling and management?",
     answers: [
       "Cognito Identity Pools",
@@ -9369,6 +9808,7 @@ export const paper7 = [
   },
   {
     id: "s7q58",
+    domain: "Deployment",
     text: "A development team at a social media company uses AWS Lambda functions for its serverless stack on AWS Cloud. For a new deployment, the Team Lead wants to send only a certain portion of the traffic to a new version of a Lambda function. In case the deployment goes wrong, the solution should also support the ability to roll back to a previous version of the Lambda function, with MINIMUM downtime for the application. As a Developer Associate, which of the following options would you recommend to address this use-case?",
     answers: [
       "Set up the application to use an alias that points to the current version. Deploy the new version of the code and configure alias to send all users to this new version. If the deployment goes wrong, reset the alias to point to the current version",
@@ -9390,6 +9830,7 @@ export const paper7 = [
   },
   {
     id: "s7q59",
+    domain: "Security",
     text: "Which of the following best describes how KMS Encryption works?",
     answers: [
       "KMS stores the CMK, and receives data from the clients, which it encrypts and sends back",
@@ -9411,6 +9852,7 @@ export const paper7 = [
   },
   {
     id: "s7q60",
+    domain: "Deployment",
     text: "When running a Rolling deployment in Elastic Beanstalk environment, only two batches completed the deployment successfully, while rest of the batches failed to deploy the updated version. Following this, the development team terminated the instances from the failed deployment. What will be the status of these failed instances post termination?",
     answers: [
       "Elastic Beanstalk will replace the failed instances with instances running the application version from the most recent successful deployment",
@@ -9432,6 +9874,7 @@ export const paper7 = [
   },
   {
     id: "s7q61",
+    domain: "Deployment",
     text: "ECS Fargate container tasks are usually spread across Availability Zones (AZs) and the underlying workloads need persistent cross-AZ shared access to the data volumes configured for the container tasks. Which of the following solutions is the best choice for these workloads?",
     answers: [
       "AWS Gateway Storage volumes",
@@ -9453,6 +9896,7 @@ export const paper7 = [
   },
   {
     id: "s7q62",
+    domain: "Deployment",
     text: "A global e-commerce company wants to perform geographic load testing of its order processing API. The company must deploy resources to multiple AWS Regions to support the load testing of the API. How can the company address these requirements without additional application code?",
     answers: [
       "Set up an AWS Cloud Development Kit (CDK) ToolKit that defines the load test resources. Leverage the CDK CLI to create a stack from the template in each Region",
@@ -9474,6 +9918,7 @@ export const paper7 = [
   },
   {
     id: "s7q63",
+    domain: "Deployment",
     text: "A developer has been asked to create an application that can be deployed across a fleet of EC2 instances. The configuration must allow for full control over the deployment steps using the blue-green deployment. Which service will help you achieve that?",
     answers: ["CodeBuild", "CodePipeline", "Elastic Beanstalk", "CodeDeploy"],
     correctAnswerIndex: 3,
@@ -9490,6 +9935,7 @@ export const paper7 = [
   },
   {
     id: "s7q64",
+    domain: "Security",
     text: "A company wants to improve the performance of its popular API service that offers unauthenticated read access to daily updated statistical information via Amazon API Gateway and AWS Lambda. What measures can the company take?",
     answers: [
       "Configure API Gateway to use Gateway VPC Endpoint",
@@ -9511,6 +9957,7 @@ export const paper7 = [
   },
   {
     id: "s7q65",
+    domain: "Deployment",
     text: "Your global organization has an IT infrastructure that is deployed using CloudFormation on AWS Cloud. One employee, in us-east-1 Region, has created a stack 'Application1' and made an exported output with the name 'ELBDNSName'. Another employee has created a stack for a different application 'Application2' in us-east-2 Region and also exported an output with the name 'ELBDNSName'. The first employee wanted to deploy the CloudFormation stack 'Application1' in us-east-2, but it got an error. What is the cause of the error?",
     answers: [
       "Output Values in CloudFormation must have unique names within a single Region",
@@ -9535,6 +9982,7 @@ export const paper7 = [
 export const paper8 = [
   {
     id: "S8q1",
+    domain: "Deployment",
     text: "A company is using a Border Gateway Protocol (BGP) based AWS VPN connection to connect from its on-premises data center to Amazon EC2 instances in the company’s account. The development team can access an EC2 instance in subnet A but is unable to access an EC2 instance in subnet B in the same VPC. Which logs can be used to verify whether the traffic is reaching subnet B?",
     answers: ["Subnet logs", "VPN logs", "VPC Flow Logs", "BGP logs"],
     correctAnswerIndex: 2,
@@ -9551,6 +9999,7 @@ export const paper8 = [
   },
   {
     id: "S8q2",
+    domain: "Development with AWS Services",
     text: "After a code review, a developer has been asked to make his publicly accessible S3 buckets private, and enable access to objects with a time-bound constraint. Which of the following options will address the given use-case?",
     answers: [
       "It is not possible to implement time constraints on Amazon S3 Bucket access",
@@ -9572,6 +10021,7 @@ export const paper8 = [
   },
   {
     id: "S8q3",
+    domain: "Development with AWS Services",
     text: "A company wants to automate its order fulfillment and inventory tracking workflow. Starting from order creation to updating inventory to shipment, the entire process has to be tracked, managed and updated automatically. Which of the following would you recommend as the most optimal solution for this requirement?",
     answers: [
       "Use Amazon SNS to develop event-driven applications that can share information",
@@ -9593,6 +10043,7 @@ export const paper8 = [
   },
   {
     id: "S8q4",
+    domain: "Deployment",
     text: "A company uses AWS CodeDeploy to deploy applications from GitHub to EC2 instances running Amazon Linux. The deployment process uses a file called appspec.yml for specifying deployment hooks. A final lifecycle event should be specified to verify the deployment success. Which of the following hook events should be used to verify the success of the deployment?",
     answers: [
       "ApplicationStart",
@@ -9614,6 +10065,7 @@ export const paper8 = [
   },
   {
     id: "S8q5",
+    domain: "Development with AWS Services",
     text: "A university has created a student portal that is accessible through a smartphone app and web application. The smartphone app is available in both Android and IOS and the web application works on most major browsers. Students will be able to do group study online and create forum questions. All changes made via smartphone devices should be available even when offline and should synchronize with other devices. Which of the following AWS services will meet these requirements?",
     answers: [
       "BeanStalk",
@@ -9635,6 +10087,7 @@ export const paper8 = [
   },
   {
     id: "S8q6",
+    domain: "Development with AWS Services",
     text: "A pharmaceutical company uses Amazon EC2 instances for application hosting and Amazon CloudFront for content delivery. A new research paper with critical findings has to be shared with a research team that is spread across the world. Which of the following represents the most optimal solution to address this requirement without compromising the security of the content?",
     answers: [
       "Configure AWS Web Application Firewall (WAF) to monitor and control the HTTP and HTTPS requests that are forwarded to CloudFront",
@@ -9656,6 +10109,7 @@ export const paper8 = [
   },
   {
     id: "S8q7",
+    domain: "Deployment",
     text: "A developer needs to automate software package deployment to both Amazon EC2 instances and virtual servers running on-premises, as part of continuous integration and delivery that the business has adopted. Which AWS service should he use to accomplish this task?",
     answers: [
       "AWS CodePipeline",
@@ -9677,6 +10131,7 @@ export const paper8 = [
   },
   {
     id: "S8q8",
+    domain: "Troubleshooting and Optimization",
     text: "A company has created an Amazon S3 bucket that holds customer data. The team lead has just enabled access logging to this bucket. The bucket size has grown substantially after starting access logging. Since no new files have been added to the bucket, the perplexed team lead is looking for an answer. Which of the following reasons explains this behavior?",
     answers: [
       "S3 access logging is pointing to the same bucket and is responsible for the substantial growth of bucket size",
@@ -9698,6 +10153,7 @@ export const paper8 = [
   },
   {
     id: "S8q9",
+    domain: "Deployment",
     text: "You are a developer working on a web application written in Java and would like to use AWS Elastic Beanstalk for deployment because it would handle deployment, capacity provisioning, load balancing, auto-scaling, and application health monitoring. In the past, you connected to your provisioned instances through SSH to issue configuration commands. Now, you would like a configuration mechanism that automatically applies settings for you. Which of the following options would help do this?",
     answers: [
       "Include config files in .ebextensions/ at the root of your source code",
@@ -9719,6 +10175,7 @@ export const paper8 = [
   },
   {
     id: "S8q10",
+    domain: "Security",
     text: "A development team is working on an AWS Lambda function that accesses DynamoDB. The Lambda function must do an upsert, that is, it must retrieve an item and update some of its attributes or create the item if it does not exist. Which of the following represents the solution with MINIMUM IAM permissions that can be used for the Lambda function to achieve this functionality?",
     answers: [
       "dynamodb:AddItem, dynamodb:GetItem",
@@ -9740,6 +10197,7 @@ export const paper8 = [
   },
   {
     id: "S8q11",
+    domain: "Deployment",
     text: "As a Team Lead, you are expected to generate a report of the code builds for every week to report internally and to the client. This report consists of the number of code builds performed for a week, the percentage success and failure, and overall time spent on these builds by the team members. You also need to retrieve the CodeBuild logs for failed builds and analyze them in Athena. Which of the following options will help achieve this?",
     answers: [
       "Enable S3 and CloudWatch Logs integration",
@@ -9761,6 +10219,7 @@ export const paper8 = [
   },
   {
     id: "S8q12",
+    domain: "Troubleshooting and Optimization",
     text: "Recently in your organization, the AWS X-Ray SDK was bundled into each Lambda function to record outgoing calls for tracing purposes. When your team leader goes to the X-Ray service in the AWS Management Console to get an overview of the information collected, they discover that no data is available. What is the most likely reason for this issue?",
     answers: [
       "Fix the IAM Role",
@@ -9782,6 +10241,7 @@ export const paper8 = [
   },
   {
     id: "S8q13",
+    domain: "Development with AWS Services",
     text: "The development team at an analytics company is using SQS queues for decoupling the various components of application architecture. As the consumers need additional time to process SQS messages, the development team wants to postpone the delivery of new messages to the queue for a few seconds. As a Developer Associate, which of the following solutions would you recommend to the development team?",
     answers: [
       "Use delay queues to postpone the delivery of new messages to the queue for a few seconds",
@@ -9803,6 +10263,7 @@ export const paper8 = [
   },
   {
     id: "S8q14",
+    domain: "Development with AWS Services",
     text: "A company needs a version control system for their fast development lifecycle with incremental changes, version control, and support to existing Git tools. Which AWS service will meet these requirements?",
     answers: [
       "AWS CodeCommit",
@@ -9824,6 +10285,7 @@ export const paper8 = [
   },
   {
     id: "S8q15",
+    domain: "Deployment",
     text: "As an AWS certified developer associate, you are working on an AWS CloudFormation template that will create resources for a company's cloud infrastructure. Your template is composed of three stacks which are Stack-A, Stack-B, and Stack-C. Stack-A will provision a VPC, a security group, and subnets for public web applications that will be referenced in Stack-B and Stack-C. After running the stacks you decide to delete them, in which order should you do it?",
     answers: [
       "Stack A, Stack C then Stack B",
@@ -9845,6 +10307,7 @@ export const paper8 = [
   },
   {
     id: "S8q16",
+    domain: "Troubleshooting and Optimization",
     text: "The development team at a retail company is gearing up for the upcoming Thanksgiving sale and wants to make sure that the application's serverless backend running via Lambda functions does not hit latency bottlenecks as a result of the traffic spike. As a Developer Associate, which of the following solutions would you recommend to address this use-case?",
     answers: [
       "Add an Application Load Balancer in front of the Lambda functions",
@@ -9866,6 +10329,7 @@ export const paper8 = [
   },
   {
     id: "S8q17",
+    domain: "Development with AWS Services",
     text: "A business has purchased one m4.xlarge Reserved Instance but it has used three m4.xlarge instances concurrently for an hour. As a Developer, explain how the instances are charged?",
     answers: [
       "One instance is charged at one hour of On-Demand usage and the other two instances are charged at two hours of Reserved Instance usage",
@@ -9887,6 +10351,7 @@ export const paper8 = [
   },
   {
     id: "S8q18",
+    domain: "Security",
     text: "The development team at an e-commerce company completed the last deployment for their application at a reduced capacity because of the deployment policy. The application took a performance hit because of the traffic spike due to an ongoing sale. Which of the following represents the BEST deployment option for the upcoming application version such that it maintains at least the FULL capacity of the application and MINIMAL impact of failed deployment?",
     answers: [
       "Deploy the new application version using 'Rolling' deployment policy",
@@ -9908,6 +10373,7 @@ export const paper8 = [
   },
   {
     id: "S8q19",
+    domain: "Troubleshooting and Optimization",
     text: "A business hosts its website on Amazon EC2 instances and employs Auto Scaling to adjust its resources according to traffic spikes. However, users globally report slow loading times because static content hosted on the EC2 instances takes too long to load, even outside of busy periods. What pair of actions should be taken to improve the latency of the website? (Select two)",
     answers: [
       "Set up an Amazon CloudFront distribution to cache the static content with Amazon S3 configured as the origin",
@@ -9931,6 +10397,7 @@ export const paper8 = [
   },
   {
     id: "S8q20",
+    domain: "Security",
     text: "A Developer is configuring Amazon EC2 Auto Scaling group to scale dynamically. Which metric below is NOT part of Target Tracking Scaling Policy?",
     answers: [
       "ASGAverageCPUUtilization",
@@ -9952,6 +10419,7 @@ export const paper8 = [
   },
   {
     id: "S8q21",
+    domain: "Development with AWS Services",
     text: "While defining a business workflow as state machine on AWS Step Functions, a developer has configured several states. Which of the following would you identify as the state that represents a single unit of work performed by a state machine?",
     answers: [
       `"wait_until" : {
@@ -9994,6 +10462,7 @@ export const paper8 = [
   },
   {
     id: "S8q22",
+    domain: "Deployment",
     text: "A developer is building a serverless application on AWS and wants to establish an accelerated development workflow. The workflow must allow the developer to deploy incremental changes for testing without deploying the entire application for every code commit. The developer wants to streamline the process while minimizing deployment time. What should the developer do to meet these requirements?",
     answers: [
       "Use the cdk deploy command from the AWS Cloud Development Kit (AWS CDK) to deploy incremental changes to AWS for testing",
@@ -10015,6 +10484,7 @@ export const paper8 = [
   },
   {
     id: "S8q23",
+    domain: "Development with AWS Services",
     text: "A developer with access to the AWS Management Console terminated an instance in the us-east-1a availability zone. The attached EBS volume remained and is now available for attachment to other instances. Your colleague launches a new Linux EC2 instance in the us-east-1e availability zone and is attempting to attach the EBS volume. Your colleague informs you that it is not possible and needs your help. Which of the following explanations would you provide to them?",
     answers: [
       "The required IAM permissions are missing",
@@ -10036,6 +10506,7 @@ export const paper8 = [
   },
   {
     id: "S8q24",
+    domain: "Development with AWS Services",
     text: "A diagnostic lab stores its data on DynamoDB. The lab wants to backup a particular DynamoDB table data on Amazon S3, so it can download the S3 backup locally for some operational use. Which of the following options is NOT feasible?",
     answers: [
       "Use Hive with Amazon EMR to export your data to an S3 bucket and download locally",
@@ -10057,6 +10528,7 @@ export const paper8 = [
   },
   {
     id: "S8q25",
+    domain: "Development with AWS Services",
     text: "A data analytics company is processing real-time Internet-of-Things (IoT) data via Kinesis Producer Library (KPL) and sending the data to a Kinesis Data Streams driven application. The application has halted data processing because of a ProvisionedThroughputExceeded exception. Which of the following actions would help in addressing this issue? (Select two)",
     answers: [
       "Configure the data producer to retry with an exponential backoff",
@@ -10080,6 +10552,7 @@ export const paper8 = [
   },
   {
     id: "S8q26",
+    domain: "Security",
     text: "A developer is looking at establishing access control for an API that connects to a Lambda function downstream. Which of the following represents a mechanism that CANNOT be used for authenticating with the API Gateway?",
     answers: [
       "Standard AWS IAM roles and policies",
@@ -10101,6 +10574,7 @@ export const paper8 = [
   },
   {
     id: "S8q27",
+    domain: "Troubleshooting and Optimization",
     text: "A serverless application built on AWS processes customer orders 24/7 using an AWS Lambda function and communicates with an external vendor's HTTP API for payment processing. The development team wants to notify the support team in near real-time using an existing Amazon SNS topic, but only when the external API error rate exceeds 5% of the total transactions processed in an hour.",
     answers: [
       "Log API results to CloudWatch Logs, use Metric Filter, and schedule Lambda to evaluate error rate and publish SNS notification",
@@ -10122,6 +10596,7 @@ export const paper8 = [
   },
   {
     id: "S8q28",
+    domain: "Deployment",
     text: "The development team at a HealthCare company has deployed EC2 instances in AWS Account A. These instances need to access patient data with Personally Identifiable Information (PII) on multiple S3 buckets in another AWS Account B. As a Developer Associate, which of the following solutions would you recommend for the given use-case?",
     answers: [
       "Create an IAM role (instance profile) in Account A and set Account B as a trusted entity. Attach this role to the EC2 instances in Account A and add an inline policy to this role to access S3 data from Account B",
@@ -10143,6 +10618,7 @@ export const paper8 = [
   },
   {
     id: "S8q29",
+    domain: "Development with AWS Services",
     text: "A company has a cloud system in AWS with components that send and receive messages using SQS queues. While reviewing the system you see that it processes a lot of information and would like to be aware of any limits of the system. Which of the following represents the maximum number of messages that can be stored in an SQS queue?",
     answers: ["10000", "100000", "10000000", "no limit"],
     correctAnswerIndex: 3,
@@ -10159,6 +10635,7 @@ export const paper8 = [
   },
   {
     id: "S8q30",
+    domain: "Development with AWS Services",
     text: "As a Developer, you are given a document written in YAML that represents the architecture of a serverless application. The first line of the document contains Transform: 'AWS::Serverless-2016-10-31'. What does the Transform section in the document represent?",
     answers: [
       "It represents a Lambda function definition",
@@ -10180,6 +10657,7 @@ export const paper8 = [
   },
   {
     id: "S8q31",
+    domain: "Troubleshooting and Optimization",
     text: "An application running on EC2 instances processes messages from an SQS queue. However, sometimes the messages are not processed and they end up in errors. These messages need to be isolated for further processing and troubleshooting. Which of the following options will help achieve this?",
     answers: [
       "Use DeleteMessage",
@@ -10201,6 +10679,7 @@ export const paper8 = [
   },
   {
     id: "S8q32",
+    domain: "Troubleshooting and Optimization",
     text: "A company uses Amazon Simple Email Service (SES) to cost-effectively send subscription emails to the customers. Intermittently, the SES service throws the error: 'Throttling – Maximum sending rate exceeded'. As a developer associate, which of the following would you recommend to fix this issue?",
     answers: [
       "Use Exponential Backoff technique to introduce delay in time before attempting to execute the operation again",
@@ -10222,6 +10701,7 @@ export const paper8 = [
   },
   {
     id: "S8q33",
+    domain: "Development with AWS Services",
     text: "As an AWS Certified Developer Associate, you have been hired to work with the development team at a company to create a REST API using the serverless architecture. Which of the following solutions will you choose to move the company to the serverless architecture paradigm?",
     answers: [
       "Fargate with Lambda at the front",
@@ -10243,6 +10723,7 @@ export const paper8 = [
   },
   {
     id: "S8q34",
+    domain: "Development with AWS Services",
     text: "A development team is building a game where players can buy items with virtual coins. For every virtual coin bought by a user, both the players table as well as the items table in DynamoDB need to be updated simultaneously using an all-or-nothing operation. As a developer associate, how will you implement this functionality?",
     answers: [
       "Use BatchWriteItem API to update multiple tables simultaneously",
@@ -10264,6 +10745,7 @@ export const paper8 = [
   },
   {
     id: "S8q35",
+    domain: "Security",
     text: "A developer in your company was just promoted to Team Lead and will be in charge of code deployment on EC2 instances via AWS CodeCommit and AWS CodeDeploy. Per the new requirements, the deployment process should be able to change permissions for deployed files as well as verify the deployment success. Which of the following actions should the new Developer take?",
     answers: [
       "Define a buildspec.yml file in the root directory",
@@ -10285,6 +10767,7 @@ export const paper8 = [
   },
   {
     id: "S8q36",
+    domain: "Development with AWS Services",
     text: "As a Senior Developer, you are tasked with creating several API Gateway powered APIs along with your team of developers. The developers are working on the API in the development environment, but they find the changes made to the APIs are not reflected when the API is called. As a Developer Associate, which of the following solutions would you recommend for this use-case?",
     answers: [
       "Redeploy the API to an existing stage or to a new stage",
@@ -10306,6 +10789,7 @@ export const paper8 = [
   },
   {
     id: "S8q37",
+    domain: "Development with AWS Services",
     text: "A business has their test environment built on Amazon EC2 configured on General purpose SSD (gp2) volume. At which gp2 volume size will their test environment hit the max IOPS?",
     answers: ["16 TiB", "5.3 TiB", "2.7 TiB", "10.6 TiB"],
     correctAnswerIndex: 1,
@@ -10322,6 +10806,7 @@ export const paper8 = [
   },
   {
     id: "S8q38",
+    domain: "Deployment",
     text: "Other than the Resources section, which of the following sections in a Serverless Application Model (SAM) Template is mandatory?",
     answers: ["Transform", "Parameters", "Mappings", "Globals"],
     correctAnswerIndex: 0,
@@ -10338,6 +10823,7 @@ export const paper8 = [
   },
   {
     id: "S8q39",
+    domain: "Development with AWS Services",
     text: "A developer is defining the signers that can create signed URLs for their Amazon CloudFront distributions. Which of the following statements should the developer consider while defining the signers? (Select two)",
     answers: [
       "When you use the root user to manage CloudFront key pairs, you can only have up to two active CloudFront key pairs per AWS account",
@@ -10361,6 +10847,7 @@ export const paper8 = [
   },
   {
     id: "S8q40",
+    domain: "Deployment",
     text: "A developer wants to package the code and dependencies for the application-specific Lambda functions as container images to be hosted on Amazon Elastic Container Registry (ECR). Which of the following options are correct for the given requirement? (Select two)",
     answers: [
       "You can test the containers locally using the Lambda Runtime API",
@@ -10384,6 +10871,7 @@ export const paper8 = [
   },
   {
     id: "S8q41",
+    domain: "Security",
     text: "An Accounting firm extensively uses Amazon EBS volumes for persistent storage of application data of Amazon EC2 instances. The volumes are encrypted to protect the critical data of the clients. As part of managing the security credentials, the project manager has come across a policy snippet. Which of the following options are correct regarding the policy?",
     answers: [
       "The first statement provides the security group the ability to generate a data key and decrypt that data key from the CMK when necessary",
@@ -10405,6 +10893,7 @@ export const paper8 = [
   },
   {
     id: "S8q42",
+    domain: "Development with AWS Services",
     text: "A media publishing company is using Amazon EC2 instances for running their business-critical applications. Their IT team is looking at reserving capacity apart from Savings Plans for the critical instances. As a Developer Associate, which of the following reserved instance types would you select to provide capacity reservations?",
     answers: [
       "Neither Regional Reserved Instances nor Zonal Reserved Instances",
@@ -10426,6 +10915,7 @@ export const paper8 = [
   },
   {
     id: "S8q43",
+    domain: "Development with AWS Services",
     text: "Consider an application that enables users to store their mobile phone images in the cloud and supports tens of thousands of users. The application should utilize an Amazon API Gateway REST API that leverages AWS Lambda functions for photo processing while storing photo details in Amazon DynamoDB. The application should allow users to create an account, upload images, and retrieve previously uploaded images, with images ranging in size from 500 KB to 5 MB. How will you design the application with the least operational overhead?",
     answers: [
       "Use Cognito identity pools to create an IAM user for each user of the application during the sign-up process. Leverage IAM authentication in API Gateway to control access to the API. Set up a Lambda function to store the images in Amazon S3 and save the image object's S3 key as part of the photo details in a DynamoDB table. Have the Lambda function retrieve previously uploaded images by querying DynamoDB for the S3 key",
@@ -10447,6 +10937,7 @@ export const paper8 = [
   },
   {
     id: "S8q44",
+    domain: "Security",
     text: "An Auto Scaling group has a maximum capacity of 3, a current capacity of 2, and a scaling policy that adds 3 instances. When executing this scaling policy, what is the expected outcome?",
     answers: [
       "Amazon EC2 Auto Scaling adds 3 instances to the group",
@@ -10468,6 +10959,7 @@ export const paper8 = [
   },
   {
     id: "S8q45",
+    domain: "Development with AWS Services",
     text: "A senior architect is configuring a DynamoDB table. The workload requires 10 strongly consistent reads per second for items sized at 6 KB each. How many read capacity units (RCUs) are needed?",
     answers: ["10", "20", "30", "60"],
     correctAnswerIndex: 1,
@@ -10484,6 +10976,7 @@ export const paper8 = [
   },
   {
     id: "S8q46",
+    domain: "Development with AWS Services",
     text: "A social gaming mobile app team wants to simplify user sign-up and needs a fully managed, scalable user management solution with the least development effort. Which option should they choose?",
     answers: [
       "Use Cognito Identity pools to facilitate sign up and user management for the mobile app",
@@ -10505,6 +10998,7 @@ export const paper8 = [
   },
   {
     id: "S8q47",
+    domain: "Deployment",
     text: "Your company is adopting microservices. New applications must be dockerized and stored in an AWS registry service. The architecture must support dynamic port mapping and allow multiple tasks from a single service to run on the same EC2 container instance. Which solution best fits this requirement?",
     answers: [
       "Application Load Balancer + ECS",
@@ -10526,6 +11020,7 @@ export const paper8 = [
   },
   {
     id: "S8q48",
+    domain: "Development with AWS Services",
     text: "A company runs its application on Amazon EC2 instances. After losing some SSH private keys, they want to reuse SSH key pairs across different AWS Regions. What should they do?",
     answers: [
       "Generate a public SSH key from a private SSH key. Then import the key into each AWS Region",
@@ -10547,6 +11042,7 @@ export const paper8 = [
   },
   {
     id: "S8q49",
+    domain: "Development with AWS Services",
     text: "A developer configures an EC2 instance with a security group allowing inbound HTTP (0.0.0.0/0) and a custom NACL also allowing inbound HTTP traffic. The instance must accept and respond to internet requests. What additional configuration is required?",
     answers: [
       "The configuration is complete on the EC2 instance for accepting and responding to requests",
@@ -10568,6 +11064,7 @@ export const paper8 = [
   },
   {
     id: "S8q50",
+    domain: "Security",
     text: "A multinational retail company wants trusted third-party authenticated users from supplier organizations to create and update records in specific DynamoDB tables in the company AWS account. What is the best solution?",
     answers: [
       "Use Cognito User pools to enable trusted third-party authenticated users to access DynamoDB",
@@ -10589,6 +11086,7 @@ export const paper8 = [
   },
   {
     id: "S8q51",
+    domain: "Development with AWS Services",
     text: "A CRM application runs on Amazon EC2 with DynamoDB as the database tier. Customers require that all communication between EC2 and DynamoDB must not traverse the public internet. What is the optimal solution?",
     answers: [
       "Configure VPC endpoints for DynamoDB that will provide required internal access without using public internet",
@@ -10610,6 +11108,7 @@ export const paper8 = [
   },
   {
     id: "S8q52",
+    domain: "Troubleshooting and Optimization",
     text: "A developer uses Kinesis Agent on a Windows EC2 instance to stream JSON logs to Amazon S3 via Kinesis Data Firehose. Which sink/destination type is NOT supported by Kinesis Data Firehose?",
     answers: [
       "Amazon ElastiCache with Amazon S3 as backup",
@@ -10631,6 +11130,7 @@ export const paper8 = [
   },
   {
     id: "S8q53",
+    domain: "Troubleshooting and Optimization",
     text: "What step can a developer take to optimize the performance of a CPU-bound AWS Lambda function and improve response time?",
     answers: [
       "Increase the function's provisioned concurrency",
@@ -10652,6 +11152,7 @@ export const paper8 = [
   },
   {
     id: "S8q54",
+    domain: "Security",
     text: "You have AWS Lambda functions written in Java. A requirement is to pass more than 1 MB of data to the function and encrypt/decrypt it at runtime. Which approach should you use?",
     answers: [
       "Use KMS direct encryption and store as file",
@@ -10673,6 +11174,7 @@ export const paper8 = [
   },
   {
     id: "S8q55",
+    domain: "Development with AWS Services",
     text: "A pharmaceutical company runs their database workloads on Provisioned IOPS SSD (io1) volumes. As a Developer Associate, which of the following options would you identify as an INVALID configuration for io1 EBS volume types?",
     answers: [
       "200 GiB size volume with 2000 IOPS",
@@ -10694,6 +11196,7 @@ export const paper8 = [
   },
   {
     id: "S8q56",
+    domain: "Security",
     text: "You are a development team lead setting permissions for other IAM users with limited permissions. On the AWS Management Console, you created a dev group where new developers will be added, and on your workstation, you configured a developer profile. You would like to test that this user cannot terminate instances. Which of the following options would you execute?",
     answers: [
       "Using the CLI, create a dummy EC2 and delete it using another CLI call",
@@ -10715,6 +11218,7 @@ export const paper8 = [
   },
   {
     id: "S8q57",
+    domain: "Development with AWS Services",
     text: "You create an Auto Scaling group in  to work with an Application Load Balancer. The scaling group is configured with a minimum size value of 5, a maximum value of 20, and the desired capacity value of 10. One of the 10 EC2 instances has been reported as unhealthy. Which of the following actions will take place?",
     answers: [
       "The ASG will terminate the EC2 Instance",
@@ -10736,6 +11240,7 @@ export const paper8 = [
   },
   {
     id: "S8q58",
+    domain: "Development with AWS Services",
     text: "An e-commerce company manages a microservices application that receives orders from various partners through a customized API for each partner exposed via Amazon API Gateway. The orders are processed by a shared AWS Lambda function. How can the company notify each partner regarding the status of their respective orders in the most efficient manner, without affecting other partners' orders, and ensuring the solution is scalable with minimal code changes when new partners are added?",
     answers: [
       "Set up an SNS topic and subscribe each partner to the SNS topic. Modify the Lambda function to publish messages with specific attributes to the SNS topic and apply the appropriate filter policy to the topic subscriptions",
@@ -10757,6 +11262,7 @@ export const paper8 = [
   },
   {
     id: "S8q59",
+    domain: "Security",
     text: "A developer wants to securely store and retrieve various types of variables, such as remote API authentication information, API URL, and related credentials across different environments of an application deployed on Amazon Elastic Container Service (Amazon ECS). What is the best approach that requires minimal modifications in the application code?",
     answers: [
       "Configure the application to fetch the variables and credentials from AWS Systems Manager Parameter Store by leveraging hierarchical unique paths in Parameter Store for each variable in each environment",
@@ -10778,6 +11284,7 @@ export const paper8 = [
   },
   {
     id: "S8q60",
+    domain: "Deployment",
     text: "The technology team at an investment bank uses Amazon DynamoDB to facilitate high-frequency trading where multiple trades can try and update an item at the same time. Which of the following actions would make sure that only the last updated value of any item is used in the application?",
     answers: [
       "Use ConsistentRead = false while doing PutItem operation for any item",
@@ -10799,6 +11306,7 @@ export const paper8 = [
   },
   {
     id: "S8q61",
+    domain: "Deployment",
     text: "Your team lead has asked you to learn AWS CloudFormation to create a collection of related AWS resources and provision them in an orderly fashion. You decide to provide AWS-specific parameter types to catch invalid values. When specifying parameters, which of the following is NOT a valid parameter type?",
     answers: [
       "CommaDelimitedList",
@@ -10820,6 +11328,7 @@ export const paper8 = [
   },
   {
     id: "S8q62",
+    domain: "Development with AWS Services",
     text: "A social gaming application supports the transfer of gift vouchers between users. When a user hits a certain milestone on the leaderboard, they earn a gift voucher that can be redeemed or transferred to another user. The development team wants to ensure that this transfer is captured in the database such that the records for both users are either written successfully with the new gift vouchers or the status quo is maintained. Which of the following solutions represent the best-fit options to meet the requirements for the given use-case? (Select two)",
     answers: [
       "Use the Amazon Athena transactional read and write APIs on the table items as a single, all-or-nothing operation",
@@ -10842,6 +11351,7 @@ export const paper8 = [
   },
   {
     id: "S8q63",
+    domain: "Troubleshooting and Optimization",
     text: "While troubleshooting, a developer realized that an Amazon EC2 instance is unable to connect to the Internet using an Internet Gateway. Which conditions should be met for Internet connectivity to be established? (Select two)",
     answers: [
       "The instance's subnet is not associated with any route table",
@@ -10864,6 +11374,7 @@ export const paper8 = [
   },
   {
     id: "S8q64",
+    domain: "Troubleshooting and Optimization",
     text: "A company wants to share information with a third party via an HTTP API endpoint managed by the third party. The company has the necessary API key to access the endpoint and the integration of the API key with the company's application code must not impact the application's performance. What is the most secure approach?",
     answers: [
       "Keep the API credentials in an encrypted table in MySQL RDS and use the credentials to make the API call by fetching the API credentials from RDS at runtime by using the AWS SDK",
@@ -10885,6 +11396,7 @@ export const paper8 = [
   },
   {
     id: "S8q65",
+    domain: "Development with AWS Services",
     text: "A startup has been experimenting with Amazon DynamoDB in its new test environment. The development team has discovered that some of the write operations have been overwriting existing items that have the specified primary key, causing data discrepancies. Which DynamoDB write option should be selected to prevent this kind of overwriting?",
     answers: [
       "Batch writes",
@@ -10909,6 +11421,7 @@ export const paper8 = [
 export const paper9 = [
   {
     id: "S9q1",
+    domain: "Troubleshooting and Optimization",
     text: "Your team lead has requested code review of your code for Lambda functions. Your code is written in Python and makes use of the Amazon Simple Storage Service (S3) to upload logs to an S3 bucket. After the review, your team lead has recommended reuse of execution context to improve the Lambda performance.\n\nWhich of the following actions will help you implement the recommendation?",
     answers: [
       "Enable X-Ray integration",
@@ -10930,6 +11443,7 @@ export const paper9 = [
   },
   {
     id: "S9q2",
+    domain: "Security",
     text: "You are creating a mobile application that needs access to the AWS API Gateway. Users will need to register first before they can access your API and you would like the user management to be fully managed.\n\nWhich authentication option should you use for your API Gateway layer?",
     answers: [
       "Use IAM permissions with sigv4",
@@ -10951,6 +11465,7 @@ export const paper9 = [
   },
   {
     id: "S9q3",
+    domain: "Security",
     text: "Your team maintains a public API Gateway that is accessed by clients from another domain. Usage has been consistent for the last few months but recently it has more than doubled. As a result, your costs have gone up and would like to prevent other unauthorized domains from accessing your API.\n\nWhich of the following actions should you take?",
     answers: [
       "Use Account-level throttling",
@@ -10972,6 +11487,7 @@ export const paper9 = [
   },
   {
     id: "S9q4",
+    domain: "Development with AWS Services",
     text: "A team is checking the viability of using AWS Step Functions for creating a banking workflow for loan approvals. The web application will also have human approval as one of the steps in the workflow.\n\nAs a developer associate, which of the following would you identify as the key characteristics for AWS Step Function? (Select two)",
     answers: [
       "You should use Express Workflows for workloads with high event rates and short duration",
@@ -10995,6 +11511,7 @@ export const paper9 = [
   },
   {
     id: "S9q5",
+    domain: "Security",
     text: "The development team at a company wants to encrypt a 111 GB object using AWS KMS.\n\nWhich of the following represents the best solution?",
     answers: [
       "Make a GenerateDataKeyWithPlaintext API call that returns an encrypted copy of a data key. Use a plaintext key to encrypt the data",
@@ -11016,6 +11533,7 @@ export const paper9 = [
   },
   {
     id: "S9q6",
+    domain: "Development with AWS Services",
     text: "Recently, you started an online learning platform using AWS Lambda and AWS Gateway API. Your first version was successful, and you began developing new features for the second version. You would like to gradually introduce the second version by routing only 10% of the incoming traffic to the new Lambda version.\n\nWhich solution should you opt for?",
     answers: [
       "Use AWS Lambda aliases",
@@ -11037,6 +11555,7 @@ export const paper9 = [
   },
   {
     id: "S9q7",
+    domain: "Security",
     text: "You are running a cloud file storage website with an Internet-facing Application Load Balancer, which routes requests from users over the internet to 10 registered Amazon EC2 instances. Users are complaining that your website always asks them to re-authenticate when they switch pages. You are puzzled because this behavior is not seen in your local machine or dev environment.\n\nWhat could be the reason?",
     answers: [
       "Application Load Balancer is in slow-start mode, which gives ALB a little more time to read and write session data",
@@ -11058,6 +11577,7 @@ export const paper9 = [
   },
   {
     id: "S9q8",
+    domain: "Deployment",
     text: "Your company runs business logic on smaller software components that perform various functions. Some functions process information in a few seconds while others seem to take a long time to complete. Your manager asked you to decouple components that take a long time to ensure software applications stay responsive under load. You decide to configure Amazon Simple Queue Service (SQS) to work with your Elastic Beanstalk configuration.\n\nWhich of the following Elastic Beanstalk environment should you choose to meet this requirement?",
     answers: [
       "Single Instance with Elastic IP",
@@ -11079,6 +11599,7 @@ export const paper9 = [
   },
   {
     id: "S9q9",
+    domain: "Development with AWS Services",
     text: "A high-frequency stock trading firm is migrating their messaging queues from self-managed message-oriented middleware systems to Amazon SQS. The development team at the company wants to minimize the costs of using SQS.\n\nAs a Developer Associate, which of the following options would you recommend to address the given use-case?",
     answers: [
       "Use SQS message timer to retrieve messages from your Amazon SQS queues",
@@ -11100,6 +11621,7 @@ export const paper9 = [
   },
   {
     id: "S9q10",
+    domain: "Deployment",
     text: "Your company is planning to move away from reserving EC2 instances and would like to adopt a more agile form of serverless architecture.\n\nWhich of the following is the simplest and the least effort way of deploying the Docker containers on this serverless architecture?",
     answers: [
       "Amazon Elastic Container Service (Amazon ECS) on Fargate",
@@ -11121,6 +11643,7 @@ export const paper9 = [
   },
   {
     id: "S9q11",
+    domain: "Troubleshooting and Optimization",
     text: "You have a three-tier web application consisting of a web layer using AngularJS, an application layer using an AWS API Gateway and a data layer in an Amazon Relational Database Service (RDS) database. Your web application allows visitors to look up popular movies from the past. The company is looking at reducing the number of calls made to endpoint and improve latency to the API.\n\nWhat can you do to improve performance?",
     answers: [
       "Use Stage Variables",
@@ -11142,6 +11665,7 @@ export const paper9 = [
   },
   {
     id: "S9q12",
+    domain: "Development with AWS Services",
     text: "As a Senior Developer, you manage 10 Amazon EC2 instances that make read-heavy database requests to the Amazon RDS for PostgreSQL. You need to make this architecture resilient for disaster recovery.\n\nWhich of the following features will help you prepare for database disaster recovery? (Select two)",
     answers: [
       "Use RDS Provisioned IOPS (SSD) Storage in place of General Purpose (SSD) Storage",
@@ -11165,6 +11689,7 @@ export const paper9 = [
   },
   {
     id: "S9q13",
+    domain: "Troubleshooting and Optimization",
     text: "A company has more than 100 million members worldwide enjoying 125 million hours of TV shows and movies each day. The company uses AWS for nearly all its computing and storage needs, which use more than 10,000 server instances on AWS. This results in an extremely complex and dynamic networking environment where applications are constantly communicating inside AWS and across the Internet. Monitoring and optimizing its network is critical for the company.\n\nThe company needs a solution for ingesting and analyzing the multiple terabytes of real-time data its network generates daily in the form of flow logs. Which technology/service should the company use to ingest this data economically and has the flexibility to direct this data to other downstream systems?",
     answers: [
       "Amazon Kinesis Data Streams",
@@ -11207,6 +11732,7 @@ export const paper9 = [
   },
   {
     id: "S9q15",
+    domain: "Deployment",
     text: "A development team has deployed a REST API in Amazon API Gateway to two different stages - a test stage and a prod stage. The test stage is used as a test build and the prod stage as a stable build. After the updates have passed the test, the team wishes to promote the test stage to the prod stage.\n\nWhich of the following represents the optimal solution for this use-case?",
     answers: [
       "Delete the existing prod stage. Create a new stage with the same name (prod) and deploy the tested version on this stage",
@@ -11228,6 +11754,7 @@ export const paper9 = [
   },
   {
     id: "S9q16",
+    domain: "Deployment",
     text: "You are working for a shipping company that is automating the creation of ECS clusters with an Auto Scaling Group using an AWS CloudFormation template that accepts cluster name as its parameters. Initially, you launch the template with input value 'MainCluster', which deployed five instances across two availability zones. The second time, you launch the template with an input value 'SecondCluster'. However, the instances created in the second run were also launched in 'MainCluster' even after specifying a different cluster name.\n\nWhat is the root cause of this issue?",
     answers: [
       "The cluster name Parameter has not been updated in the file /etc/ecs/ecs.config during bootstrap",
@@ -11249,6 +11776,7 @@ export const paper9 = [
   },
   {
     id: "S9q17",
+    domain: "Security",
     text: "A developer is designing an AWS CloudFormation template for deploying Amazon EC2 instances in numerous AWS accounts. The developer needs to select EC2 instances from a list of pre-approved instance types.\n\nWhat measures could the developer take to integrate the list of authorized instance types into the CloudFormation template?",
     answers: [
       "Configure separate parameters for each EC2 instance type in the CloudFormation template",
@@ -11270,6 +11798,7 @@ export const paper9 = [
   },
   {
     id: "S9q18",
+    domain: "Development with AWS Services",
     text: "A company’s e-commerce website is expecting hundreds of thousands of visitors on Black Friday. The marketing department is concerned that high volumes of orders might stress SQS leading to message failures. The company has approached you for the steps to be taken as a precautionary measure against the high volumes.\n\nWhat step will you suggest as a Developer Associate?",
     answers: [
       "Enable auto-scaling in the SQS queue",
@@ -11291,6 +11820,7 @@ export const paper9 = [
   },
   {
     id: "S9q19",
+    domain: "Deployment",
     text: "An organization is moving its on-premises resources to the cloud. Source code will be moved to AWS CodeCommit and AWS CodeBuild will be used for compiling the source code using Apache Maven as a build tool. The organization wants the build environment should allow for scaling and running builds in parallel.\n\nWhich of the following options should the organization choose for their requirement?",
     answers: [
       "CodeBuild scales automatically, the organization does not have to do anything for scaling or for parallel builds",
@@ -11312,6 +11842,7 @@ export const paper9 = [
   },
   {
     id: "S9q20",
+    domain: "Development with AWS Services",
     text: "A telecommunications company that provides internet service for mobile device users maintains over 100 c4.large instances in the us-east-1 region. The EC2 instances run complex algorithms. The manager would like to track CPU utilization of the EC2 instances as frequently as every 10 seconds.\n\nWhich of the following represents the BEST solution for the given use-case?",
     answers: [
       "Simply get it from the CloudWatch Metrics",
@@ -11333,6 +11864,7 @@ export const paper9 = [
   },
   {
     id: "S9q21",
+    domain: "Security",
     text: "A development team has created a new IAM user that has s3:PutObject permission to write to an S3 bucket. This S3 bucket uses server-side encryption with AWS KMS managed keys (SSE-KMS) as the default encryption. Using the access key ID and the secret access key of the IAM user, the application received an access denied error when calling the PutObject API.\n\nAs a Developer Associate, how would you resolve this issue?",
     answers: [
       "Correct the policy of the IAM user to allow the s3:Encrypt action",
@@ -11354,6 +11886,7 @@ export const paper9 = [
   },
   {
     id: "S9q22",
+    domain: "Development with AWS Services",
     text: "A telecom service provider stores its critical customer data on Amazon Simple Storage Service (Amazon S3).\n\nWhich of the following options can be used to control access to data stored on Amazon S3? (Select two)",
     answers: [
       "Bucket policies, Identity and Access Management (IAM) policies",
@@ -11377,6 +11910,7 @@ export const paper9 = [
   },
   {
     id: "S9q23",
+    domain: "Development with AWS Services",
     text: "A media company uses Amazon Simple Queue Service (SQS) queue to manage their transactions. With changing business needs, the payload size of the messages is increasing. The Team Lead of the project is worried about the 256 KB message size limit that SQS has.\n\nWhat can be done to make the queue accept messages of a larger size?",
     answers: [
       "Use the SQS Extended Client",
@@ -11398,6 +11932,7 @@ export const paper9 = [
   },
   {
     id: "S9q24",
+    domain: "Security",
     text: "A financial services company wants to ensure that the customer data is always kept encrypted on Amazon S3 but wants an AWS managed solution that allows full control to create, rotate and remove the encryption keys.\n\nAs a Developer Associate, which of the following would you recommend to address the given use-case?",
     answers: [
       "Server-Side Encryption with Customer-Provided Keys (SSE-C)",
@@ -11419,6 +11954,7 @@ export const paper9 = [
   },
   {
     id: "S9q25",
+    domain: "Security",
     text: "A developer wants to integrate user-specific file upload and download features in an application that uses both Amazon Cognito user pools and Cognito identity pools for secure access with Amazon S3. The developer also wants to ensure that only authorized users can access their own files and that the files are securely saved and retrieved. The files are 5 KB to 500 MB in size.\n\nWhat do you recommend as the most efficient solution?",
     answers: [
       "Use CloudFront Lambda@Edge to validate that the given file is uploaded to S3 and downloaded from S3 only by the authorized user",
@@ -11440,6 +11976,7 @@ export const paper9 = [
   },
   {
     id: "S9q26",
+    domain: "Development with AWS Services",
     text: "You have an Auto Scaling group configured to a minimum capacity of 1 and a maximum capacity of 5, designed to launch EC2 instances across 3 Availability Zones. During a low utilization period, an entire Availability Zone went down and your application experienced downtime.\n\nWhat can you do to ensure that your application remains highly available?",
     answers: [
       "Configure ASG fast failover",
@@ -11461,6 +11998,7 @@ export const paper9 = [
   },
   {
     id: "S9q27",
+    domain: "Development with AWS Services",
     text: "A developer from your team has configured the load balancer to route traffic equally between instances or across Availability Zones. However, Elastic Load Balancing (ELB) routes more traffic to one instance or Availability Zone than the others.\n\nWhy is this happening and how can it be fixed? (Select two)",
     answers: [
       "For Application Load Balancers, cross-zone load balancing is disabled by default",
@@ -11484,6 +12022,7 @@ export const paper9 = [
   },
   {
     id: "S9q28",
+    domain: "Troubleshooting and Optimization",
     text: "A company wants to automate and orchestrate a multi-source high-volume flow of data in a scalable data management solution built using AWS services. The solution must ensure that the business rules and transformations run in sequence, handle reprocessing of data in case of errors, and require minimal maintenance.\n\nWhich AWS service should the company use to manage and automate the orchestration of the data flows?",
     answers: [
       "AWS Batch",
@@ -11505,6 +12044,7 @@ export const paper9 = [
   },
   {
     id: "S9q29",
+    domain: "Development with AWS Services",
     text: "A company follows collaborative development practices. The engineering manager wants to isolate the development effort by setting up simulations of API components owned by various development teams.\n\nWhich API integration type is best suited for this requirement?",
     answers: ["AWS_PROXY", "HTTP", "HTTP_PROXY", "MOCK"],
     correctAnswerIndex: 3,
@@ -11521,6 +12061,7 @@ export const paper9 = [
   },
   {
     id: "S9q30",
+    domain: "Development with AWS Services",
     text: "A digital marketing company has its website hosted on an Amazon S3 bucket A. The development team notices that the web fonts that are hosted on another S3 bucket B are not loading on the website.\n\nWhich of the following solutions can be used to address this issue?",
     answers: [
       "Configure CORS on the bucket A that is hosting the website to allow any origin to respond to requests",
@@ -11542,6 +12083,7 @@ export const paper9 = [
   },
   {
     id: "S9q31",
+    domain: "Development with AWS Services",
     text: "Your company hosts a static website on Amazon Simple Storage Service (S3) written in HTML5. The website has a worldwide audience with hundreds of thousands of monthly visitors. While users in the United States have a great user experience, users from other parts of the world are experiencing slow responses and lag.\n\nWhich service can mitigate this issue?",
     answers: [
       "Use Amazon ElastiCache for Redis",
@@ -11563,6 +12105,7 @@ export const paper9 = [
   },
   {
     id: "S9q32",
+    domain: "Troubleshooting and Optimization",
     text: "You have been asked by your Team Lead to enable detailed monitoring of the Amazon EC2 instances your team uses. As a Developer working on AWS CLI, which of the below command will you run to enable this for a running instance?",
     answers: [
       "aws ec2 run-instances --image-id ami-09092360 --monitoring Enabled=true",
@@ -11584,6 +12127,7 @@ export const paper9 = [
   },
   {
     id: "S9q33",
+    domain: "Troubleshooting and Optimization",
     text: "Your web application reads and writes data to your DynamoDB table. The table is provisioned with 400 Write Capacity Units (WCUs) shared across 4 partitions. One of the partitions receives 250 WCU/second while others receive much less. You receive the error 'ProvisionedThroughputExceededException'.\n\nWhat is the likely cause of this error?",
     answers: [
       "You have a hot partition",
@@ -11605,6 +12149,7 @@ export const paper9 = [
   },
   {
     id: "S9q34",
+    domain: "Development with AWS Services",
     text: "A development team uses shared Amazon S3 buckets to upload files. Due to this shared access, objects in S3 buckets have different owners, making it difficult to manage the objects.\n\nWhich of the following would you suggest to automatically make the S3 bucket owner also the owner of all objects in the bucket, irrespective of the AWS account used for uploading the objects?",
     answers: [
       "Use S3 CORS to make the S3 bucket owner, the owner of all objects in the bucket",
@@ -11626,6 +12171,7 @@ export const paper9 = [
   },
   {
     id: "S9q35",
+    domain: "Deployment",
     text: "AWS CloudFormation helps model and provision all the cloud infrastructure resources needed for your business.\n\nWhich of the following services rely on CloudFormation to provision resources? (Select two)",
     answers: [
       "AWS Autoscaling",
@@ -11649,6 +12195,7 @@ export const paper9 = [
   },
   {
     id: "S9q36",
+    domain: "Security",
     text: "A HealthCare mobile app uses proprietary Machine Learning algorithms to provide early diagnosis using patient health metrics. To protect this sensitive data, the development team wants to transition to a scalable user management system with log-in/sign-up functionality that also supports Multi-Factor Authentication (MFA).\n\nWhich of the following options can be used to implement a solution with the LEAST amount of development effort? (Select two)",
     answers: [
       "Use Amazon Cognito for user-management and facilitating the log-in/sign-up process",
@@ -11672,6 +12219,7 @@ export const paper9 = [
   },
   {
     id: "S9q37",
+    domain: "Development with AWS Services",
     text: "You are a developer working with the AWS CLI to create Lambda functions that contain environment variables. Your functions will require over 50 environment variables consisting of sensitive information of database table names.\n\nWhat is the total set size/number of environment variables you can create for AWS Lambda?",
     answers: [
       "The total size of all environment variables shouldn't exceed 8 KB. There is no limit on the number of variables",
@@ -11693,6 +12241,7 @@ export const paper9 = [
   },
   {
     id: "S9q38",
+    domain: "Deployment",
     text: "You have a workflow process that pulls code from AWS CodeCommit and deploys to EC2 instances associated with tag group ProdBuilders. You would like to configure the instances to archive no more than two application revisions to conserve disk space.\n\nWhich of the following will allow you to implement this?",
     answers: [
       "CodeDeploy Agent",
@@ -11714,6 +12263,7 @@ export const paper9 = [
   },
   {
     id: "S9q39",
+    domain: "Deployment",
     text: "As part of an employee skills upgrade, the developers on your team have been delegated responsibilities usually held by DevOps engineers, giving them full control over modeling the software delivery process from coding to deployment. As the team lead, you are now responsible for any manual approvals needed in the process.\n\nWhich of the following approaches supports the given workflow?",
     answers: [
       "Create one CodePipeline for your entire flow and add a manual approval step",
@@ -11735,6 +12285,7 @@ export const paper9 = [
   },
   {
     id: "S9q40",
+    domain: "Development with AWS Services",
     text: "As part of their on-boarding, the employees at an IT company need to upload their profile photos in a private S3 bucket. The company wants to build an in-house web application hosted on an EC2 instance that should display the profile photos in a secure way when the employees mark their attendance.\n\nAs a Developer Associate, which of the following solutions would you suggest to address this use-case?",
     answers: [
       "Save the S3 key for each user's profile photo in a DynamoDB table and use a lambda function to dynamically generate a pre-signed URL. Reference this URL for display via the web application",
@@ -11756,6 +12307,7 @@ export const paper9 = [
   },
   {
     id: "S9q41",
+    domain: "Security",
     text: "Two policies are attached to an IAM user. The first policy states that the user has explicitly been denied all access to EC2 instances. The second policy states that the user has been allowed permission for the 'ec2:Describe*' action.\n\nWhen the user tries to use a 'Describe' action on an EC2 instance using the CLI, what will be the output?",
     answers: [
       "The IAM user stands in an invalid state, because of conflicting policies",
@@ -11777,6 +12329,7 @@ export const paper9 = [
   },
   {
     id: "S9q42",
+    domain: "Troubleshooting and Optimization",
     text: "A cybersecurity company is running a serverless backend with several compute-heavy workflows running on Lambda functions. The development team has noticed a performance lag after analyzing the performance metrics for the Lambda functions.\n\nAs a Developer Associate, which of the following options would you suggest as the BEST solution to address the compute-heavy workloads?",
     answers: [
       "Use reserved concurrency to account for the compute-heavy workflows",
@@ -11798,6 +12351,7 @@ export const paper9 = [
   },
   {
     id: "S9q43",
+    domain: "Security",
     text: "A developer wants to securely store an access token that allows a transaction-processing application running on Amazon EC2 instances to authenticate and send a chat message (via the chat API) to the company's support team when an invalid transaction is detected. While minimizing management overhead, the chat API access token must be encrypted both at rest and in transit, and also be accessible from other AWS accounts.\n\nWhat is the most efficient solution to address this scenario?",
     answers: [
       "Store AWS KMS encrypted access token in a DynamoDB table and configure a resource-based policy for the DynamoDB table to allow access from other accounts. Modify the IAM role of the EC2 instances with permissions to access the DynamoDB table.",
@@ -11819,6 +12373,7 @@ export const paper9 = [
   },
   {
     id: "S9q44",
+    domain: "Security",
     text: "The Development team at a media company is working on securing their databases.\n\nWhich of the following AWS database engines can be configured with IAM Database Authentication? (Select two)",
     answers: [
       "RDS SQL Server",
@@ -11842,6 +12397,7 @@ export const paper9 = [
   },
   {
     id: "S9q45",
+    domain: "Troubleshooting and Optimization",
     text: "As a developer, you are looking at creating a custom configuration for Amazon EC2 instances running in an Auto Scaling group. The solution should allow the group to auto-scale based on the metric of 'average RAM usage' for your Amazon EC2 instances.\n\nWhich option provides the best solution?",
     answers: [
       "Create a custom alarm for your ASG and make your instances trigger the alarm using PutAlarmData API",
@@ -11863,6 +12419,7 @@ export const paper9 = [
   },
   {
     id: "S9q46",
+    domain: "Development with AWS Services",
     text: "A developer is working on an AWS Lambda function that reads data from Amazon S3 objects and writes the data to an Amazon DynamoDB table. Although the function triggers successfully from an S3 event notification upon object creation, it encounters a failure while attempting to write data to the DynamoDB table.\n\nWhat is the probable reason for the failure?",
     answers: [
       "The Lambda function's reserved concurrency limit has been exceeded",
@@ -11884,6 +12441,7 @@ export const paper9 = [
   },
   {
     id: "S9q47",
+    domain: "Development with AWS Services",
     text: "You have migrated an on-premise SQL Server database to an Amazon Relational Database Service (RDS) database attached to a VPC inside a private subnet. Also, the related Java application, hosted on-premise, has been moved to an Amazon Lambda function.\n\nWhich of the following should you implement to connect the AWS Lambda function to its RDS instance?",
     answers: [
       "Use Environment variables to pass in the RDS connection string",
@@ -11905,6 +12463,7 @@ export const paper9 = [
   },
   {
     id: "S9q48",
+    domain: "Development with AWS Services",
     text: "A banking application needs to send real-time alerts and notifications based on any updates from the backend services. The company wants to avoid implementing complex polling mechanisms for these notifications.\n\nWhich of the following types of APIs supported by the Amazon API Gateway is the right fit?",
     answers: ["REST or HTTP APIs", "HTTP APIs", "WebSocket APIs", "REST APIs"],
     correctAnswerIndex: 2,
@@ -11921,6 +12480,7 @@ export const paper9 = [
   },
   {
     id: "S9q49",
+    domain: "Development with AWS Services",
     text: "A company uses Amazon RDS as its database. For improved user experience, it has been decided that a highly reliable fully-managed caching layer has to be configured in front of RDS. \n\nWhich of the following is the right choice, keeping in mind that cache content regeneration is a costly activity?",
     answers: [
       "Implement Amazon ElastiCache Redis in Cluster Mode",
@@ -11942,6 +12502,7 @@ export const paper9 = [
   },
   {
     id: "S9q50",
+    domain: "Development with AWS Services",
     text: "To meet compliance guidelines, a company needs to ensure replication of any data stored in its S3 buckets.\n\nWhich of the following characteristics are correct while configuring an S3 bucket for replication? (Select two)",
     answers: [
       "Same-Region Replication (SRR) and Cross-Region Replication (CRR) can be configured at the S3 bucket level, a shared prefix level, or an object level using S3 object tags",
@@ -11965,6 +12526,7 @@ export const paper9 = [
   },
   {
     id: "S9q51",
+    domain: "Troubleshooting and Optimization",
     text: "An IT company has migrated to a serverless application stack on the AWS Cloud with the compute layer being implemented via Lambda functions. The engineering managers would like to actively troubleshoot any failures in the Lambda functions.\n\nAs a Developer Associate, which of the following solutions would you suggest for this use-case?",
     answers: [
       "Use CodeCommit to identify and notify any failures in the Lambda code",
@@ -11986,6 +12548,7 @@ export const paper9 = [
   },
   {
     id: "S9q52",
+    domain: "Development with AWS Services",
     text: "Your company has a three-year contract with a healthcare provider. The contract states that monthly database backups must be retained for the duration of the contract for compliance purposes. Currently, the limit on backup retention for automated backups, on Amazon Relational Database Service (RDS), does not meet your requirements.\n\nWhich of the following solutions can help you meet your requirements?",
     answers: [
       "Create a cron event in CloudWatch, which triggers an AWS Lambda function that triggers the database snapshot",
@@ -12007,6 +12570,7 @@ export const paper9 = [
   },
   {
     id: "S9q53",
+    domain: "Development with AWS Services",
     text: "A large firm stores its static data assets on Amazon S3 buckets. Each service line of the firm has its own AWS account. For a business use case, the Finance department needs to give access to their S3 bucket's data to the Human Resources department.\n\nWhich of the below options is NOT feasible for cross-account access of S3 bucket objects?",
     answers: [
       "Use Access Control List (ACL) and IAM policies for programmatic-only access to S3 bucket objects",
@@ -12028,6 +12592,7 @@ export const paper9 = [
   },
   {
     id: "S9q54",
+    domain: "Troubleshooting and Optimization",
     text: "An IT company has its serverless stack integrated with AWS X-Ray. The developer at the company has noticed a high volume of data going into X-Ray and the AWS monthly usage charges have skyrocketed as a result. The developer has requested changes to mitigate the issue.\n\nAs a Developer Associate, which of the following solutions would you recommend to obtain tracing trends while reducing costs with minimal disruption?",
     answers: [
       "Implement a network sampling rule",
@@ -12049,6 +12614,7 @@ export const paper9 = [
   },
   {
     id: "S9q55",
+    domain: "Deployment",
     text: "Your web application architecture consists of multiple Amazon EC2 instances running behind an Elastic Load Balancer with an Auto Scaling group having the desired capacity of 5 EC2 instances. You would like to integrate AWS CodeDeploy for automating application deployment. The deployment should re-route traffic from your application's original environment to the new environment.\n\nWhich of the following options will meet your deployment criteria?",
     answers: [
       "Opt for In-place deployment",
@@ -12070,6 +12636,7 @@ export const paper9 = [
   },
   {
     id: "S9q56",
+    domain: "Troubleshooting and Optimization",
     text: "The development team at a social media company is considering using Amazon ElastiCache to boost the performance of their existing databases.\n\nAs a Developer Associate, which of the following use-cases would you recommend as the BEST fit for ElastiCache? (Select two)",
     answers: [
       "Use ElastiCache to run highly complex JOIN queries",
@@ -12093,6 +12660,7 @@ export const paper9 = [
   },
   {
     id: "S9q57",
+    domain: "Development with AWS Services",
     text: "A company has a workload that requires 14,000 consistent IOPS for data that must be durable and secure. The compliance standards of the company state that the data should be secure at every stage of its lifecycle on all of the EBS volumes they use.\n\nWhich of the following statements are true regarding data security on EBS?",
     answers: [
       "EBS volumes do not support in-flight encryption but do support encryption at rest using KMS",
@@ -12114,6 +12682,7 @@ export const paper9 = [
   },
   {
     id: "S9q58",
+    domain: "Deployment",
     text: "A leading financial services company offers data aggregation services for Wall Street trading firms. The company bills its clients based on per unit of clickstream data provided to the clients. As the company operates in a regulated industry, it needs to have the same ordered clickstream data available for auditing within a window of 7 days.\n\nAs a Developer Associate, which of the following AWS services do you think provides the ability to run the billing process and auditing process on the given clickstream data in the same order?",
     answers: [
       "AWS Kinesis Data Analytics",
@@ -12135,6 +12704,7 @@ export const paper9 = [
   },
   {
     id: "S9q59",
+    domain: "Development with AWS Services",
     text: "A new member of your team is working on creating a Dead Letter Queue (DLQ) for AWS Lambda functions. \n\nAs a Developer Associate, can you help him identify the use cases wherein AWS Lambda will add a message into a DLQ after being processed? (Select two)",
     answers: [
       "The Lambda function invocation is asynchronous",
@@ -12158,6 +12728,7 @@ export const paper9 = [
   },
   {
     id: "S9q60",
+    domain: "Development with AWS Services",
     text: "Your company uses an Application Load Balancer to route incoming end-user traffic to applications hosted on Amazon EC2 instances. The applications capture incoming request information and store it in the Amazon Relational Database Service (RDS) running on Microsoft SQL Server DB engines.\n\nAs part of new compliance rules, you need to capture the client's IP address. How will you achieve this?",
     answers: [
       "Use the header X-Forwarded-For",
@@ -12179,6 +12750,7 @@ export const paper9 = [
   },
   {
     id: "S9q61",
+    domain: "Deployment",
     text: "A junior developer working on ECS instances terminated a container instance in Amazon Elastic Container Service (Amazon ECS) as per instructions from the team lead. But the container instance continues to appear as a resource in the ECS cluster.\n\nAs a Developer Associate, which of the following solutions would you recommend to fix this behavior?",
     answers: [
       "You terminated the container instance while it was in RUNNING state, that lead to this synchronization issues",
@@ -12200,6 +12772,7 @@ export const paper9 = [
   },
   {
     id: "S9q62",
+    domain: "Development with AWS Services",
     text: "An application runs on an EC2 instance and processes orders on a nightly basis. This EC2 instance needs to access the orders that are stored in S3.\n\nHow would you recommend the EC2 instance access the orders securely?",
     answers: [
       "Use EC2 User Data",
@@ -12221,6 +12794,7 @@ export const paper9 = [
   },
   {
     id: "S9q63",
+    domain: "Development with AWS Services",
     text: "An e-commerce company has an order processing workflow with several tasks to be done in parallel as well as decision steps to be evaluated for successful processing of the order. All the tasks are implemented via Lambda functions.\n\nWhich of the following is the BEST solution to meet these business requirements?",
     answers: [
       "Use AWS Glue to orchestrate the workflow",
@@ -12242,6 +12816,7 @@ export const paper9 = [
   },
   {
     id: "S9q64",
+    domain: "Troubleshooting and Optimization",
     text: "A developer wants to enable X-Ray tracing on an on-premises Linux server running a custom application that is accessed through Amazon API Gateway.\n\nWhat is the most efficient solution that requires minimal configuration?",
     answers: [
       "Install and run the X-Ray daemon on the on-premises servers to capture and relay the data to the X-Ray service",
@@ -12263,6 +12838,7 @@ export const paper9 = [
   },
   {
     id: "S9q65",
+    domain: "Deployment",
     text: "Your application is deployed automatically using AWS Elastic Beanstalk. Your YAML configuration files are stored in the folder .ebextensions and new files are added or updated often. The DevOps team does not want to re-deploy the application every time there are configuration changes, instead, they would rather manage configuration externally, securely, and have it load dynamically into the application at runtime.\n\nWhat option allows you to do this?",
     answers: [
       "Use SSM Parameter Store",
@@ -12286,6 +12862,7 @@ export const paper9 = [
 export const paper10 = [
   {
     id: "S10q1",
+    domain: "Deployment",
     text: "A communication platform serves millions of customers and deploys features in a production environment on AWS via CodeDeploy. You are reviewing scripts for the deployment process located in the AppSpec file. Which of the following options lists the correct order of lifecycle events?",
     answers: [
       "BeforeInstall => ValidateService => DownloadBundle => ApplicationStart",
@@ -12307,6 +12884,7 @@ export const paper10 = [
   },
   {
     id: "S10q2",
+    domain: "Deployment",
     text: "An e-commerce company has implemented AWS CodeDeploy as part of its AWS cloud CI/CD strategy. The company has configured automatic rollbacks while deploying a new version of its flagship application to Amazon EC2. What occurs if the deployment of the new version fails?",
     answers: [
       "The last known working deployment is automatically restored using the snapshot stored in Amazon S3",
@@ -12328,6 +12906,7 @@ export const paper10 = [
   },
   {
     id: "S10q3",
+    domain: "Development with AWS Services",
     text: "You are a system administrator whose company recently moved its production application to AWS and migrated data from MySQL to AWS DynamoDB. You are adding new tables to AWS DynamoDB and need to allow your application to query your data by the primary key and an alternate key. This option must be added when first creating tables otherwise changes cannot be made afterward. Which of the following actions should you take?",
     answers: [
       "Create a LSI",
@@ -12349,6 +12928,7 @@ export const paper10 = [
   },
   {
     id: "S10q4",
+    domain: "Security",
     text: "An organization recently began using AWS CodeCommit for its source control service. A compliance security team visiting the organization was auditing the software development process and noticed developers making many git push commands within their development machines. The compliance team requires that encryption be used for this activity. How can the organization ensure source code is encrypted in transit and at rest?",
     answers: [
       "Enable KMS encryption",
@@ -12370,6 +12950,7 @@ export const paper10 = [
   },
   {
     id: "S10q5",
+    domain: "Security",
     text: "You have a popular web application that accesses data stored in an Amazon Simple Storage Service (S3) bucket. Developers use the SDK to maintain the application and add new features. Security compliance requests that all new objects uploaded to S3 be encrypted using SSE-S3 at the time of upload. Which of the following headers must the developers add to their request?",
     answers: [
       "'x-amz-server-side-encryption': 'aws:kms'",
@@ -12391,6 +12972,7 @@ export const paper10 = [
   },
   {
     id: "S10q6",
+    domain: "Development with AWS Services",
     text: "You have configured a Network ACL and a Security Group for the load balancer and Amazon EC2 instances to allow inbound traffic on port 80. However, users are still unable to connect to your website after launch. Which additional configuration is required to make the website accessible to all users over the internet?",
     answers: [
       "Add a rule to the Network ACLs to allow outbound traffic on ports 1024 - 65535",
@@ -12412,6 +12994,7 @@ export const paper10 = [
   },
   {
     id: "S10q7",
+    domain: "Troubleshooting and Optimization",
     text: "Your company leverages Amazon CloudFront to provide content via the internet to customers with low latency. Aside from latency, security is another concern and you are looking for help in enforcing end-to-end connections using HTTPS so that content is protected. Which of the following options is available for HTTPS in AWS CloudFront?",
     answers: [
       "Between CloudFront and backend only",
@@ -12433,6 +13016,7 @@ export const paper10 = [
   },
   {
     id: "S10q8",
+    domain: "Security",
     text: "You are planning to build a fleet of EBS-optimized EC2 instances to handle the load of your new application. Due to security compliance, your organization wants any secret strings used in the application to be encrypted to prevent exposing values as clear text. The solution requires that decryption events be audited and API calls to be simple. How can this be achieved? (select two)",
     answers: [
       "Store the secret as PlainText in SSM Parameter Store",
@@ -12456,6 +13040,7 @@ export const paper10 = [
   },
   {
     id: "S10q9",
+    domain: "Deployment",
     text: "You have a Java-based application running on EC2 instances loaded with AWS CodeDeploy agents. You are considering different options for deployment, one is the flexibility that allows for incremental deployment of your new application versions and replaces existing versions in the EC2 instances. The other option is a strategy in which an Auto Scaling group is used to perform a deployment. Which of the following options will allow you to deploy in this manner? (Select two)",
     answers: [
       "Pilot Light Deployment",
@@ -12479,6 +13064,7 @@ export const paper10 = [
   },
   {
     id: "S10q10",
+    domain: "Deployment",
     text: "A data analytics company with its IT infrastructure on the AWS Cloud wants to build and deploy its flagship application as soon as there are any changes to the source code. As a Developer Associate, which of the following options would you suggest to trigger the deployment? (Select two)",
     answers: [
       "Keep the source code in an Amazon S3 bucket and set up AWS CodePipeline to recur at an interval of every 15 minutes",
@@ -12502,6 +13088,7 @@ export const paper10 = [
   },
   {
     id: "S10q11",
+    domain: "Security",
     text: "You are a manager for a tech company that has just hired a team of developers to work on the company's AWS infrastructure. All the developers are reporting to you that when using the AWS CLI to execute commands it fails with the following exception: You are not authorized to perform this operation. Encoded authorization failure message: 6h34GtpmGjJJUm946eDVBfzWQJk6z5GePbbGDs9Z2T8xZj9EZtEduSnTbmrR7pMqpJrVYJCew2m8YBZQf4HRWEtrpncANrZMsnzk. Which of the following actions will help developers decode the message?",
     answers: [
       "AWS IAM decode-authorization-message",
@@ -12523,6 +13110,7 @@ export const paper10 = [
   },
   {
     id: "S10q12",
+    domain: "Security",
     text: "Your AWS CodeDeploy deployment to T2 instances succeed. The new application revision makes API calls to Amazon S3 however the application is not working as expected due to authorization exceptions and you were assigned to troubleshoot the issue. Which of the following should you do?",
     answers: [
       "Fix the IAM permissions for the EC2 instance role",
@@ -12565,6 +13153,7 @@ export const paper10 = [
   },
   {
     id: "S10q14",
+    domain: "Deployment",
     text: "What is the run order of the hooks for in-place deployments using CodeDeploy?",
     answers: [
       "Before Install -> Application Stop -> Application Start -> ValidateService",
@@ -12586,6 +13175,7 @@ export const paper10 = [
   },
   {
     id: "S10q15",
+    domain: "Troubleshooting and Optimization",
     text: "DevOps engineers are developing an order processing system where notifications are sent to a department whenever an order is placed for a product. The system also pushes identical notifications of the new order to a processing module that would allow EC2 instances to handle the fulfillment of the order. In the case of processing errors, the messages should be allowed to be re-processed at a later stage. The order processing system should be able to scale transparently without the need for any manual or programmatic provisioning of resources. Which of the following solutions can be used to address this use-case in the most cost-efficient way?",
     answers: ["SNS + Lambda", "SQS + SES", "SNS + SQS", "SNS + Kinesis"],
     correctAnswerIndex: 2,
@@ -12602,6 +13192,7 @@ export const paper10 = [
   },
   {
     id: "S10q16",
+    domain: "Troubleshooting and Optimization",
     text: "You are designing a high-performance application that requires millions of connections. You have several EC2 instances running Apache2 web servers and the application will require capturing the user’s source IP address and source port without the use of X-Forwarded-For. Which of the following options will meet your needs?",
     answers: [
       "Application Load Balancer",
@@ -12623,6 +13214,7 @@ export const paper10 = [
   },
   {
     id: "S10q17",
+    domain: "Deployment",
     text: "A developer wants a seamless ability to return to older versions of a Lambda function that is being deployed. Which of the following solutions offers the LEAST operational overhead?",
     answers: [
       "Use a Lambda function alias that can point to the different versions",
@@ -12644,6 +13236,7 @@ export const paper10 = [
   },
   {
     id: "S10q18",
+    domain: "Development with AWS Services",
     text: "As a Full-stack Web Developer, you are involved with every aspect of a company’s platform from development with PHP and JavaScript to the configuration of NoSQL databases with Amazon DynamoDB. You are not concerned about your response receiving stale data from your database and need to perform 16 eventually consistent reads per second of 12 KB in size each. How many read capacity units (RCUs) do you need?",
     answers: ["12", "24", "192", "48"],
     correctAnswerIndex: 1,
@@ -12660,6 +13253,7 @@ export const paper10 = [
   },
   {
     id: "S10q19",
+    domain: "Deployment",
     text: "A global education provider runs its Learning Management System (LMS) application on Amazon EC2 instances behind an Application Load Balancer (ALB), with its domain name managed in Amazon Route 53. The LMS is heavily dependent on static assets such as images, style sheets, and JavaScript files, and the application is currently deployed in a single AWS Region. The provider wants to deliver faster performance for students worldwide while minimizing ongoing operational overhead. Which solution will improve global performance with the least operational effort?",
     answers: [
       "Enable Amazon S3 Transfer Acceleration and move static assets to S3; update the application to fetch assets via the accelerated S3 endpoint",
@@ -12681,6 +13275,7 @@ export const paper10 = [
   },
   {
     id: "S10q20",
+    domain: "Security",
     text: "An IT company uses a blue/green deployment policy to provision new Amazon EC2 instances in an Auto Scaling group behind a new Application Load Balancer for each new application version. The current set up requires the users to log in after every new deployment. As a Developer Associate, what advice would you give to the company for resolving this issue?",
     answers: [
       "Use ElastiCache to maintain user sessions",
@@ -12702,6 +13297,7 @@ export const paper10 = [
   },
   {
     id: "S10q21",
+    domain: "Troubleshooting and Optimization",
     text: "A financial services company with over 10,000 employees has hired you as the new Senior Developer. Initially caching was enabled to reduce the number of calls made to all API endpoints and improve the latency of requests to the company’s API Gateway. For testing purposes, you would like to invalidate caching for the API clients to get the most recent responses. Which of the following should you do?",
     answers: [
       "Using the request parameter ?cache-control-max-age=0",
@@ -12723,6 +13319,7 @@ export const paper10 = [
   },
   {
     id: "S10q22",
+    domain: "Development with AWS Services",
     text: "After reviewing your monthly AWS bill you notice that the cost of using Amazon SQS has gone up substantially after creating new queues; however, you know that your queue clients do not have a lot of traffic and are receiving empty responses. Which of the following actions should you take?",
     answers: [
       "Use a FIFO queue",
@@ -12744,6 +13341,7 @@ export const paper10 = [
   },
   {
     id: "S10q23",
+    domain: "Deployment",
     text: "The development team at a company is looking at building an AWS CloudFormation template that self-populates the AWS Region variable while deploying the CloudFormation template. What is the MOST operationally efficient way to determine the Region in which the template is being deployed?",
     answers: [
       "Create an AWS Lambda-backed custom resource for Region and let the desired value be populated at the time of deployment by the Lambda",
@@ -12765,6 +13363,7 @@ export const paper10 = [
   },
   {
     id: "S10q24",
+    domain: "Troubleshooting and Optimization",
     text: "Your company manages hundreds of EC2 instances running on Linux OS. The instances are configured in several Availability Zones in the eu-west-3 region. Your manager has requested to collect system memory metrics on all EC2 instances using a script. Which of the following solutions will help you collect this data?",
     answers: [
       "Extract RAM statistics from the standard CloudWatch metrics for EC2 instances",
@@ -12786,6 +13385,7 @@ export const paper10 = [
   },
   {
     id: "S10q25",
+    domain: "Deployment",
     text: "A company would like to migrate the existing application code from a GitHub repository to AWS CodeCommit. As an AWS Certified Developer Associate, which of the following would you recommend for migrating the cloned repository to CodeCommit over HTTPS?",
     answers: [
       "Use authentication offered by GitHub secure tokens",
@@ -12807,6 +13407,7 @@ export const paper10 = [
   },
   {
     id: "S10q26",
+    domain: "Development with AWS Services",
     text: "The development team at a company wants to insert vendor records into an Amazon DynamoDB table as soon as the vendor uploads a new file into an Amazon S3 bucket. As a Developer Associate, which set of steps would you recommend to achieve this?",
     answers: [
       "Create an S3 event to invoke a Lambda function that inserts records into DynamoDB",
@@ -12828,6 +13429,7 @@ export const paper10 = [
   },
   {
     id: "S10q27",
+    domain: "Security",
     text: "Your development team uses the AWS SDK for Java on a web application that uploads files to several Amazon Simple Storage Service (S3) buckets using the SSE-KMS encryption mechanism. Developers are reporting that they are receiving permission errors when trying to push their objects over HTTP. Which of the following headers should they include in their request?",
     answers: [
       "'x-amz-server-side-encryption': 'SSE-S3'",
@@ -12849,6 +13451,7 @@ export const paper10 = [
   },
   {
     id: "S10q28",
+    domain: "Security",
     text: "You work as a developer doing contract work for the government on AWS GovCloud. Your applications use Amazon Simple Queue Service (SQS) for its message queue service. Due to recent hacking attempts, security measures have become stricter and require you to store data in encrypted queues. Which of the following steps can you take to meet your requirements without making changes to the existing code?",
     answers: [
       "Use the SSL endpoint",
@@ -12870,6 +13473,7 @@ export const paper10 = [
   },
   {
     id: "S10q29",
+    domain: "Security",
     text: "A development team is storing sensitive customer data in S3 that will require encryption at rest. The encryption keys must be rotated at least annually. What is the easiest way to implement a solution for this requirement?",
     answers: [
       "Use SSE-C with automatic key rotation on an annual basis",
@@ -12891,6 +13495,7 @@ export const paper10 = [
   },
   {
     id: "S10q30",
+    domain: "Troubleshooting and Optimization",
     text: "You have an Amazon Kinesis Data Stream with 10 shards, and from the metrics, you are well below the throughput utilization of 10 MB per second to send data. You send 3 MB per second of data and yet you are receiving ProvisionedThroughputExceededException errors frequently. What is the likely cause of this?",
     answers: [
       "The partition key that you have selected isn't distributed enough",
@@ -12912,6 +13517,7 @@ export const paper10 = [
   },
   {
     id: "S10q31",
+    domain: "Development with AWS Services",
     text: "You are storing your video files in a separate S3 bucket than your main static website in an S3 bucket. When accessing the video URLs directly the users can view the videos on the browser, but they can't play the videos while visiting the main website. What is the root cause of this problem?",
     answers: [
       "Enable CORS",
@@ -12933,6 +13539,7 @@ export const paper10 = [
   },
   {
     id: "S10q32",
+    domain: "Troubleshooting and Optimization",
     text: "You have uploaded a zip file to AWS Lambda that contains code files written in Node.js. When your function is executed you receive the following output: 'Error: Memory Size: 10,240 MB Max Memory Used'. Which of the following explains the problem?",
     answers: [
       "Your zip file is corrupt",
@@ -12954,6 +13561,7 @@ export const paper10 = [
   },
   {
     id: "S10q33",
+    domain: "Deployment",
     text: "You have moved your on-premise infrastructure to AWS and are in the process of configuring an AWS Elastic Beanstalk deployment environment for production, development, and testing. You have configured your production environment to use a rolling deployment to prevent your application from becoming unavailable to users. For the development and testing environment, you would like to deploy quickly and are not concerned about downtime. Which of the following deployment policies meet your needs?",
     answers: [
       "Rolling with additional batches",
@@ -12975,6 +13583,7 @@ export const paper10 = [
   },
   {
     id: "S10q34",
+    domain: "Development with AWS Services",
     text: "A firm maintains a highly available application that receives HTTPS traffic from mobile devices and web browsers. The main Developer would like to set up the Load Balancer routing to route traffic from web servers to smart.com/api and from mobile devices to smart.com/mobile. A developer advises that the previous recommendation is not needed and that requests should be sent to api.smart.com and mobile.smart.com instead. Which of the following routing options were discussed in the given use-case? (select two)",
     answers: [
       "Client IP",
@@ -12998,6 +13607,7 @@ export const paper10 = [
   },
   {
     id: "S10q35",
+    domain: "Troubleshooting and Optimization",
     text: "A company has several Linux-based EC2 instances that generate various log files which need to be analyzed for security and compliance purposes. The company wants to use Kinesis Data Streams (KDS) to analyze this log data. Which of the following is the most optimal way of sending log data from the EC2 instances to KDS?",
     answers: [
       "Install AWS SDK on each of the instances and configure it to send the necessary files to Kinesis Data Streams",
@@ -13019,6 +13629,7 @@ export const paper10 = [
   },
   {
     id: "S10q36",
+    domain: "Troubleshooting and Optimization",
     text: "A development team uses the AWS SDK for Java to maintain an application that stores data in AWS DynamoDB. The application makes use of Scan operations to return several items from a 25 GB table. There is no possibility of creating indexes to retrieve these items predictably. Developers are trying to get these specific rows from DynamoDB as fast as possible. Which of the following options can be used to improve the performance of the Scan operation?",
     answers: [
       "Use a FilterExpression",
@@ -13040,6 +13651,7 @@ export const paper10 = [
   },
   {
     id: "S10q37",
+    domain: "Development with AWS Services",
     text: "A developer is configuring an Application Load Balancer (ALB) to direct traffic to the application's EC2 instances and Lambda functions. Which of the following characteristics of the ALB can be identified as correct? (Select two)",
     answers: [
       "An ALB has three possible target types: Instance, IP and Lambda",
@@ -13061,6 +13673,7 @@ export const paper10 = [
   },
   {
     id: "S10q38",
+    domain: "Deployment",
     text: "An IT company is using AWS CloudFormation to manage its IT infrastructure. It has created a template to provision a stack with a VPC and a subnet. The output value of this subnet has to be used in another stack. As a Developer Associate, which of the following options would you suggest to provide this information to another stack?",
     answers: [
       "Use 'Expose' field in the Output section of the stack's template",
@@ -13082,6 +13695,7 @@ export const paper10 = [
   },
   {
     id: "S10q39",
+    domain: "Deployment",
     text: "Your company is in the process of building a DevOps culture and is moving all of its on-premise resources to the cloud using serverless architectures and automated deployments. You have created a CloudFormation template in YAML that uses an AWS Lambda function to pull HTML files from GitHub and place them into an Amazon S3 bucket that you specify. Which of the following AWS CLI commands can you use to upload AWS Lambda functions and AWS CloudFormation templates to AWS?",
     answers: [
       "cloudformation package and cloudformation deploy",
@@ -13103,6 +13717,7 @@ export const paper10 = [
   },
   {
     id: "S10q40",
+    domain: "Development with AWS Services",
     text: "A developer is migrating an on-premises application to AWS Cloud. The application currently processes user uploads and uploads them to a local directory on the server. All such file uploads must be saved and then made available to all instances in an Auto Scaling group. As a Developer Associate, which of the following options would you recommend for this use-case?",
     answers: [
       "Use Amazon EBS and configure the application AMI to use a snapshot of the same EBS instance while launching new instances",
@@ -13124,6 +13739,7 @@ export const paper10 = [
   },
   {
     id: "S10q41",
+    domain: "Development with AWS Services",
     text: "A firm uses AWS DynamoDB to store information about people’s favorite sports teams and allow the information to be searchable from their home page. There is a daily requirement that all 10 million records in the table should be deleted then re-loaded at 2:00 AM each night. Which option is an efficient way to delete with minimal costs?",
     answers: [
       "Call PurgeTable",
@@ -13145,6 +13761,7 @@ export const paper10 = [
   },
   {
     id: "S10q42",
+    domain: "Development with AWS Services",
     text: "A voting system hosted on-premise was recently migrated to AWS to lower cost, gain scalability, and to better serve thousands of concurrent users. When one of the AWS resource state changes, it generates an event and will need to trigger AWS Lambda. The AWS resource whose state changes and AWS Lambda does not have direct integration. Which of the following methods can be used to trigger AWS Lambda?",
     answers: [
       "Open a support ticket with AWS",
@@ -13166,6 +13783,7 @@ export const paper10 = [
   },
   {
     id: "S10q43",
+    domain: "Deployment",
     text: "You are working on a project that has over 100 dependencies. Every time your AWS CodeBuild runs a build step it has to resolve Java dependencies from external Ivy repositories which take a long time. Your manager wants to speed this process up in AWS CodeBuild. Which of the following will help you do this with minimal effort?",
     answers: [
       "Cache dependencies on S3",
@@ -13187,6 +13805,7 @@ export const paper10 = [
   },
   {
     id: "S10q44",
+    domain: "Development with AWS Services",
     text: "Your company manages MySQL databases on EC2 instances to have full control. Applications on other EC2 instances managed by an Auto Scaling Group (ASG) make requests to these databases to get information that displays data on dashboards viewed on mobile phones, tablets, and web browsers. Your manager would like to scale your Auto Scaling group based on the number of requests per minute. How can you achieve this?",
     answers: [
       "Attach additional Elastic File Storage",
@@ -13208,6 +13827,7 @@ export const paper10 = [
   },
   {
     id: "S10q45",
+    domain: "Troubleshooting and Optimization",
     text: "An order management system uses a cron job to poll for any new orders. Every time a new order is created, the cron job sends this order data as a message to the message queues to facilitate downstream order processing in a reliable way. To reduce costs and improve performance, the company wants to move this functionality to AWS cloud. Which of the following is the most optimal solution to meet this requirement?",
     answers: [
       "Use Amazon Simple Notification Service (SNS) to push notifications and use AWS Lambda functions to process the information received from SNS",
@@ -13229,6 +13849,7 @@ export const paper10 = [
   },
   {
     id: "S10q46",
+    domain: "Development with AWS Services",
     text: "You are assigned as the new project lead for a web application that processes orders for customers. You want to integrate event-driven processing anytime data is modified or deleted and use a serverless approach using AWS Lambda for processing stream events. Which of the following databases should you choose from?",
     answers: ["ElastiCache", "DynamoDB", "RDS", "Kinesis"],
     correctAnswerIndex: 1,
@@ -13245,6 +13866,7 @@ export const paper10 = [
   },
   {
     id: "S10q47",
+    domain: "Deployment",
     text: "You have been hired at a company that needs an experienced developer to help with a continuous integration/continuous delivery (CI/CD) workflow on AWS. You configure the company’s workflow to run an AWS CodePipeline pipeline whenever the application’s source code changes in a repository hosted in AWS CodeCommit and compiles source code with AWS CodeBuild. You are configuring ProjectArtifacts in your build stage. Which of the following should you do?",
     answers: [
       "Give AWS CodeCommit permissions to upload the build output to your Amazon S3 bucket",
@@ -13266,6 +13888,7 @@ export const paper10 = [
   },
   {
     id: "S10q48",
+    domain: "Security",
     text: "As part of internal regulations, you must ensure that all communications to Amazon S3 are encrypted. For which of the following encryption mechanisms will a request get rejected if the connection is not using HTTPS?",
     answers: ["Client Side Encryption", "SSE-S3", "SSE-KMS", "SSE-C"],
     correctAnswerIndex: 3,
@@ -13282,6 +13905,7 @@ export const paper10 = [
   },
   {
     id: "S10q49",
+    domain: "Troubleshooting and Optimization",
     text: "You are getting ready for an event to show off your Alexa skill written in JavaScript. As you are testing your voice activation commands you find that some intents are not invoking as they should and you are struggling to figure out what is happening. You included the following code console.log(JSON.stringify(this.event)) in hopes of getting more details about the request to your Alexa skill. You would like the logs stored in an Amazon S3 bucket named MyAlexaLog. How do you achieve this?",
     answers: [
       "Use CloudWatch integration feature with Lambda",
@@ -13303,6 +13927,7 @@ export const paper10 = [
   },
   {
     id: "S10q50",
+    domain: "Security",
     text: "Your mobile application needs to perform API calls to DynamoDB. You do not want to store AWS secret and access keys onto the mobile devices and need all the calls to DynamoDB made with a different identity per mobile device. Which of the following services allows you to achieve this?",
     answers: [
       "Cognito User Pools",
@@ -13324,6 +13949,7 @@ export const paper10 = [
   },
   {
     id: "S10q51",
+    domain: "Development with AWS Services",
     text: "A development team is considering Amazon ElastiCache for Redis as its in-memory caching solution for its relational database. Which of the following options are correct while configuring ElastiCache? (Select two)",
     answers: [
       "While using Redis with cluster mode enabled, you cannot manually promote any of the replica nodes to primary",
@@ -13347,6 +13973,7 @@ export const paper10 = [
   },
   {
     id: "S10q52",
+    domain: "Development with AWS Services",
     text: "An IT company has a web application running on Amazon EC2 instances that needs read-only access to an Amazon DynamoDB table. As a Developer Associate, what is the best-practice solution you would recommend to accomplish this task?",
     answers: [
       "Run application code with AWS account root user credentials to ensure full access to all AWS services",
@@ -13368,6 +13995,7 @@ export const paper10 = [
   },
   {
     id: "S10q53",
+    domain: "Security",
     text: "A company developed an app-based service for citizens to book transportation rides in the local community. The platform is running on AWS EC2 instances and uses Amazon RDS for storing transportation data. A new feature has been requested where receipts would be emailed to customers with PDF attachments retrieved from Amazon S3. Which of the following options will provide EC2 instances with the right permissions to upload files to Amazon S3 and generate S3 Signed URL?",
     answers: [
       "CloudFormation",
@@ -13389,6 +14017,7 @@ export const paper10 = [
   },
   {
     id: "S10q54",
+    domain: "Security",
     text: "A user has an IAM policy as well as an Amazon SQS policy that apply to his account. The IAM policy grants his account permission for the ReceiveMessage action on example_queue, whereas the Amazon SQS policy gives his account permission for the SendMessage action on the same queue. Considering the permissions above, which of the following options are correct? (Select two)",
     answers: [
       "The user can send a ReceiveMessage request to example_queue, the IAM policy allows this action",
@@ -13412,6 +14041,7 @@ export const paper10 = [
   },
   {
     id: "S10q55",
+    domain: "Development with AWS Services",
     text: "A company wants to add geospatial capabilities to the cache layer, along with query capabilities and an ability to horizontally scale. The company uses Amazon RDS as the database tier. Which solution is optimal for this use-case?",
     answers: [
       "Leverage the capabilities offered by ElastiCache for Redis with cluster mode disabled",
@@ -13433,6 +14063,7 @@ export const paper10 = [
   },
   {
     id: "S10q56",
+    domain: "Troubleshooting and Optimization",
     text: "An organization uses Alexa as its intelligent assistant to improve productivity throughout the organization. A group of developers manages custom Alexa Skills written in Node.Js to control conference-room equipment settings and start meetings using voice activation. The manager has requested developers that all functions code should be monitored for error rates with the possibility of creating alarms on top of them. Which of the following options should be chosen? (select two)",
     answers: [
       "CloudTrail",
@@ -13456,6 +14087,7 @@ export const paper10 = [
   },
   {
     id: "S10q57",
+    domain: "Deployment",
     text: "A senior cloud engineer designs and deploys online fraud detection solutions for credit card companies processing millions of transactions daily. The Elastic Beanstalk application sends files to Amazon S3 and then sends a message to an Amazon SQS queue containing the path of the uploaded file in S3. The engineer wants to postpone the delivery of any new messages to the queue for at least 10 seconds. Which SQS feature should the engineer leverage?",
     answers: [
       "Implement application-side delay",
@@ -13477,6 +14109,7 @@ export const paper10 = [
   },
   {
     id: "S10q58",
+    domain: "Security",
     text: "You have a web application hosted on EC2 that makes GET and PUT requests for objects stored in Amazon S3 using the SDK for PHP. As the security team completed the final review of your application for vulnerabilities, they noticed that your application uses hardcoded IAM access key and secret access key to gain access to AWS services. They recommend you leverage a more secure setup, which should use temporary credentials if possible. Which of the following options can be used to address the given use-case?",
     answers: [
       "Use the SSM parameter store",
@@ -13498,6 +14131,7 @@ export const paper10 = [
   },
   {
     id: "S10q59",
+    domain: "Security",
     text: "For an application that stores personal health information (PHI) in an encrypted Amazon RDS for MySQL DB instance, a developer wants to improve its performance by caching frequently accessed data and adding the ability to sort or rank the cached datasets. What is the best approach to meet these requirements subject to the constraint that the PHI stays encrypted at all times?",
     answers: [
       "Store the frequently accessed data in an Amazon ElastiCache for Memcached instance with encryption enabled for data in transit and at rest",
@@ -13519,6 +14153,7 @@ export const paper10 = [
   },
   {
     id: "S10q60",
+    domain: "Troubleshooting and Optimization",
     text: "A website serves static content from an Amazon Simple Storage Service (Amazon S3) bucket and dynamic content from an application load balancer. The user base is spread across the world and latency should be minimized for a better user experience. Which technology/service can help access the static and dynamic content while keeping the data latency low?",
     answers: [
       "Configure CloudFront with multiple origins to serve both static and dynamic content at low latency to global users",
@@ -13540,6 +14175,7 @@ export const paper10 = [
   },
   {
     id: "S10q61",
+    domain: "Development with AWS Services",
     text:
       "A developer has pushed a Lambda function that pushes data into an RDS MySQL database with the following Python code:\n\n" +
       "def handler(event, context):\n" +
@@ -13574,6 +14210,7 @@ export const paper10 = [
   },
   {
     id: "S10q62",
+    domain: "Development with AWS Services",
     text: "Your company has been hired to build a resilient mobile voting app for an upcoming music award show that expects to have 5 to 20 million viewers. The mobile voting app will be marketed heavily months in advance so you are expected to handle millions of messages in the system. You are configuring Amazon Simple Queue Service (SQS) queues for your architecture that should receive messages from 20 KiB to 200 KiB.\n\nIs it possible to send these messages to SQS?",
 
     answers: [
@@ -13600,6 +14237,7 @@ export const paper10 = [
   },
   {
     id: "S10q63",
+    domain: "Deployment",
     text: ".NET developer team works with many ASP.NET web applications that use EC2 instances to host them on IIS. The deployment process needs to be configured so that multiple versions of the application can run in AWS Elastic Beanstalk. One version would be used for development, testing, and another version for load testing.\n\nWhich of the following methods do you recommend?",
 
     answers: [
@@ -13627,6 +14265,7 @@ export const paper10 = [
   },
   {
     id: "S10q64",
+    domain: "Security",
     text: "A cybersecurity company is publishing critical log data to a log group in Amazon CloudWatch Logs, which was created 3 months ago. The company must encrypt the log data using an AWS KMS customer master key (CMK), so any future data can be encrypted to meet the company’s security guidelines.\n\nHow can the company address this use-case?",
 
     answers: [
@@ -13653,6 +14292,7 @@ export const paper10 = [
   },
   {
     id: "S10q65",
+    domain: "Development with AWS Services",
     text: "An Amazon Simple Queue Service (SQS) has to be configured between two AWS accounts for shared access to the queue. AWS account A has the SQS queue in its account and AWS account B has to be given access to this queue.\n\nWhich of the following options need to be combined to allow this cross-account access? (Select three)",
 
     answers: [
@@ -13686,6 +14326,7 @@ export const paper10 = [
 export const paper11 = [
   {
     id: "S11q1",
+    domain: "Security",
     text: "An EC2 instance has an IAM instance role attached to it, providing it read and write access to the S3 bucket 'my_bucket'. You have tested the IAM instance role and both reads and writes are working. You then remove the IAM role from the EC2 instance and test both read and write again. Writes stopped working but reads are still working.\n\nWhat is the likely cause of this behavior?",
     answers: [
       "The S3 bucket policy authorizes reads",
@@ -13707,6 +14348,7 @@ export const paper11 = [
   },
   {
     id: "S11q2",
+    domain: "Deployment",
     text: "A company has hosted its restaurant review website on an Amazon EC2 instance. The website supports multiple languages and the preferred language is added as a query string parameter to the request. The directory structure and file names for all versions of the website are identical. The website responds with the chosen language's webpage when accessed directly. However, when the same webpage is accessed through the configured CloudFront distribution, it defaults to a single language.\n\nHow will you fix this issue?",
     answers: [
       "Create a new cache policy for the CloudFront distribution and set the cache behavior to Query string forwarding and caching. In the Query string whitelist field include the language string. Update the CloudFront distribution to use the new cache policy",
@@ -13728,6 +14370,7 @@ export const paper11 = [
   },
   {
     id: "S11q3",
+    domain: "Development with AWS Services",
     text: "A data analytics company ingests a large number of messages and stores them in an RDS database using Lambda. Because of the increased payload size, it is taking more than 15 minutes to process each message.\n\nAs a Developer Associate, which of the following options would you recommend to process each message in the MOST scalable way?",
     answers: [
       "Provision an EC2 instance to poll the messages from an SQS queue",
@@ -13770,6 +14413,7 @@ export const paper11 = [
   },
   {
     id: "S11q5",
+    domain: "Development with AWS Services",
     text: "A company has recently launched a new gaming application that the users are adopting rapidly. The company uses RDS MySQL as the database. The development team wants an urgent solution to this issue where the rapidly increasing workload might exceed the available database storage.\n\nAs a developer associate, which of the following solutions would you recommend so that it requires minimum development effort to address this requirement?",
     answers: [
       "Migrate RDS MySQL database to DynamoDB which automatically allocates storage space when required",
@@ -13791,6 +14435,7 @@ export const paper11 = [
   },
   {
     id: "S11q6",
+    domain: "Deployment",
     text: "Which environment variable can be used by AWS X-Ray SDK to ensure that the daemon is correctly discovered on ECS?",
     answers: [
       "AWS_XRAY_DAEMON_ADDRESS",
@@ -13812,6 +14457,7 @@ export const paper11 = [
   },
   {
     id: "S11q7",
+    domain: "Development with AWS Services",
     text: "When your company first created an AWS account, you began with a single sign-in principal called a root user account that had complete access to all AWS services and resources.\n\nWhat should you do to adhere to best practices for using the root user account?",
     answers: [
       "It should be accessible by 3 to 6 members of the IT team",
@@ -13833,6 +14479,7 @@ export const paper11 = [
   },
   {
     id: "S11q8",
+    domain: "Deployment",
     text: "A financial services company has developed a REST API which is deployed in an Auto Scaling Group behind an Application Load Balancer. The API stores the data payload in DynamoDB and the static content is served through S3. Upon analyzing the usage pattern, it's found that 80% of the read requests are shared across all users.\n\nAs a Developer Associate, how can you improve the application performance while optimizing the cost with the least development effort?",
     answers: [
       "Enable ElastiCache Redis for DynamoDB and CloudFront for S3",
@@ -13855,6 +14502,7 @@ export const paper11 = [
 
   {
     id: "S11q9",
+    domain: "Deployment",
     text: "An IT company uses AWS CloudFormation templates to provision their AWS infrastructure for Amazon EC2, Amazon VPC, and Amazon S3 resources. Using cross-stack referencing, a developer creates a stack called NetworkStack which will export the subnetId that can be used when creating EC2 instances in another stack.\n\nTo use the exported value in another stack, which of the following functions must be used?",
     answers: ["!Ref", "!GetAtt", "!ImportValue", "!Sub"],
     correctAnswerIndex: 2,
@@ -13871,6 +14519,7 @@ export const paper11 = [
   },
   {
     id: "S11q10",
+    domain: "Development with AWS Services",
     text: "You are using AWS SQS FIFO queues to get the ordering of messages on a per user_id basis. On top of this, you would like to make sure that duplicate messages should not be sent to SQS as this would cause application failure.\n\nAs a developer, which message parameter should you set for deduplicating messages?",
     answers: [
       "MessageGroupId",
@@ -13892,6 +14541,7 @@ export const paper11 = [
   },
   {
     id: "S11q11",
+    domain: "Deployment",
     text: "Your team lead has finished creating a CodeBuild project in the management console and a build spec has been defined for the project. After the build is run, CodeBuild fails to pull a Docker image into the build environment.\n\nWhat is the most likely cause?",
     answers: [
       "The Docker image is missing some tags",
@@ -13913,6 +14563,7 @@ export const paper11 = [
   },
   {
     id: "S11q12",
+    domain: "Deployment",
     text: "Your company wants to move away from manually managing Lambda in the AWS console and wants to upload and update them using AWS CloudFormation.\n\nHow do you declare an AWS Lambda function in CloudFormation? (Select two)",
     answers: [
       "Upload all the code as a zip to S3 and refer the object in AWS::Lambda::Function block",
@@ -13936,6 +14587,7 @@ export const paper11 = [
   },
   {
     id: "S11q13",
+    domain: "Development with AWS Services",
     text: "You are using AWS SQS FIFO queues to get the ordering of messages on a per user_id basis.\n\nAs a developer, which message parameter should you set the value of user_id to guarantee the ordering?",
     answers: [
       "MessageHash",
@@ -13957,6 +14609,7 @@ export const paper11 = [
   },
   {
     id: "S11q14",
+    domain: "Troubleshooting and Optimization",
     text: "You have been collecting AWS X-Ray traces across multiple applications and you would now like to index your X-Ray traces to search and filter through them efficiently.\n\nWhat should you use in your instrumentation?",
     answers: ["Annotations", "Metadata", "Segments", "Sampling"],
     correctAnswerIndex: 0,
@@ -13973,6 +14626,7 @@ export const paper11 = [
   },
   {
     id: "S11q15",
+    domain: "Development with AWS Services",
     text: "Which of the following CLI options will allow you to retrieve a subset of the attributes coming from a DynamoDB scan?",
     answers: [
       "--projection-expression",
@@ -13994,6 +14648,7 @@ export const paper11 = [
   },
   {
     id: "S11q16",
+    domain: "Deployment",
     text: "Your organization has set up a full CI/CD pipeline leveraging CodePipeline and the deployment is done on Elastic Beanstalk. This pipeline has worked for over a year now but you are approaching the limits of Elastic Beanstalk in terms of how many versions can be stored in the service.\n\nHow can you remove older versions that are not used by Elastic Beanstalk so that new versions can be created for your applications?",
     answers: [
       "Use Worker Environments",
@@ -14015,6 +14670,7 @@ export const paper11 = [
   },
   {
     id: "S11q16",
+    domain: "Deployment",
     text: "Your organization has set up a full CI/CD pipeline leveraging CodePipeline and the deployment is done on Elastic Beanstalk. This pipeline has worked for over a year now but you are approaching the limits of Elastic Beanstalk in terms of how many versions can be stored in the service.\n\nHow can you remove older versions that are not used by Elastic Beanstalk so that new versions can be created for your applications?",
     answers: [
       "Use Worker Environments",
@@ -14036,6 +14692,7 @@ export const paper11 = [
   },
   {
     id: "S11q18",
+    domain: "Development with AWS Services",
     text: "A company ingests real-time data into its on-premises data center and subsequently a daily data feed is compressed into a single file and uploaded on Amazon S3 for backup. The typical compressed file size is around 2 GB.\n\nWhich of the following is the fastest way to upload the daily compressed file into S3?",
     answers: [
       "Upload the compressed file using multipart upload",
@@ -14057,6 +14714,7 @@ export const paper11 = [
   },
   {
     id: "S11q19",
+    domain: "Security",
     text: "You were assigned to a project that requires the use of the AWS CLI to build a project with AWS CodeBuild. Your project's root directory includes the buildspec.yml file to run build commands and would like your build artifacts to be automatically encrypted at the end.\n\nHow should you configure CodeBuild to accomplish this?",
     answers: [
       "Use an AWS Lambda Hook",
@@ -14080,6 +14738,7 @@ export const paper11 = [
   },
   {
     id: "S11q20",
+    domain: "Development with AWS Services",
     text: "You are working with a t2.small instance bastion host that has the AWS CLI installed to help manage all the AWS services installed on it. You would like to know the security group and the instance id of the current instance.\n\nWhich of the following will help you fetch the needed information?",
     answers: [
       "Query the user data at http://169.254.169.254/latest/user-data",
@@ -14101,6 +14760,7 @@ export const paper11 = [
   },
   {
     id: "S11q21",
+    domain: "Development with AWS Services",
     text: "The development team at an e-commerce company is preparing for the upcoming Thanksgiving sale. The product manager wants the development team to implement appropriate caching strategy on Amazon ElastiCache to withstand traffic spikes on the website during the sale. A key requirement is to facilitate consistent updates to the product prices and product description, so that the cache never goes out of sync with the backend.\n\nAs a Developer Associate, which of the following solutions would you recommend for the given use-case?",
     answers: [
       "Use a caching strategy to write to the backend first and then invalidate the cache",
@@ -14122,6 +14782,7 @@ export const paper11 = [
   },
   {
     id: "S11q22",
+    domain: "Deployment",
     text: "Your company likes to operate multiple AWS accounts so that teams have their environments. Services deployed across these accounts interact with one another, and now there's a requirement to implement X-Ray traces across all your applications deployed on EC2 instances and AWS accounts.\n\nAs such, you would like to have a unified account to view all the traces. What should you do in your X-Ray daemon set up to make this work? (Select two)",
     answers: [
       "Create a role in the target unified account and allow roles in each sub-account to assume the role.",
@@ -14145,6 +14806,7 @@ export const paper11 = [
   },
   {
     id: "S11q23",
+    domain: "Troubleshooting and Optimization",
     text: "The customer feedback functionality for a company's flagship web application is handled via an Amazon API Gateway based REST API that invokes an AWS Lambda function for further processing. Although the performance of the function is satisfactory, the development team has been tasked to optimize the startup time of the Lambda function to further improve the customer experience.\n\nHow will you optimize the Lambda function for faster initialization?",
     answers: [
       "Configure reserved concurrency to guarantee the maximum number of concurrent instances of the Lambda function",
@@ -14166,6 +14828,7 @@ export const paper11 = [
   },
   {
     id: "S11q24",
+    domain: "Troubleshooting and Optimization",
     text: "A company's e-commerce application becomes slow when traffic spikes. The application has a three-tier architecture (web, application and database tier) that uses synchronous transactions. The development team at the company has identified certain bottlenecks in the application tier and it is looking for a long term solution to improve the application's performance.\n\nAs a developer associate, which of the following solutions would you suggest to meet the required application response times while accounting for any traffic spikes?",
     answers: [
       "Leverage horizontal scaling for the web and application tiers by using Auto Scaling groups and Application Load Balancer",
@@ -14187,6 +14850,7 @@ export const paper11 = [
   },
   {
     id: "S11q25",
+    domain: "Security",
     text: "A developer created an online shopping application that runs on EC2 instances behind load balancers. The same web application version is hosted on several EC2 instances and the instances run in an Auto Scaling group. The application uses STS to request credentials but after an hour your application stops working.\n\nWhat is the most likely cause of this issue?",
     answers: [
       "The IAM service is experiencing downtime once an hour",
@@ -14208,6 +14872,7 @@ export const paper11 = [
   },
   {
     id: "S11q26",
+    domain: "Security",
     text: "An e-commerce company has deployed its application on AWS Elastic Beanstalk. The Auto Scaling group associated with the Beanstalk environment has three Amazon EC2 instances. When the number of instances falls below two, it severely impacts the performance of the web application. The company currently uses the default all-at-once deployment policy and is looking for an effective strategy for future deployments.\n\nWhich of the following represents the most cost-effective deployment strategy for the company?",
     answers: [
       "Opt for traffic-splitting deployment strategy with traffic split parameter set to 50% of the total traffic",
@@ -14229,6 +14894,7 @@ export const paper11 = [
   },
   {
     id: "S11q27",
+    domain: "Development with AWS Services",
     text: "Your Lambda function must use the Node.js drivers to connect to your RDS PostgreSQL database in your VPC.\n\nHow do you bundle your Lambda function to add the dependencies?",
     answers: [
       "Zip the function and the dependencies separately and upload them in AWS Lambda as two parts",
@@ -14250,6 +14916,7 @@ export const paper11 = [
   },
   {
     id: "S11q28",
+    domain: "Development with AWS Services",
     text: "You are looking to invoke an AWS Lambda function every hour (similar to a cron job) in a serverless way.\n\nWhich event source should you use for your AWS Lambda function?",
     answers: ["EventBridge", "Amazon S3", "SQS", "Kinesis"],
     correctAnswerIndex: 0,
@@ -14266,6 +14933,7 @@ export const paper11 = [
   },
   {
     id: "S11q29",
+    domain: "Development with AWS Services",
     text: "A financial services company uses Amazon S3 to store transformed and anonymized customer data that is generated by a daily batch job. The development team has been tasked to build a solution that analyzes the output of the daily job for any sensitive financial information about the company's customers.\n\nAs an AWS Certified Developer Associate, which of the following options would you recommend to address this use case MOST efficiently?",
     answers: [
       "Leverage Macie to analyze the output of the daily batch job and look for any sensitive data findings of type SensitiveData:S3Object/CustomIdentifier",
@@ -14287,6 +14955,7 @@ export const paper11 = [
   },
   {
     id: "S11q30",
+    domain: "Troubleshooting and Optimization",
     text: "Applications running on EC2 instances process messages from an SQS queue but sometimes they experience errors due to messages not being processed.\n\nTo isolate the messages, which option will help with further debugging?",
     answers: [
       "Use DeleteMessage",
@@ -14308,6 +14977,7 @@ export const paper11 = [
   },
   {
     id: "S11q31",
+    domain: "Security",
     text: "A business-critical mobile application uses Amazon Cognito user pools with multi-factor authentication (MFA) enabled for all its users. The application manages confidential data about the company's sales forecasts and product launches. Considering the highly critical nature of the application, the company wants to track every user login activity via a notification sent as an email to the security team.\n\nWhich of the following would you recommend as the MOST optimal way of implementing this requirement within a short period?",
     answers: [
       "Create an AWS Lambda function that uses Amazon Simple Email Service to send an email notification to the concerned security team. Configure this function as Amazon Cognito post-authentication Lambda trigger",
@@ -14329,6 +14999,7 @@ export const paper11 = [
   },
   {
     id: "S11q32",
+    domain: "Development with AWS Services",
     text: "You are running a public DNS service on an EC2 instance where the DNS name is pointing to the IP address of the instance. You wish to upgrade your DNS service but would like to do it without any downtime.\n\nWhich of the following options will help you accomplish this?",
     answers: [
       "Elastic IP",
@@ -14350,6 +15021,7 @@ export const paper11 = [
   },
   {
     id: "S11q33",
+    domain: "Deployment",
     text: "You've just deployed an AWS Lambda function. The lambda function will be invoked via the API Gateway. The API Gateway will need to control access to it.\n\nWhich of the following mechanisms is not supported for API Gateway?",
     answers: [
       "Cognito User Pools",
@@ -14371,6 +15043,7 @@ export const paper11 = [
   },
   {
     id: "S11q34",
+    domain: "Security",
     text: "A company has a new media application that utilizes an Amazon CloudFront distribution that accesses the S3 bucket by using an origin access identity (OAI). The S3 bucket has an explicit access denial for all other users. A developer wants to allow access to the login page for unauthenticated users while ensuring the security of all private content that has restricted viewer access.\n\nWhich of the following will you recommend?",
     answers: [
       "Configure a second cache behavior to the distribution having the same origin as the default cache behavior and have the path pattern for the second cache behavior as the path of the login page with viewer access as unrestricted. Keep the default cache behavior’s settings unchanged",
@@ -14392,6 +15065,7 @@ export const paper11 = [
   },
   {
     id: "S11q35",
+    domain: "Deployment",
     text: "An IT company leverages CodePipeline to automate its release pipelines. The development team wants to write a Lambda function that will send notifications for state changes within the pipeline.\n\nAs a Developer Associate, which steps would you suggest to associate the Lambda function with the event source?",
     answers: [
       "Use the Lambda console to configure a trigger that invokes the Lambda function with CodePipeline as the event source",
@@ -14413,6 +15087,7 @@ export const paper11 = [
   },
   {
     id: "S11q36",
+    domain: "Deployment",
     text: "Your company is shifting towards Elastic Container Service (ECS) to deploy applications. The process should be automated using the AWS CLI to create a service where at least ten instances of a task definition are kept running under the default cluster.\n\nWhich of the following commands should be executed?",
     answers: [
       "aws ecs run-task --cluster default --task-definition ecs-demo",
@@ -14434,6 +15109,7 @@ export const paper11 = [
   },
   {
     id: "S11q37",
+    domain: "Troubleshooting and Optimization",
     text: "Your company is new to cloud computing and would like to host a static HTML5 website on the cloud and be able to access it via domain www.mycompany.com. You have created a bucket in Amazon Simple Storage Service (S3), enabled website hosting, and set the index.html as the default page. Finally, you create an Alias record in Amazon Route 53 that points to the S3 website endpoint of your S3 bucket.\n\nWhen you test the domain www.mycompany.com you get the following error: 'HTTP response code 403 (Access Denied)'. What can you do to resolve this error?",
     answers: [
       "Create a bucket policy",
@@ -14455,6 +15131,7 @@ export const paper11 = [
   },
   {
     id: "S11q38",
+    domain: "Deployment",
     text: "A media analytics company has built a streaming application on Lambda using Serverless Application Model (SAM).\n\nAs a Developer Associate, which of the following would you identify as the correct order of execution to successfully deploy the application?",
     answers: [
       "Develop the SAM template locally => upload the template to Lambda => deploy your application to the cloud",
@@ -14476,6 +15153,7 @@ export const paper11 = [
   },
   {
     id: "S11q39",
+    domain: "Deployment",
     text: "You would like to run the X-Ray daemon for your Docker containers deployed using AWS Fargate.\n\nWhat do you need to do to ensure the setup will work? (Select two)",
     answers: [
       "Provide the correct IAM task role to the X-Ray container",
@@ -14499,6 +15177,7 @@ export const paper11 = [
   },
   {
     id: "S11q40",
+    domain: "Security",
     text: "You are running a web application where users can author blogs and share them with their followers. Most of the workflow is read based, but when a blog is updated, you would like to ensure that the latest data is served to the users (no stale data). The Developer has already suggested using ElastiCache to cope with the read load but has asked you to implement a caching strategy that complies with the requirements of the site.\n\nWhich strategy would you recommend?",
     answers: [
       "Use a Lazy Loading strategy with TTL",
@@ -14520,6 +15199,7 @@ export const paper11 = [
   },
   {
     id: "S11q41",
+    domain: "Troubleshooting and Optimization",
     text: "You have created a DynamoDB table to support your application and provisioned RCU and WCU to it so that your application has been running for over a year now without any throttling issues. Your application now requires a second type of query over your table and as such, you have decided to create an LSI and a GSI on a new table to support that use case. One month after having implemented such indexes, it seems your table is experiencing throttling.\n\nUpon looking at the table's metrics, it seems the RCU and WCU provisioned are still sufficient. What's happening?",
     answers: [
       "The GSI is throttling so you need to provision more RCU and WCU to the GSI",
@@ -14541,6 +15221,7 @@ export const paper11 = [
   },
   {
     id: "S11q42",
+    domain: "Security",
     text: "You would like your Elastic Beanstalk environment to expose an HTTPS endpoint instead of an HTTP endpoint to get in-flight encryption between your clients and your web servers.\n\nWhat must be done to set up HTTPS on Beanstalk?",
     answers: [
       "Configure Health Checks",
@@ -14562,6 +15243,7 @@ export const paper11 = [
   },
   {
     id: "S11q43",
+    domain: "Development with AWS Services",
     text: "You are a developer working on AWS Lambda functions that are triggered by Amazon API Gateway and would like to perform testing on a low volume of traffic for new API versions.\n\nWhich of the following features will accomplish this task?",
     answers: [
       "Canary Deployment",
@@ -14583,6 +15265,7 @@ export const paper11 = [
   },
   {
     id: "S11q44",
+    domain: "Security",
     text: "Your organization has a single Amazon Simple Storage Service (S3) bucket that contains folders labeled with customer names. Several administrators have IAM access to the S3 bucket and versioning is enabled to easily recover from unintended user actions.\n\nWhich of the following statements about versioning is NOT true based on this scenario?",
     answers: [
       "Deleting a file is a recoverable operation",
@@ -14604,6 +15287,7 @@ export const paper11 = [
   },
   {
     id: "S11q45",
+    domain: "Security",
     text: "An e-commerce application posts its order transactions in bulk to an accounting application for further processing. Due to changes in the compliance rules, all the transactions are being encrypted with AWS Key Management Service (AWS KMS) key before posting to the accounting application. Post this change, the testers have raised tickets regarding the application receiving a ThrottlingException error.\n\nWhat measures should a developer take to fix this issue MOST optimally? (Select two)",
     answers: [
       "Use a bucket-level key for SSE-KMS which will decrease the requested traffic to AWS KMS thereby avoiding the ThrottlingException error",
@@ -14627,6 +15311,7 @@ export const paper11 = [
   },
   {
     id: "S11q46",
+    domain: "Development with AWS Services",
     text: "Your AWS account is now growing to 200 users and you would like to provide each of these users a personal space in the S3 bucket 'my_company_space' with the prefix /home/<username>, where they have read/write access.\n\nHow can you do this efficiently?",
     answers: [
       "Create one customer-managed policy per user and attach them to the relevant users",
@@ -14648,6 +15333,7 @@ export const paper11 = [
   },
   {
     id: "S11q47",
+    domain: "Security",
     text: "A security company is requiring all developers to perform server-side encryption with customer-provided encryption keys when performing operations in AWS S3. Developers should write software with C# using the AWS SDK and implement the requirement in the PUT, GET, Head, and Copy operations.\n\nWhich of the following encryption methods meets this requirement?",
     answers: ["SSE-S3", "SSE-KMS", "SSE-C", "Client-Side Encryption"],
     correctAnswerIndex: 2,
@@ -14664,6 +15350,7 @@ export const paper11 = [
   },
   {
     id: "S11q48",
+    domain: "Deployment",
     text: "You are implementing a banking application in which you need to update the Exchanges DynamoDB table and the AccountBalance DynamoDB table at the same time or not at all.\n\nWhich DynamoDB feature should you use?",
     answers: [
       "DynamoDB Streams",
@@ -14685,6 +15372,7 @@ export const paper11 = [
   },
   {
     id: "S11q49",
+    domain: "Troubleshooting and Optimization",
     text: "You are responsible for an application that runs on multiple Amazon EC2 instances. In front of the instances is an Internet-facing load balancer that takes requests from clients over the internet and distributes them to the EC2 instances. A health check is configured to ping the index.html page found in the root directory for the health status. When accessing the website via the internet visitors of the website receive timeout errors.\n\nWhat should be checked first to resolve the issue?",
     answers: [
       "The ALB is warming up",
@@ -14706,6 +15394,7 @@ export const paper11 = [
   },
   {
     id: "S11q50",
+    domain: "Security",
     text: "You are deploying Lambda functions that operate on your S3 buckets to read files and extract key metadata. The Lambda functions are managed using SAM.\n\nWhich Policy should you insert in your serverless model template to give buckets read access?",
     answers: [
       "LambdaInvokePolicy",
@@ -14727,6 +15416,7 @@ export const paper11 = [
   },
   {
     id: "S11q51",
+    domain: "Deployment",
     text: "Your client wants to deploy a service on EC2 instances, and as EC2 instances are added into an ASG, each EC2 instance should be running 3 different Docker Containers simultaneously.\n\nWhat Elastic Beanstalk platform should they choose?",
     answers: [
       "Docker single-container platform",
@@ -14748,6 +15438,7 @@ export const paper11 = [
   },
   {
     id: "S11q52",
+    domain: "Troubleshooting and Optimization",
     text: "A popular mobile app retrieves data from an AWS DynamoDB table that was provisioned with read-capacity units (RCUs) that are evenly shared across four partitions. One of those partitions is receiving more traffic than the other partitions, causing hot partition issues.\n\nWhat technology will allow you to reduce the read traffic on your AWS DynamoDB table with minimal effort?",
     answers: [
       "DynamoDB Streams",
@@ -14769,6 +15460,7 @@ export const paper11 = [
   },
   {
     id: "S11q53",
+    domain: "Deployment",
     text: "You have created a test environment in Elastic Beanstalk and as part of that environment, you have created an RDS database.\n\nHow can you make sure the database can be explored after the environment is destroyed?",
     answers: [
       "Make a selective delete in Elastic Beanstalk",
@@ -14790,6 +15482,7 @@ export const paper11 = [
   },
   {
     id: "S11q54",
+    domain: "Deployment",
     text: "A business-critical application is hosted on an Amazon EC2 instance and the latest update is in the testing phase. The business has requested a solution to track the average response time of the application and send a notification to the manager if it exceeds a particular threshold. The update will eventually be implemented in the production environment where the solution will be deployed on multiple EC2 instances.\n\nWhich of the following options would you combine to address the requirements of the business? (Select two)",
     answers: [
       "Configure the application to write the response time to a log file on the EC2 instance. Install and configure the Amazon CloudWatch agent on the EC2 instance to stream the application logs to CloudWatch Logs. Create a metric filter for the response time from the log file",
@@ -14813,6 +15506,7 @@ export const paper11 = [
   },
   {
     id: "S11q55",
+    domain: "Deployment",
     text: "A development team has a mix of applications hosted on-premises as well as on EC2 instances. The on-premises application controls all applications deployed on the EC2 instances. In case of any errors, the team wants to leverage Amazon CloudWatch to monitor and troubleshoot the on-premises application.\n\nAs a Developer Associate, which of the following solutions would you suggest to address this use-case?",
     answers: [
       "Upload log files from the on-premises server to S3 and let CloudWatch process the files from S3",
@@ -14834,6 +15528,7 @@ export const paper11 = [
   },
   {
     id: "S11q56",
+    domain: "Development with AWS Services",
     text: "You would like to paginate the results of an S3 List to show 100 results per page to your users and minimize the number of API calls that you will use.\n\nWhich CLI options should you use? (Select two)",
     answers: [
       "--limit",
@@ -14857,6 +15552,7 @@ export const paper11 = [
   },
   {
     id: "S11q57",
+    domain: "Troubleshooting and Optimization",
     text: "You are creating a web application in which users can follow each other. Some users will be more popular than others and thus their data will be requested very often. Currently, the user data sits in RDS and it has been recommended to use ElastiCache as a caching layer to improve read performance. The whole dataset of users cannot sit in ElastiCache due to cost, so you only want to cache the most often requested profiles. Stale data is acceptable for up to one minute.\n\nWhat caching strategy do you recommend implementing?",
     answers: [
       "Use a Lazy Loading strategy with TTL",
@@ -14878,6 +15574,7 @@ export const paper11 = [
   },
   {
     id: "S11q58",
+    domain: "Development with AWS Services",
     text: "You would like to retrieve a subset of your dataset stored in S3 with the CSV format. You would like to retrieve a month of data and only 3 columns out of the 10.\n\nYou need to minimize compute and network costs for this, what should you use?",
     answers: ["S3 Access Logs", "S3 Inventory", "S3 Analytics", "S3 Select"],
     correctAnswerIndex: 3,
@@ -14894,6 +15591,7 @@ export const paper11 = [
   },
   {
     id: "S11q59",
+    domain: "Deployment",
     text: "One of your Kinesis Stream is experiencing increased traffic due to a sale day. Therefore your Kinesis Administrator has split shards and thus you went from having 6 shards to having 10 shards in your Kinesis Stream. Your consuming application is running a KCL-based application on EC2 instances.\n\nWhat is the maximum number of EC2 instances that can be deployed to process the shards?",
     answers: ["10", "1", "6", "20"],
     correctAnswerIndex: 0,
@@ -14910,6 +15608,7 @@ export const paper11 = [
   },
   {
     id: "S11q60",
+    domain: "Deployment",
     text: "You would like to have a one-stop dashboard for all the CI/CD needs of one of your projects. You don't need heavy control of the individual configuration of each component in your CI/CD, but need to be able to get a holistic view of your projects.\n\nWhich service do you recommend?",
     answers: ["CodeDeploy", "CodePipeline", "CodeStar", "CodeBuild"],
     correctAnswerIndex: 2,
@@ -14926,6 +15625,7 @@ export const paper11 = [
   },
   {
     id: "S11q61",
+    domain: "Troubleshooting and Optimization",
     text: "A developer has created a new Application Load Balancer but has not registered any targets with the target groups.\n\nWhich of the following errors would be generated by the Load Balancer?",
     answers: [
       "HTTP 500: Internal server error",
@@ -14947,6 +15647,7 @@ export const paper11 = [
   },
   {
     id: "S11q62",
+    domain: "Deployment",
     text: "As part of your video processing application, you are looking to perform a set of repetitive and scheduled tasks asynchronously. Your application is deployed on Elastic Beanstalk.\n\nWhich Elastic Beanstalk environment should you set up for performing the repetitive tasks?",
     answers: [
       "Setup a Web Server environment and a .ebextensions file",
@@ -14968,6 +15669,7 @@ export const paper11 = [
   },
   {
     id: "S11q63",
+    domain: "Development with AWS Services",
     text: "Your Lambda function processes files for your customers and as part of that process, it creates a lot of intermediary files it needs to store on its disk and then discard.\n\nWhat is the best way to store temporary files for your Lambda functions that will be discarded when the function stops running?",
     answers: [
       "Use the local directory /opt",
@@ -14989,6 +15691,7 @@ export const paper11 = [
   },
   {
     id: "S11q64",
+    domain: "Development with AWS Services",
     text: "A media company wants to migrate a video editing service to Amazon EC2 while following security best practices. The videos are sourced and read from a non-public S3 bucket.\n\nAs a Developer Associate, which of the following solutions would you recommend for the given use-case?",
     answers: [
       "Set up an S3 service role with read-only permissions for the S3 bucket and attach the role to the EC2 instance profile",
@@ -15010,6 +15713,7 @@ export const paper11 = [
   },
   {
     id: "S11q65",
+    domain: "Development with AWS Services",
     text: "An e-commerce company has multiple EC2 instances operating in a private subnet which is part of a custom VPC. These instances are running an image processing application that needs to access images stored on S3. Once each image is processed, the status of the corresponding record needs to be marked as completed in a DynamoDB table.\n\nHow would you go about providing private access to these AWS resources which are not part of this custom VPC?",
     answers: [
       "Create a gateway endpoint for DynamoDB and add it as a target in the route table of the custom VPC. Create an API endpoint for S3 and then connect to the S3 service using the private IP address",
@@ -15033,6 +15737,7 @@ export const paper11 = [
 export const paper12 = [
   {
     id: "S12q01",
+    domain: "Deployment",
     text: "A developer while working on Amazon EC2 instances, realized that an instance was not needed and had shut it down. But another instance of the same type automatically got launched in the account.\n\nWhich of the following options can attribute the given sequence of actions?",
     answers: [
       "Instance might be part of Auto Scaling Group and hence re-launched similar instance",
@@ -15054,6 +15759,7 @@ export const paper12 = [
   },
   {
     id: "S12q02",
+    domain: "Security",
     text: "A company has sensitive data stored in an Amazon S3 bucket that is encrypted using AWS Key Management Service (AWS KMS). A developer wants to enforce encryption in transit for all users who have been granted permission to use the S3 GetObject operation across multiple AWS accounts.\n\nWhich of the following represents the best solution for this use case?",
     answers: [
       'Configure a resource-based policy on the KMS key to allow access when a request has the condition "aws:SecureTransport": "false"',
@@ -15075,6 +15781,7 @@ export const paper12 = [
   },
   {
     id: "S12q03",
+    domain: "Troubleshooting and Optimization",
     text: "An e-commerce application writes log files into Amazon S3. The application also reads these log files in parallel on a near real-time basis. The development team wants to address any data discrepancies that might arise when the application overwrites an existing log file and then tries to read that specific log file.\n\nWhich of the following options BEST describes the capabilities of Amazon S3 relevant to this scenario?",
     answers: [
       "A process replaces an existing object and immediately tries to read it. Until the change is fully propagated, Amazon S3 might return the new data",
@@ -15096,6 +15803,7 @@ export const paper12 = [
   },
   {
     id: "S12q04",
+    domain: "Development with AWS Services",
     text: "A developer is configuring the redirect actions for an Application Load Balancer. The developer stumbled upon the following snippet of code.\n\nWhich of the following is an example of a query string condition that the developer can use on AWS CLI?",
     answers: [
       '[\n  {\n      "Field": "query-string",\n      "QueryStringConfig": {\n          "Values": [\n            {\n                "Key": "version",\n                "Value": "v1"\n            },\n            {\n                "Value": "*example*"\n            }\n          ]\n      }\n  }\n]',
@@ -15117,6 +15825,7 @@ export const paper12 = [
   },
   {
     id: "S12q05",
+    domain: "Deployment",
     text: "A developer is configuring an Amazon EC2 Auto Scaling Group (ASG) that has to launch both Spot and On-Demand instances based on the requirement. Also, the CodeDeploy agent has to be automatically installed on these EC2 instances. All the EC2 instances are running on the Amazon Linux operating system.\n\nWhat is the most operationally efficient way to configure this requirement?",
     answers: [
       "Use launch templates to configure the EC2 Auto Scaling Group for On-Demand and spot instances. When you create a launch template use the User data field to add a configuration script that runs when the instance starts. This shell script can, in turn, install the CodeDeploy agent",
@@ -15138,6 +15847,7 @@ export const paper12 = [
   },
   {
     id: "S12q06",
+    domain: "Development with AWS Services",
     text: "Your team-mate has configured an Amazon S3 event notification for an S3 bucket that holds sensitive audit data of a firm. As the Team Lead, you are receiving the SNS notifications for every event in this bucket. After validating the event data, you realized that few events are missing.\n\nWhat could be the reason for this behavior and how to avoid this in the future?",
     answers: [
       "Versioning is enabled on the S3 bucket and event notifications are getting fired for only one version",
@@ -15159,6 +15869,7 @@ export const paper12 = [
   },
   {
     id: "S12q07",
+    domain: "Deployment",
     text: "An AWS CodePipeline was configured to be triggered by Amazon EventBridge. Recently the pipeline failed and upon investigation, the Team Lead noticed that the source was changed from AWS CodeCommit to Amazon Simple Storage Service (S3). The Team Lead has requested you to find the user who had made the changes.\n\nWhich service will help you solve this?",
     answers: [
       "Amazon Inspector",
@@ -15180,6 +15891,7 @@ export const paper12 = [
   },
   {
     id: "S12q08",
+    domain: "Development with AWS Services",
     text: "As a Developer, you are working on a mobile application that utilizes Amazon Simple Queue Service (SQS) for sending messages to downstream systems for further processing. One of the requirements is that the messages should be stored in the queue for a period of 12 days.\n\nHow will you configure this requirement?",
     answers: [
       "The maximum retention period of SQS messages is 7 days, therefore retention period of 12 days is not possible",
@@ -15201,6 +15913,7 @@ export const paper12 = [
   },
   {
     id: "S12q09",
+    domain: "Deployment",
     text: "The development team at an e-commerce company wants to run a serverless data store service on two docker containers that share resources.\n\nWhich of the following ECS configurations can be used to facilitate this use-case?",
     answers: [
       "Put the two containers into two separate task definitions using a Fargate Launch Type",
@@ -15222,6 +15935,7 @@ export const paper12 = [
   },
   {
     id: "S12q10",
+    domain: "Security",
     text: "You're a developer maintaining a web application written in .NET. The application makes references to public objects in a public S3 accessible bucket using a public URL. While doing a code review your colleague advises that the approach is not a best practice because some of the objects contain private data. After the administrator makes the S3 bucket private you can no longer access the S3 objects but you would like to create an application that will enable people to access some objects as needed with a time policy constraint.\n\nWhich of the following options will give access to the objects?",
     answers: [
       "Using pre-signed URL",
@@ -15243,6 +15957,7 @@ export const paper12 = [
   },
   {
     id: "S12q11",
+    domain: "Security",
     text: "A company wants to automate the creation of ECS clusters using CloudFormation. The process has worked for a while, but after creating task definitions and assigning roles, the development team discovers that the tasks for containers are not using the permissions assigned to them.\n\nWhich ECS config must be set in /etc/ecs/ecs.config to allow ECS tasks to use IAM roles?",
     answers: [
       "ECS_ENABLE_TASK_IAM_ROLE",
@@ -15264,6 +15979,7 @@ export const paper12 = [
   },
   {
     id: "S12q12",
+    domain: "Security",
     text: "A company wants to implement authentication for its new RESTful API service that uses Amazon API Gateway. To authenticate the calls, each request must include HTTP headers with a client ID and user ID. These credentials must be compared to the authentication data in a DynamoDB table.\n\nAs an AWS Certified Developer Associate, which of the following would you recommend for implementing this authentication in API Gateway?",
     answers: [
       "Authorize using Amazon Cognito that will reference the authentication table of DynamoDB",
@@ -15285,6 +16001,7 @@ export const paper12 = [
   },
   {
     id: "S12q13",
+    domain: "Development with AWS Services",
     text: "Your company has a load balancer in a VPC configured to be internet facing. The public DNS name assigned to the load balancer is myDns-1234567890.us-east-1.elb.amazonaws.com. When your client applications first load they capture the load balancer DNS name and then resolve the IP address for the load balancer so that they can directly reference the underlying IP.\n\nIt is observed that the client applications work well but unexpectedly stop working after a while. What is the reason for this?",
     answers: [
       "You need to enable stickiness",
@@ -15306,6 +16023,7 @@ export const paper12 = [
   },
   {
     id: "S12q14",
+    domain: "Troubleshooting and Optimization",
     text: "A developer has just completed configuring the Application Load Balancer for the EC2 instances. Just as he started testing his configuration, he realized that he has missed assigning target groups to his ALB.\n\nWhich error code should he expect in his debug logs?",
     answers: ["HTTP 403", "HTTP 500", "HTTP 503", "HTTP 504"],
     correctAnswerIndex: 2,
@@ -15322,6 +16040,7 @@ export const paper12 = [
   },
   {
     id: "S12q15",
+    domain: "Deployment",
     text: "As a site reliability engineer, you are responsible for improving the company’s deployment by scaling and automating applications. As new application versions are ready for production you ensure that the application gets deployed to different sets of EC2 instances at different times allowing for a smooth transition.\n\nUsing AWS CodeDeploy, which of the following options will allow you to do this?",
     answers: [
       "Define multiple CodeDeploy Applications",
@@ -15343,6 +16062,7 @@ export const paper12 = [
   },
   {
     id: "S12q16",
+    domain: "Deployment",
     text: "You are a developer working at a cloud company that embraces serverless. You have performed your initial deployment and would like to work towards adding API Gateway stages and associate them with existing deployments. Your stages will include prod, test, and dev and will need to match a Lambda function variant that can be updated over time.\n\nWhich of the following features must you add to achieve this? (select two)",
     answers: [
       "Mapping Templates",
@@ -15366,6 +16086,7 @@ export const paper12 = [
   },
   {
     id: "S12q17",
+    domain: "Troubleshooting and Optimization",
     text: "You're a developer for 'Movie Gallery', a company that just migrated to the cloud. A database must be created using NoSQL technology to hold movies that are listed for public viewing. You are taking an important step in designing the database with DynamoDB and need to choose the appropriate partition key.\n\nWhich of the following unique attributes satisfies this requirement?",
     answers: ["producer_name", "movie_id", "lead_actor_name", "movie_language"],
     correctAnswerIndex: 1,
@@ -15382,6 +16103,7 @@ export const paper12 = [
   },
   {
     id: "S12q18",
+    domain: "Security",
     text: "Your e-commerce company needs to improve its software delivery process and is moving away from the waterfall methodology. You decided that every application should be built using the best CI/CD practices and every application should be packaged and deployed as a Docker container. The Docker images should be stored in ECR and pushed with AWS CodePipeline and AWS CodeBuild.\n\nWhen you attempt to do this, the last step fails with an authorization issue. What is the most likely issue?",
     answers: [
       "The IAM permissions are wrong for the CodeBuild service",
@@ -15403,6 +16125,7 @@ export const paper12 = [
   },
   {
     id: "S12q19",
+    domain: "Development with AWS Services",
     text: "The development team at a health-care company is planning to migrate to AWS Cloud from the on-premises data center. The team is evaluating Amazon RDS as the database tier for its flagship application.\n\nWhich of the following would you identify as correct for RDS Multi-AZ? (Select two)",
     answers: [
       "To enhance read scalability, a Multi-AZ standby instance can be used to serve read requests",
@@ -15426,6 +16149,7 @@ export const paper12 = [
   },
   {
     id: "S12q20",
+    domain: "Deployment",
     text: "The development team at an IT company uses CloudFormation to manage its AWS infrastructure. The team has created a network stack containing a VPC with subnets and a web application stack with EC2 instances and an RDS instance. The team wants to reference the VPC created in the network stack into its web application stack.\n\nAs a Developer Associate, which of the following solutions would you recommend for the given use-case?",
     answers: [
       "Create a cross-stack reference and use the Export output field to flag the value of VPC from the network stack. Then use Fn::ImportValue intrinsic function to import the value of VPC into the web application stack",
@@ -15447,6 +16171,7 @@ export const paper12 = [
   },
   {
     id: "S12q21",
+    domain: "Troubleshooting and Optimization",
     text: "A multi-national company runs its technology operations on AWS Cloud. As part of their storage solution, they use a large number of EBS volumes, with AWS Config and CloudTrail activated. A manager has tried to find the user name that created an EBS volume by searching CloudTrail events logs but wasn't successful.\n\nAs a Developer Associate, which of the following would you recommend as the correct solution?",
     answers: [
       "EBS volume status checks are disabled",
@@ -15468,6 +16193,7 @@ export const paper12 = [
   },
   {
     id: "S12q22",
+    domain: "Troubleshooting and Optimization",
     text: "A developer has just integrated an AWS Lambda function to an Amazon API Gateway API. The integration has led to errors that the developer is unable to troubleshoot. The developer has decided to enable CloudWatch logging at the method level for the API Gateway API.\n\nWhat are the key points of consideration while configuring method-level logging for the API Gateway? (Select two)",
     answers: [
       "You are charged for accessing method-level and stage-level CloudWatch metrics, but not for API-level metrics",
@@ -15489,6 +16215,7 @@ export const paper12 = [
   },
   {
     id: "S12q23",
+    domain: "Security",
     text: "A Company uses a large set of EBS volumes for their fleet of Amazon EC2 instances. As an AWS Certified Developer Associate, your help has been requested to understand the security features of the EBS volumes. The company does not want to build or maintain their own encryption key management infrastructure.\n\nCan you help them understand what works for Amazon EBS encryption? (Select two)",
     answers: [
       "You can encrypt an existing unencrypted volume or snapshot by using AWS Key Management Service (KMS) AWS SDKs",
@@ -15512,6 +16239,7 @@ export const paper12 = [
   },
   {
     id: "S12q24",
+    domain: "Deployment",
     text: "A developer in your company has configured a build using AWS CodeBuild. The build fails and the developer needs to quickly troubleshoot the issue to see which commands or settings located in the BuildSpec file are causing an issue.\n\nWhich approach will help them accomplish this?",
     answers: [
       "SSH into the CodeBuild Docker container",
@@ -15533,6 +16261,7 @@ export const paper12 = [
   },
   {
     id: "S12q25",
+    domain: "Development with AWS Services",
     text: "A development team has inherited a web application running in the us-east-1 region with three availability zones (us-east-1a, us-east-1b, and us-east-1c) whose incoming web traffic is routed by a load balancer. When one of the EC2 instances hosting the web application crashes, the team realizes that the load balancer continues to route traffic to that instance causing intermittent issues.\n\nWhich of the following should the development team do to minimize this problem?",
     answers: [
       "Enable Multi AZ deployments",
@@ -15554,6 +16283,7 @@ export const paper12 = [
   },
   {
     id: "S12q26",
+    domain: "Deployment",
     text: "You are working for a technology startup building web and mobile applications. You would like to pull Docker images from the ECR repository called demo so you can start running local tests against the latest application version.\n\nWhich of the following commands must you run to pull existing Docker images from ECR? (Select two)",
     answers: [
       "aws docker push 1234567890.dkr.ecr.eu-west-1.amazonaws.com/demo:latest",
@@ -15577,6 +16307,7 @@ export const paper12 = [
   },
   {
     id: "S12q27",
+    domain: "Development with AWS Services",
     text: "A development team is configuring Kinesis Data Streams for ingesting real-time data from various appliances. The team has declared a shard capacity of one to test the configuration.\n\nWhat happens if the capacity limits of an Amazon Kinesis data stream are exceeded while the data producer adds data to the data stream?",
     answers: [
       "Data is lost unless the partition key of the data records is changed in order to write data to a different shard in the stream",
@@ -15598,6 +16329,7 @@ export const paper12 = [
   },
   {
     id: "S12q28",
+    domain: "Development with AWS Services",
     text: "A developer is creating a RESTful API service using an Amazon API Gateway with AWS Lambda integration. The service must support different API versions for testing purposes.\n\nAs a Developer Associate, which of the following would you suggest as the best way to accomplish this?",
     answers: [
       "Deploy the API versions as unique stages with unique endpoints and use stage variables to provide the context to identify the API versions",
@@ -15619,6 +16351,7 @@ export const paper12 = [
   },
   {
     id: "S12q29",
+    domain: "Deployment",
     text: "A retail company manages its IT infrastructure on AWS Cloud via Elastic Beanstalk. The development team at the company is planning to deploy the next version with MINIMUM application downtime and the ability to rollback quickly in case deployment goes wrong.\n\nAs a Developer Associate, which of the following options would you recommend to the development team?",
     answers: [
       "Deploy the new version to a separate environment via Blue/Green Deployment, and then swap Route 53 records of the two environments to redirect traffic to the new version",
@@ -15640,6 +16373,7 @@ export const paper12 = [
   },
   {
     id: "S12q30",
+    domain: "Development with AWS Services",
     text: "A company has configured an Auto Scaling group with health checks. The configuration is set to the desired capacity value of 3 and maximum capacity value of 3. The EC2 instances of your Auto Scaling group are configured to scale when CPU utilization is at 60 percent and is now running at 80 percent utilization.\n\nWhich of the following will take place?",
     answers: [
       "System will keep running as is",
@@ -15661,6 +16395,7 @@ export const paper12 = [
   },
   {
     id: "S12q31",
+    domain: "Troubleshooting and Optimization",
     text: "An analytics company is using Kinesis Data Streams (KDS) to process automobile health-status data from the taxis managed by a taxi ride-hailing service. Multiple consumer applications are using the incoming data streams and the engineers have noticed a performance lag for the data delivery speed between producers and consumers of the data streams.\n\nAs a Developer Associate, which of the following options would you suggest for improving the performance for the given use-case?",
     answers: [
       "Swap out Kinesis Data Streams with Kinesis Data Firehose",
@@ -15682,6 +16417,7 @@ export const paper12 = [
   },
   {
     id: "S12q32",
+    domain: "Development with AWS Services",
     text: "A company is looking at storing their less frequently accessed files on AWS that can be concurrently accessed by hundreds of EC2 instances. The company needs the most cost-effective file storage service that provides immediate access to data whenever needed.\n\nWhich of the following options represents the best solution for the given requirements?",
     answers: [
       "Amazon Elastic File System (EFS) Standard–IA storage class",
@@ -15703,6 +16439,7 @@ export const paper12 = [
   },
   {
     id: "S12q33",
+    domain: "Deployment",
     text: "As an AWS Certified Developer Associate, you are writing a CloudFormation template in YAML. The template consists of an EC2 instance creation and one RDS resource. Once your resources are created you would like to output the connection endpoint for the RDS database.\n\nWhich intrinsic function returns the value needed?",
     answers: ["!GetAtt", "!Sub", "!FindInMap", "!Ref"],
     correctAnswerIndex: 0,
@@ -15719,6 +16456,7 @@ export const paper12 = [
   },
   {
     id: "S12q34",
+    domain: "Development with AWS Services",
     text: "A company that specializes in cloud communications platform as a service allows software developers to programmatically use their services to send and receive text messages. The initial platform did not have a scalable architecture as all components were hosted on one server and should be redesigned for high availability and scalability.\n\nWhich of the following options can be used to implement the new architecture? (select two)",
     answers: [
       "API Gateway + Lambda",
@@ -15742,6 +16480,7 @@ export const paper12 = [
   },
   {
     id: "S12q35",
+    domain: "Deployment",
     text: "A development team has created AWS CloudFormation templates that are reusable by taking advantage of input parameters to name resources based on client names.\n\nYou would like to save your templates on the cloud, which storage option should you choose?",
     answers: ["ECR", "EFS", "EBS", "S3"],
     correctAnswerIndex: 3,
@@ -15758,6 +16497,7 @@ export const paper12 = [
   },
   {
     id: "S12q36",
+    domain: "Development with AWS Services",
     text: "Your application sends messages to an Amazon Simple Queue Service (SQS) queue frequently, which are then polled by another application that specifies which message to retrieve.\n\nWhich of the following options describe the maximum number of messages that can be retrieved at one time?",
     answers: ["20", "100", "5", "10"],
     correctAnswerIndex: 3,
@@ -15774,6 +16514,7 @@ export const paper12 = [
   },
   {
     id: "S12q37",
+    domain: "Deployment",
     text: "An application runs on Amazon Elastic Container Service (Amazon ECS) on AWS Fargate. The company's audit requirements mandate that logging and storing of application log data must be done centrally on AWS.\n\nHow will you configure this requirement?",
     answers: [
       "Download and install the unified CloudWatch agent on the ECS instances to collect internal system-level metrics and application logs from the instances. The logs collected by the unified CloudWatch agent are processed and stored in Amazon CloudWatch logs and can be queried for report generation",
@@ -15795,6 +16536,7 @@ export const paper12 = [
   },
   {
     id: "S12q38",
+    domain: "Deployment",
     text: "As a site reliability engineer, you work on building and running large-scale, distributed, fault-tolerant systems in the cloud using automation. You have just replaced the company's Jenkins based CI/CD platform with AWS CodeBuild and would like to programmatically define your build steps.\n\nWhich of the following options should you choose?",
     answers: [
       "Define an appspec.yml file in the codebuild/ directory",
@@ -15816,6 +16558,7 @@ export const paper12 = [
   },
   {
     id: "S12q39",
+    domain: "Development with AWS Services",
     text: "The development team at an IT company has configured an Application Load Balancer (ALB) with a Lambda function A as the target but the Lambda function A is not able to process any request from the ALB. Upon investigation, the team finds that there is another Lambda function B in the AWS account that is exceeding the concurrency limits.\n\nHow can the development team address this issue?",
     answers: [
       "Set up reserved concurrency for the Lambda function B so that it throttles if it goes above a certain concurrency limit",
@@ -15837,6 +16580,7 @@ export const paper12 = [
   },
   {
     id: "S12q40",
+    domain: "Troubleshooting and Optimization",
     text: "A company has AWS Lambda functions where each is invoked by other AWS services such as Amazon Kinesis Data Firehose, Amazon API Gateway, Amazon Simple Storage Service, or Amazon EventBridge. What these Lambda functions have in common is that they process heavy workloads such as big data analysis, large file processing, and statistical computations.\n\nWhat should you do to improve the performance of your AWS Lambda functions without changing your code?",
     answers: [
       "Increase the RAM assigned to your Lambda function",
@@ -15858,6 +16602,7 @@ export const paper12 = [
   },
   {
     id: "S12q41",
+    domain: "Development with AWS Services",
     text: "You are a DynamoDB developer for an aerospace company that requires you to write 6 objects per second of 4.5KB in size each.\n\nWhat write capacity unit is needed for your project?",
     answers: ["30", "24", "46", "15"],
     correctAnswerIndex: 0,
@@ -15874,6 +16619,7 @@ export const paper12 = [
   },
   {
     id: "S12q42",
+    domain: "Deployment",
     text: "A multi-national company maintains separate AWS accounts for different verticals in their organization. The project manager of a team wants to migrate the Elastic Beanstalk environment from Team A's AWS account into Team B's AWS account. As a Developer, you have been roped in to help him in this process.\n\nWhich of the following will you suggest?",
     answers: [
       "It is not possible to migrate Elastic Beanstalk environment from one AWS account to the other",
@@ -15895,6 +16641,7 @@ export const paper12 = [
   },
   {
     id: "S12q43",
+    domain: "Development with AWS Services",
     text: "An e-commerce company uses Amazon SQS queues to decouple their application architecture. The development team has observed message processing failures for an edge case scenario when a user places an order for a particular product ID, but the product ID is deleted, thereby causing the application code to fail.\n\nAs a Developer Associate, which of the following solutions would you recommend to address such message failures?",
     answers: [
       "Use a dead-letter queue to handle message processing failures",
@@ -15916,6 +16663,7 @@ export const paper12 = [
   },
   {
     id: "S12q44",
+    domain: "Deployment",
     text: "Your organization has developers that merge code changes regularly to an AWS CodeCommit repository. Your pipeline has AWS CodeCommit as the source and you would like to configure a rule that reacts to changes in CodeCommit.\n\nWhich of the following options do you choose for this type of integration?",
     answers: [
       "Use Amazon EventBridge Rules",
@@ -15937,6 +16685,7 @@ export const paper12 = [
   },
   {
     id: "S12q45",
+    domain: "Deployment",
     text: "A new recruit is trying to understand the nuances of EC2 Auto Scaling. As an AWS Certified Developer Associate, you have been asked to mentor the new recruit.\n\nCan you identify and explain the correct statements about Auto Scaling to the new recruit? (Select two).",
     answers: [
       "Amazon EC2 Auto Scaling works with both Application Load Balancers and Network Load Balancers",
@@ -15960,6 +16709,7 @@ export const paper12 = [
   },
   {
     id: "S12q46",
+    domain: "Development with AWS Services",
     text: "A video streaming application uses Amazon CloudFront for its data distribution. The development team has decided to use CloudFront with origin failover for high availability.\n\nWhich of the following options are correct while configuring CloudFront with Origin Groups? (Select two)",
     answers: [
       "When there’s a cache hit, CloudFront routes the request to the primary origin in the origin group",
@@ -15983,6 +16733,7 @@ export const paper12 = [
   },
   {
     id: "S12q47",
+    domain: "Deployment",
     text: "Your web application front end consists of 5 EC2 instances behind an Application Load Balancer. You have configured your web application to capture the IP address of the client making requests. When viewing the data captured you notice that every IP address being captured is the same, which also happens to be the IP address of the Application Load Balancer.\n\nWhat should you do to identify the true IP address of the client?",
     answers: [
       "Modify the front-end of the website so that the users send their IP in the requests",
@@ -16004,6 +16755,7 @@ export const paper12 = [
   },
   {
     id: "S12q48",
+    domain: "Troubleshooting and Optimization",
     text: "A company uses microservices-based infrastructure to process the API calls from clients, perform request filtering and cache requests using the AWS API Gateway. Users report receiving 501 error code and you have been contacted to find out what is failing.\n\nWhich service will you choose to help you troubleshoot?",
     answers: [
       "Use CloudWatch service",
@@ -16025,6 +16777,7 @@ export const paper12 = [
   },
   {
     id: "S12q49",
+    domain: "Development with AWS Services",
     text: "Your team has just signed up an year-long contract with a client maintaining a three-tier web application, that needs to be moved to AWS Cloud. The application has steady traffic throughout the day and needs to be on a reliable system with no down-time or access issues. The solution needs to be cost-optimal for this startup.\n\nWhich of the following options should you choose?",
     answers: [
       "Amazon EC2 On Demand Instances",
@@ -16046,6 +16799,7 @@ export const paper12 = [
   },
   {
     id: "S12q50",
+    domain: "Development with AWS Services",
     text: "The development team at a retail organization wants to allow a Lambda function in its AWS Account A to access a DynamoDB table in another AWS Account B.\n\nAs a Developer Associate, which of the following solutions would you recommend for the given use-case?",
     answers: [
       "Create a clone of the Lambda function in AWS Account B so that it can access the DynamoDB table in the same account",
@@ -16067,6 +16821,7 @@ export const paper12 = [
   },
   {
     id: "S12q51",
+    domain: "Troubleshooting and Optimization",
     text: "An organization with high data volume workloads have successfully moved to DynamoDB after having many issues with traditional database systems. However, a few months into production, DynamoDB tables are consistently recording high latency.\n\nAs a Developer Associate, which of the following would you suggest to reduce the latency? (Select two)",
     answers: [
       "Reduce connection pooling, which keeps the connections alive even when user requests are not present, thereby, blocking the services",
@@ -16090,6 +16845,7 @@ export const paper12 = [
   },
   {
     id: "S12q52",
+    domain: "Security",
     text: "A company stores confidential data on an Amazon Simple Storage Service (S3) bucket. New regulatory guidelines require that files be stored with server-side encryption. The encryption used must be Advanced Encryption Standard (AES-256) and the company does not want to manage S3 encryption keys.\n\nWhich of the following options should you use?",
     answers: ["Client Side Encryption", "SSE-S3", "SSE-KMS", "SSE-C"],
     correctAnswerIndex: 1,
@@ -16106,6 +16862,7 @@ export const paper12 = [
   },
   {
     id: "S12q53",
+    domain: "Development with AWS Services",
     text: "An e-commerce company has a fleet of EC2 based web servers running into very high CPU utilization issues. The development team has determined that serving secure traffic via HTTPS is a major contributor to the high CPU load.\n\nWhich of the following steps can take the high CPU load off the web servers? (Select two)",
     answers: [
       "Create an HTTPS listener on the Application Load Balancer with SSL termination",
@@ -16129,6 +16886,7 @@ export const paper12 = [
   },
   {
     id: "S12q54",
+    domain: "Deployment",
     text: "A startup manages its Cloud resources with Elastic Beanstalk. The environment consists of a few Amazon EC2 instances, an Auto Scaling Group (ASG), and an Elastic Load Balancer. Even after the Load Balancer marked an EC2 instance as unhealthy, the ASG has not replaced it with a healthy instance.\n\nAs a Developer, suggest the necessary configurations to automate the replacement of unhealthy instance.",
     answers: [
       "Auto Scaling group doesn't automatically replace the unhealthy instances marked by the load balancer. They have to be manually replaced from AWS Console",
@@ -16150,6 +16908,7 @@ export const paper12 = [
   },
   {
     id: "S12q55",
+    domain: "Security",
     text: "A photo-sharing application manages its EC2 server fleet running behind an Application Load Balancer and the traffic is fronted by a CloudFront distribution. The development team wants to decouple the user authentication process for the application so that the application servers can just focus on the business logic.\n\nAs a Developer Associate, which of the following solutions would you recommend to address this use-case with minimal development effort?",
     answers: [
       "Use Cognito Authentication via Cognito Identity Pools for your CloudFront distribution",
@@ -16171,6 +16930,7 @@ export const paper12 = [
   },
   {
     id: "S12q56",
+    domain: "Development with AWS Services",
     text: "A development team has been using Amazon S3 service as an object store. With Amazon S3 turning strongly consistent, the team wants to understand the impact of this change on its data storage practices.\n\nAs a developer associate, can you identify the key characteristics of the strongly consistent data model followed by S3? (Select two)",
     answers: [
       "A process deletes an existing object and immediately lists keys within its bucket. The object could still be visible for few more minutes till the change propagates",
@@ -16194,6 +16954,7 @@ export const paper12 = [
   },
   {
     id: "S12q57",
+    domain: "Deployment",
     text: "A developer hosts a static website in Amazon S3 behind an Amazon CloudFront distribution, using a custom domain that points to the CloudFront URL. The site is deployed through a CI/CD pipeline where the source stage is followed by a build stage that runs an AWS CodeBuild project defined by a buildspec.yml file. The buildspec builds the code and uploads the static files to the S3 bucket, and the updated content is visible both in the bucket and through the S3 website endpoint. However, the CloudFront domain continues to serve stale content.\n\nWhat do you recommend to fix this issue?",
     answers: [
       "Invoke an Amazon CloudFront invalidation for the changed paths",
@@ -16215,6 +16976,7 @@ export const paper12 = [
   },
   {
     id: "S12q58",
+    domain: "Security",
     text: "A developer is configuring Amazon ECS container instances to send log information to CloudWatch Logs. For the container instances to be able to send log data to CloudWatch Logs, an IAM policy needs to be created that will allow the container instances to use the CloudWatch Logs APIs.\n\nWhich policy is the right fit for the given requirement?",
     answers: [
       '{\n    "Version": "2012-10-17",\n    "Statement": [\n        {\n            "Effect": "Allow",\n            "Action": [\n                "logs:CreateLogGroup",\n                "logs:CreateLogStream",\n                "logs:PutLogEvents",\n                "logs:DescribeLogStreams"\n            ],\n            "Resource": [\n                "arn:aws:logs:*:*:*"\n            ]\n        }\n    ]\n}',
@@ -16236,6 +16998,7 @@ export const paper12 = [
   },
   {
     id: "S12q59",
+    domain: "Deployment",
     text: "A media application uses Amazon CloudFront distribution to distribute static content configured on an Amazon S3 bucket. The application is used across different countries and various AWS Regions. Some regions have been experiencing latency when there is a cache miss on CloudFront.\n\nWhich of the following configuration changes will you suggest to decrease latency and improve user performance by redirecting requests on cache misses to the S3 bucket in the Region that is nearest to the user's country?",
     answers: [
       "Redirect requests on cache misses to the S3 bucket nearest to the user country. Create a Lambda@Edge function to redirect requests based on the value of the CloudFront-Viewer-Country header. Associate the Lambda@Edge function with the distribution's viewer request event",
@@ -16257,6 +17020,7 @@ export const paper12 = [
   },
   {
     id: "S12q60",
+    domain: "Deployment",
     text: "A development team has configured an Elastic Load Balancer for host-based routing. The idea is to support multiple subdomains and different top-level domains.\n\nThe rule *.sample.com matches which of the following?",
     answers: ["sample.test.com", "sample.com", "SAMPLE.COM", "test.sample.com"],
     correctAnswerIndex: 3,
@@ -16273,6 +17037,7 @@ export const paper12 = [
   },
   {
     id: "S12q61",
+    domain: "Development with AWS Services",
     text: "You are a software engineer working for an IT company and are asked to contribute to a growing internal application that includes dashboards for data visualization. You are provisioning your AWS DynamoDB table and need to perform 10 strongly consistent reads per second of 4 KB in size each.\n\nHow many Read Capacity Units (RCUs) are needed?",
     answers: ["10", "40", "20", "5"],
     correctAnswerIndex: 0,
@@ -16289,6 +17054,7 @@ export const paper12 = [
   },
   {
     id: "S12q62",
+    domain: "Development with AWS Services",
     text: "As a Developer Associate, you are responsible for the data management of the AWS Kinesis streams at your company. The security team has mandated stricter security requirements by leveraging mechanisms available with the Kinesis Data Streams service that won't require code changes on your end.\n\nWhich of the following features meet the given requirements? (Select two)",
     answers: [
       "SSE-C encryption",
@@ -16312,6 +17078,7 @@ export const paper12 = [
   },
   {
     id: "S12q63",
+    domain: "Development with AWS Services",
     text: "A development team has noticed that one of the EC2 instances has been wrongly configured with the 'DeleteOnTermination' attribute set to True for its root EBS volume.\n\nAs a developer associate, can you suggest a way to disable this flag while the instance is still running?",
     answers: [
       "Set the DisableApiTermination attribute of the instance using the API",
@@ -16334,6 +17101,7 @@ export const paper12 = [
   },
   {
     id: "S12q64",
+    domain: "Deployment",
     text: "A video encoding application running on an EC2 instance takes about 20 seconds on average to process each raw footage file. The application picks the new job messages from an SQS queue. The development team needs to account for the use-case when the video encoding process takes longer than usual so that the same raw footage is not processed by multiple consumers.\n\nAs a Developer Associate, which of the following solutions would you recommend to address this use-case?",
     answers: [
       "Use WaitTimeSeconds action to long poll and extend a message's visibility timeout",
@@ -16355,6 +17123,7 @@ export const paper12 = [
   },
   {
     id: "S12q65",
+    domain: "Security",
     text: "A developer at a university is encrypting a large XML payload transferred over the network using AWS KMS and wants to test the application before going to production.\n\nWhat is the maximum data size supported by AWS KMS?",
     answers: ["1MB", "10MB", "4KB", "16KB"],
     correctAnswerIndex: 2,

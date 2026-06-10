@@ -1,5 +1,39 @@
 import Answers from "./Answers.jsx";
 import { useTheme } from "./ThemeContext.jsx";
+import DOMPurify from "dompurify";
+
+// Detect if a string contains HTML tags
+function containsHTML(str) {
+  return /<[a-z][\s\S]*>/i.test(str);
+}
+
+function QuestionText({ text, darkMode }) {
+  if (containsHTML(text)) {
+    const clean = DOMPurify.sanitize(text, {
+      ALLOWED_TAGS: [
+        "p","strong","em","b","i","ul","ol","li","code","pre",
+        "table","thead","tbody","tr","th","td","img","a","br","span","h1","h2","h3","h4","div",
+      ],
+      ALLOWED_ATTR: ["href","src","alt","class","style","target","rel"],
+    });
+    return (
+      <div
+        className="question-html-content"
+        style={darkMode ? { color: "white" } : {}}
+        dangerouslySetInnerHTML={{ __html: clean }}
+      />
+    );
+  }
+  return (
+    <h2 style={darkMode ? { color: "white" } : {}}>
+      {text.split("\n").map((line, i) => (
+        <p key={i} style={darkMode ? { color: "white" } : {}}>
+          {line}
+        </p>
+      ))}
+    </h2>
+  );
+}
 
 export default function Question({
   index,
@@ -29,14 +63,7 @@ export default function Question({
         </button>
       </div>
 
-      {/* <h2 style={{ whiteSpace: "pre-line" }}>{question.text}</h2> */}
-      <h2 style={darkMode ? { color: "white" } : {}}>
-        {question.text.split("\n").map((line, i) => (
-          <p key={i} style={darkMode ? { color: "white" } : {}}>
-            {line}
-          </p>
-        ))}
-      </h2>
+      <QuestionText text={question.text} darkMode={darkMode} />
 
       <Answers
         answers={question.answers}
