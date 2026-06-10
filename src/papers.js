@@ -10872,7 +10872,45 @@ export const paper8 = [
   {
     id: "S8q41",
     domain: "Security",
-    text: "An Accounting firm extensively uses Amazon EBS volumes for persistent storage of application data of Amazon EC2 instances. The volumes are encrypted to protect the critical data of the clients. As part of managing the security credentials, the project manager has come across a policy snippet. Which of the following options are correct regarding the policy?",
+    text: `An Accounting firm extensively uses Amazon EBS volumes for persistent storage of application data of Amazon EC2 instances. The volumes are encrypted to protect the critical data of the clients. As part of managing the security credentials, the project manager has come across a policy snippet. Which of the following options are correct regarding the policy?
+    <pre>
+    <code>{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Allow for use of this Key",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::111122223333:role/UserRole"
+            },
+            "Action": [
+                "kms:GenerateDataKeyWithoutPlaintext",
+                "kms:Decrypt"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Allow for EC2 Use",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::111122223333:role/UserRole"
+            },
+            "Action": [
+                "kms:CreateGrant",
+                "kms:ListGrants",
+                "kms:RevokeGrant"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                "kms:ViaService": "ec2.us-west-2.amazonaws.com"
+            }
+        }
+    ]
+}</code>
+    </pre>
+Which of the following options are correct regarding the policy?
+    `,
     answers: [
       "The first statement provides the security group the ability to generate a data key and decrypt that data key from the CMK when necessary",
       "The second statement in the policy mentions that all the resources stated in the first statement can take the specified role which will provide the ability to create, list, and revoke grants for Amazon EC2",
