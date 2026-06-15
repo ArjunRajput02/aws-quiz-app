@@ -73,6 +73,11 @@ const PAPER_META = {
     topics: ["ECR", "DynamoDB", "API Gateway", "CI/CD", "Monitoring", "AWS"],
     difficulty: "Medium",
   },
+  13: {
+    icon: "😍",
+    topics: ["ECR", "DynamoDB", "API Gateway", "CI/CD", "Monitoring", "AWS"],
+    difficulty: "Medium",
+  },
 };
 
 const DIFF_COLOR = {

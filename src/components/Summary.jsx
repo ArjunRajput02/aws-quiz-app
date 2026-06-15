@@ -129,7 +129,6 @@ function ReviewItem({ answer, question, index, darkMode }) {
 
       {expanded && mainExplanation && (
         <div className="explanation-panel">
-          <p className="explanation-main">{mainExplanation}</p>
           <ul className="choice-breakdown">
             {question.answers.map((choice, idx) => {
               const isChoiceCorrect = question.correctAnswerIndices.includes(idx);
@@ -145,11 +144,11 @@ function ReviewItem({ answer, question, index, darkMode }) {
                     <span className="choice-text">{choice}</span>
                     {wasChosen && <span className="choice-yours-tag">Your pick</span>}
                   </div>
-                  {reason && <p className="choice-reason">{reason}</p>}
                 </li>
               );
             })}
           </ul>
+          <p className="explanation-main" dangerouslySetInnerHTML={{ __html: mainExplanation }} style={{ whiteSpace: "pre-wrap" }}></p>
         </div>
       )}
     </li>

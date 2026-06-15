@@ -19,7 +19,7 @@ function QuestionText({ text, darkMode }) {
     return (
       <div
         className="question-html-content"
-        style={darkMode ? { color: "white" } : {}}
+        style={darkMode ? { color: "white",whiteSpace:'pre-wrap' } : {whiteSpace:'pre-wrap'}}
         dangerouslySetInnerHTML={{ __html: clean }}
       />
     );
